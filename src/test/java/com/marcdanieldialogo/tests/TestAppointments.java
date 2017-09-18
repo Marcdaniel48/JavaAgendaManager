@@ -12,6 +12,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.time.DateTimeException;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.LinkedList;
@@ -264,6 +265,25 @@ public class TestAppointments {
         date = LocalDateTime.of(2018, 3, 1, 12, 59);
         appointments = appointmentDAO.findByDate(date);
         assertEquals("The number of records returned does not match expected", 0, appointments.size());
+    }
+    
+    /**
+     * Tests the "findByDate" method for a failure.
+     * 
+     * Tries to create a LocalDateTime object with an illegal value (Sets the year to 2018, but with a month of -1).
+     * More of a LocalDatetime failure than a findByDate failure.
+     * 
+     * @throws SQlException, DateTimeException
+     */
+    @Test(timeout = 1000, expected = DateTimeException.class)
+    public void testFindByDateFailure() throws SQLException, DateTimeException {
+        AppointmentDAO appointmentDAO = new AppointmentDAOImpl();
+        
+        LocalDateTime date = LocalDateTime.of(2018, -1, 20, 14, 0);
+        
+        List<Appointment> appointments = appointmentDAO.findByDate(date);
+        
+        fail("An illegal value has been used for the LocalDateTime object.");
     }
     
     @Test(timeout = 1000)
