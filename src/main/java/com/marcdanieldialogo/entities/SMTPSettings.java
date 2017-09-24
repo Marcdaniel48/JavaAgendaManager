@@ -15,8 +15,10 @@ public class SMTPSettings {
     private String smtp_url;
     private int smtp_port;
     private int default_SMTP;
+    private int reminder_interval;
     
-    public SMTPSettings(int smtp_id, String username, String email, String email_password, String smtp_url, int smtp_port, int default_SMTP)
+    public SMTPSettings(int smtp_id, String username, String email, String email_password, String smtp_url, int smtp_port, int default_SMTP,
+            int reminder_interval)
     {
         this.smtp_id = smtp_id;
         this.username = username;
@@ -25,6 +27,7 @@ public class SMTPSettings {
         this.smtp_url = smtp_url;
         this.smtp_port = smtp_port;
         this.default_SMTP = default_SMTP;
+        this.reminder_interval = reminder_interval;
     }
 
     public SMTPSettings() {
@@ -35,6 +38,7 @@ public class SMTPSettings {
         this.smtp_url = "";
         this.smtp_port = 465;
         this.default_SMTP = 0;
+        this.reminder_interval = -1;
     }
     
     public int getSMTPID()
@@ -71,7 +75,10 @@ public class SMTPSettings {
     {
         return default_SMTP;
     }
-    
+    public int getReminderInterval()
+    {
+        return reminder_interval;
+    }
     
     public void setSMTPID(int smtp_id) {
         this.smtp_id = smtp_id;
@@ -107,6 +114,11 @@ public class SMTPSettings {
         this.default_SMTP = default_SMTP;
     }
     
+    public void setReminderInterval(int reminder_interval)
+    {
+        this.reminder_interval = reminder_interval;
+    }
+    
     
     @Override
     public int hashCode() {
@@ -117,6 +129,8 @@ public class SMTPSettings {
         hash = 37 * hash + Objects.hashCode(this.email_password);
         hash = 37 * hash + Objects.hashCode(this.smtp_url);
         hash = 37 * hash + Objects.hashCode(this.smtp_port);
+        hash = 37 * hash + Objects.hashCode(this.default_SMTP);
+        hash = 37 * hash + Objects.hashCode(this.reminder_interval);
         
         return hash;
     }
@@ -161,13 +175,23 @@ public class SMTPSettings {
             return false;
         }
         
+        if(!Objects.equals(this.default_SMTP, other.default_SMTP))
+        {
+            return false;
+        }
+        
+        if(!Objects.equals(this.reminder_interval, other.reminder_interval))
+        {
+            return false;
+        }
+        
         return true;
     }
 
     @Override
     public String toString() {
         return "SMTPSettings{" + "smtp_id=" + smtp_id + ", username=" + username + ", email=" + email + ", email_password=" + email_password 
-                + ", smtp_url=" + smtp_url + ", smtp_port=" + smtp_port + '}';
+                + ", smtp_url=" + smtp_url + ", smtp_port=" + smtp_port + ", default_SMTP=" + default_SMTP + ", reminder_interval=" + reminder_interval + '}';
     }
 
 }
