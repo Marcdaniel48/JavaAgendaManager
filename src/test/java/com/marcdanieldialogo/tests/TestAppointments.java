@@ -63,7 +63,6 @@ public class TestAppointments {
         appointment.setDetails("Because I can.");
         appointment.setWholeDay(false);
         appointment.setAppointmentGroup(5);
-        appointment.setReminderInterval(1);
         appointment.setAlarmReminder(true);
         
         int records = appointmentDAO.create(appointment);
@@ -101,7 +100,6 @@ public class TestAppointments {
         appointment.setDetails("Because I can.");
         appointment.setWholeDay(false);
         appointment.setAppointmentGroup(5);
-        appointment.setReminderInterval(1);
         appointment.setAlarmReminder(true);
         
         int records = appointmentDAO.create(appointment);
@@ -160,7 +158,6 @@ public class TestAppointments {
         appointment.setEndTime(appointmentDAO.findID(1).getEndTime());
         appointment.setDetails("I won't go today");
         appointment.setWholeDay(appointmentDAO.findID(1).getWholeDay());
-        appointment.setReminderInterval(appointmentDAO.findID(1).getReminderInterval());
         appointment.setAlarmReminder(appointmentDAO.findID(1).getAlarmReminder());
         
         int records = appointmentDAO.update(appointment);
@@ -201,7 +198,6 @@ public class TestAppointments {
         appointment.setEndTime(appointmentDAO.findID(1).getEndTime());
         appointment.setDetails("I won't go today");
         appointment.setWholeDay(appointmentDAO.findID(1).getWholeDay());
-        appointment.setReminderInterval(appointmentDAO.findID(1).getReminderInterval());
         appointment.setAlarmReminder(appointmentDAO.findID(1).getAlarmReminder());
         
         int records = appointmentDAO.update(appointment);
@@ -264,7 +260,9 @@ public class TestAppointments {
         
         date = LocalDateTime.of(2018, 3, 1, 12, 59);
         appointments = appointmentDAO.findByDate(date);
-        assertEquals("The number of records returned does not match expected", 0, appointments.size());
+        // There is not appointment at time 12:59, but there is one at 13:00. The findByDate method will also return
+        // appointments that are 1 minute ahead of time.
+        assertEquals("The number of records returned does not match expected", 1, appointments.size());
     }
     
     /**
