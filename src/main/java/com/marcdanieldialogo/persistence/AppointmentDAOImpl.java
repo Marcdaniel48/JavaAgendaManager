@@ -41,7 +41,7 @@ public class AppointmentDAOImpl implements AppointmentDAO{
         int records;
 
         String sql = "INSERT INTO APPOINTMENT(TITLE, LOCATION, START_TIME, END_TIME, DETAILS, WHOLE_DAY,"
-                + "APPOINTMENT_GROUP, REMINDER_INTERVAL, ALARM_REMINDER) values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                + "APPOINTMENT_GROUP, ALARM_REMINDER) values (?, ?, ?, ?, ?, ?, ?, ?)";
         
         try(Connection conn = util.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);)
@@ -53,8 +53,7 @@ public class AppointmentDAOImpl implements AppointmentDAO{
             stmt.setString(5, appointment.getDetails());
             stmt.setBoolean(6, appointment.getWholeDay());
             stmt.setInt(7, appointment.getAppointmentGroup());
-            stmt.setInt(8, appointment.getReminderInterval());
-            stmt.setBoolean(9, appointment.getAlarmReminder());
+            stmt.setBoolean(8, appointment.getAlarmReminder());
             
             records = stmt.executeUpdate();
             
@@ -103,7 +102,6 @@ public class AppointmentDAOImpl implements AppointmentDAO{
                 appointment.setDetails(results.getString("DETAILS"));
                 appointment.setWholeDay(results.getBoolean("WHOLE_DAY"));
                 appointment.setAppointmentGroup(results.getInt("APPOINTMENT_GROUP"));
-                appointment.setReminderInterval(results.getInt("REMINDER_INTERVAL"));
                 appointment.setAlarmReminder(results.getBoolean("ALARM_REMINDER"));
                 
                 rows.add(appointment);
@@ -142,7 +140,6 @@ public class AppointmentDAOImpl implements AppointmentDAO{
                     appointment.setDetails(resultSet.getString("DETAILS"));
                     appointment.setWholeDay(resultSet.getBoolean("WHOLE_DAY"));
                     appointment.setAppointmentGroup(resultSet.getInt("APPOINTMENT_GROUP"));
-                    appointment.setReminderInterval(resultSet.getInt("REMINDER_INTERVAL"));
                     appointment.setAlarmReminder(resultSet.getBoolean("ALARM_REMINDER"));
                 }
             }
@@ -162,7 +159,7 @@ public class AppointmentDAOImpl implements AppointmentDAO{
     public int update(Appointment appointment) throws SQLException {
         int record = 0;
         String updateStatement = "UPDATE APPOINTMENT SET TITLE = ?, LOCATION = ?, START_TIME = ?, END_TIME = ?, DETAILS = ?, WHOLE_DAY = ?, APPOINTMENT_GROUP = ?,"
-                + " REMINDER_INTERVAL = ?, ALARM_REMINDER = ? WHERE APPOINTMENT_ID = ?";
+                + " ALARM_REMINDER = ? WHERE APPOINTMENT_ID = ?";
         
         try
         (Connection connection = util.getConnection(); PreparedStatement pStatement = connection.prepareStatement(updateStatement);)
@@ -174,9 +171,8 @@ public class AppointmentDAOImpl implements AppointmentDAO{
             pStatement.setString(5, appointment.getDetails());
             pStatement.setBoolean(6, appointment.getWholeDay());
             pStatement.setInt(7, appointment.getAppointmentGroup());
-            pStatement.setInt(8, appointment.getReminderInterval());
-            pStatement.setBoolean(9, appointment.getAlarmReminder());
-            pStatement.setInt(10, appointment.getAppointmentID());
+            pStatement.setBoolean(8, appointment.getAlarmReminder());
+            pStatement.setInt(9, appointment.getAppointmentID());
             
             
             pStatement.executeUpdate();
@@ -242,7 +238,6 @@ public class AppointmentDAOImpl implements AppointmentDAO{
                     appointment.setDetails(resultSet.getString("DETAILS"));
                     appointment.setWholeDay(resultSet.getBoolean("WHOLE_DAY"));
                     appointment.setAppointmentGroup(resultSet.getInt("APPOINTMENT_GROUP"));
-                    appointment.setReminderInterval(resultSet.getInt("REMINDER_INTERVAL"));
                     appointment.setAlarmReminder(resultSet.getBoolean("ALARM_REMINDER"));
                     
                     appointments.add(appointment);
@@ -254,7 +249,8 @@ public class AppointmentDAOImpl implements AppointmentDAO{
     
     /**
      * Takes in a LocalDateTime object and uses it to retrieve any records of the 
-     * APPOINTMENT table that's currently active during the LocalDateTime's day and time.
+     * APPOINTMENT table that's currently active during the LocalDateTime's day and time
+     * (day, hour, minutes).
      * 
      * @param date
      * @return appointments
@@ -264,13 +260,17 @@ public class AppointmentDAOImpl implements AppointmentDAO{
     public List<Appointment> findByDate(LocalDateTime date) throws SQLException
     {
         List<Appointment> appointments = new ArrayList<>();
-        String sql = "SELECT * FROM APPOINTMENT WHERE START_TIME = ?";
-        Timestamp startTime = Timestamp.valueOf(date);
+        
+        date = LocalDateTime.of(date.getYear(), date.getMonthValue(), date.getDayOfMonth(), date.getHour(), date.getMinute());
+        
+        
+        String sql = "SELECT * FROM APPOINTMENT WHERE START_TIME BETWEEN ? AND ?";
         
         try
         (Connection connection = util.getConnection(); PreparedStatement pStatement = connection.prepareStatement(sql);)
         {
-            pStatement.setTimestamp(1, startTime);
+            pStatement.setTimestamp(1, Timestamp.valueOf(date));
+            pStatement.setTimestamp(2, Timestamp.valueOf(date.plusMinutes(1)));
             
             ResultSet resultSet = pStatement.executeQuery();
             
@@ -284,7 +284,6 @@ public class AppointmentDAOImpl implements AppointmentDAO{
                     appointment.setDetails(resultSet.getString("DETAILS"));
                     appointment.setWholeDay(resultSet.getBoolean("WHOLE_DAY"));
                     appointment.setAppointmentGroup(resultSet.getInt("APPOINTMENT_GROUP"));
-                    appointment.setReminderInterval(resultSet.getInt("REMINDER_INTERVAL"));
                     appointment.setAlarmReminder(resultSet.getBoolean("ALARM_REMINDER"));
                     
                     appointments.add(appointment);
@@ -336,7 +335,6 @@ public class AppointmentDAOImpl implements AppointmentDAO{
                 appointment.setDetails(resultSet.getString("DETAILS"));
                 appointment.setWholeDay(resultSet.getBoolean("WHOLE_DAY"));
                 appointment.setAppointmentGroup(resultSet.getInt("APPOINTMENT_GROUP"));
-                appointment.setReminderInterval(resultSet.getInt("REMINDER_INTERVAL"));
                 appointment.setAlarmReminder(resultSet.getBoolean("ALARM_REMINDER"));
 
                 appointments.add(appointment);
@@ -399,7 +397,6 @@ public class AppointmentDAOImpl implements AppointmentDAO{
                     appointment.setDetails(resultSet.getString("DETAILS"));
                     appointment.setWholeDay(resultSet.getBoolean("WHOLE_DAY"));
                     appointment.setAppointmentGroup(resultSet.getInt("APPOINTMENT_GROUP"));
-                    appointment.setReminderInterval(resultSet.getInt("REMINDER_INTERVAL"));
                     appointment.setAlarmReminder(resultSet.getBoolean("ALARM_REMINDER"));
                     
                     appointments.add(appointment);
@@ -445,7 +442,6 @@ public class AppointmentDAOImpl implements AppointmentDAO{
                     appointment.setDetails(resultSet.getString("DETAILS"));
                     appointment.setWholeDay(resultSet.getBoolean("WHOLE_DAY"));
                     appointment.setAppointmentGroup(resultSet.getInt("APPOINTMENT_GROUP"));
-                    appointment.setReminderInterval(resultSet.getInt("REMINDER_INTERVAL"));
                     appointment.setAlarmReminder(resultSet.getBoolean("ALARM_REMINDER"));
                     
                     appointments.add(appointment);
@@ -492,7 +488,6 @@ public class AppointmentDAOImpl implements AppointmentDAO{
                     appointment.setDetails(resultSet.getString("DETAILS"));
                     appointment.setWholeDay(resultSet.getBoolean("WHOLE_DAY"));
                     appointment.setAppointmentGroup(resultSet.getInt("APPOINTMENT_GROUP"));
-                    appointment.setReminderInterval(resultSet.getInt("REMINDER_INTERVAL"));
                     appointment.setAlarmReminder(resultSet.getBoolean("ALARM_REMINDER"));
                     
                     appointments.add(appointment);
