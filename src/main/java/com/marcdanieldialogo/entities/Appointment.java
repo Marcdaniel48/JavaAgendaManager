@@ -17,7 +17,6 @@ public class Appointment {
     private String details;
     private Boolean whole_day;
     private int appointment_group;
-    private int reminder_interval;
     private Boolean alarm_reminder;
     
     public Appointment(int appointment_id, String title, String location, Timestamp start_time, Timestamp end_time, String details, Boolean whole_day,
@@ -31,7 +30,6 @@ public class Appointment {
         this.details = details;
         this.whole_day = whole_day;
         this.appointment_group = appointment_group;
-        this.reminder_interval = reminder_interval;
         this.alarm_reminder = alarm_reminder;
     }
 
@@ -44,7 +42,6 @@ public class Appointment {
         this.details = "";
         this.whole_day = null;
         this.appointment_group = -1;
-        this.reminder_interval = -1;
         this.alarm_reminder = null;
     }
     
@@ -80,10 +77,7 @@ public class Appointment {
     {
         return appointment_group;
     }
-    public int getReminderInterval()
-    {
-        return reminder_interval;
-    }
+
     public Boolean getAlarmReminder()
     {
         return alarm_reminder;
@@ -129,11 +123,6 @@ public class Appointment {
         this.appointment_group = appointment_group;
     }
     
-    public void setReminderInterval(int reminder_interval)
-    {
-        this.reminder_interval = reminder_interval;
-    }
-    
     public void setAlarmReminder(Boolean alarm_reminder)
     {
         this.alarm_reminder = alarm_reminder;
@@ -150,7 +139,6 @@ public class Appointment {
         hash = 37 * hash + Objects.hashCode(this.details);
         hash = 37 * hash + Objects.hashCode(this.whole_day);
         hash = 37 * hash + Objects.hashCode(this.appointment_group);
-        hash = 37 * hash + Objects.hashCode(this.reminder_interval);
         hash = 37 * hash + Objects.hashCode(this.alarm_reminder);
         
         return hash;
@@ -203,10 +191,6 @@ public class Appointment {
         if (!Objects.equals(this.appointment_group, other.appointment_group)) {
             return false;
         }
-                
-        if (!Objects.equals(this.reminder_interval, other.reminder_interval)) {
-            return false;
-        }
         
         if (!Objects.equals(this.alarm_reminder, other.alarm_reminder)) {
             return false;
@@ -219,7 +203,7 @@ public class Appointment {
     public String toString() {
         return "Appointment{" + "appointment_id=" + appointment_id + ", title=" + title + ", location=" + location + ", start_time=" + start_time 
                 + ", end_time=" + end_time + ", details=" + details + ", whole_day=" + whole_day + ", appointment_group=" + appointment_group
-                + ", reminder_interval=" + reminder_interval + ", alarm_reminder=" + alarm_reminder + '}';
+                + ", alarm_reminder=" + alarm_reminder + '}';
     }
     
     
