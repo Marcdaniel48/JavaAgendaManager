@@ -35,7 +35,7 @@ public class SMTPSettingsDAOImpl implements SMTPSettingsDAO{
     public int create(SMTPSettings smtp) throws SQLException {
         int records;
 
-        String sql = "INSERT INTO SMTP_SETTINGS(USERNAME, EMAIL, EMAIL_PASSWORD, SMTP_URL, SMTP_PORT, DEFAULT_SMTP) values (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO SMTP_SETTINGS(USERNAME, EMAIL, EMAIL_PASSWORD, SMTP_URL, SMTP_PORT, DEFAULT_SMTP, REMINDER_INTERVAL) values (?, ?, ?, ?, ?, ?, ?)";
         try(Connection conn = util.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);)
         {
@@ -45,6 +45,7 @@ public class SMTPSettingsDAOImpl implements SMTPSettingsDAO{
             stmt.setString(4, smtp.getSMTPURL());
             stmt.setInt(5, smtp.getSMTPPort());
             stmt.setInt(6, smtp.getDefaultSMTP());
+            stmt.setInt(7, smtp.getReminderInterval());
             
             if(smtp.getDefaultSMTP() == 1)
             {
@@ -98,6 +99,7 @@ public class SMTPSettingsDAOImpl implements SMTPSettingsDAO{
                 smtp.setEmailPassword(results.getString("EMAIL_PASSWORD"));
                 smtp.setSMTPURL(results.getString("SMTP_URL"));
                 smtp.setSMTPPort(results.getInt("SMTP_PORT"));
+                smtp.setReminderInterval(results.getInt("REMINDER_INTERVAL"));
                 
                 rows.add(smtp);
             }
@@ -119,7 +121,6 @@ public class SMTPSettingsDAOImpl implements SMTPSettingsDAO{
         String selectQuery = "SELECT * FROM SMTP_SETTINGS WHERE SMTP_ID = ?";
         
         try (Connection connection = util.getConnection();
-                // You must use PreparedStatements to guard against SQL Injection
                 PreparedStatement pStatement = connection.prepareStatement(selectQuery);) {
             pStatement.setInt(1, id);
 
@@ -132,6 +133,7 @@ public class SMTPSettingsDAOImpl implements SMTPSettingsDAO{
                     smtp.setEmailPassword(resultSet.getString("EMAIL_PASSWORD"));
                     smtp.setSMTPURL(resultSet.getString("SMTP_URL"));
                     smtp.setSMTPPort(resultSet.getInt("SMTP_PORT"));
+                    smtp.setReminderInterval(resultSet.getInt("REMINDER_INTERVAL"));
                 }
             }
         }
@@ -148,7 +150,8 @@ public class SMTPSettingsDAOImpl implements SMTPSettingsDAO{
     @Override
     public int update(SMTPSettings smtp) throws SQLException {
         int record = 0;
-        String updateStatement = "UPDATE SMTP_SETTINGS SET USERNAME = ?, EMAIL = ?, EMAIL_PASSWORD = ?, SMTP_URL = ?, SMTP_PORT = ? WHERE SMTP_ID = ?";
+        String updateStatement = "UPDATE SMTP_SETTINGS SET USERNAME = ?, EMAIL = ?, EMAIL_PASSWORD = ?, SMTP_URL = ?, SMTP_PORT = ?,"
+                + "DEFAULT_SMTP = ?, REMINDER_INTERVAL = ? WHERE SMTP_ID = ?";
         
         try
         (Connection conn = util.getConnection(); PreparedStatement pStatement = conn.prepareStatement(updateStatement);)
@@ -158,7 +161,9 @@ public class SMTPSettingsDAOImpl implements SMTPSettingsDAO{
             pStatement.setString(3, smtp.getEmailPassword());
             pStatement.setString(4, smtp.getSMTPURL());
             pStatement.setInt(5, smtp.getSMTPPort());
-            pStatement.setInt(6, smtp.getSMTPID());
+            pStatement.setInt(6, smtp.getDefaultSMTP());
+            pStatement.setInt(7, smtp.getReminderInterval());
+            pStatement.setInt(8, smtp.getSMTPID());
             
             if(smtp.getDefaultSMTP() == 1)
             {
@@ -228,6 +233,8 @@ public class SMTPSettingsDAOImpl implements SMTPSettingsDAO{
                     smtp.setEmailPassword(resultSet.getString("EMAIL_PASSWORD"));
                     smtp.setSMTPURL(resultSet.getString("SMTP_URL"));
                     smtp.setSMTPPort(resultSet.getInt("SMTP_PORT"));
+                    smtp.setDefaultSMTP(resultSet.getInt("DEFAULT_SMTP"));
+                    smtp.setReminderInterval(resultSet.getInt("REMINDER_INTERVAL"));
                 }
             }
         }
