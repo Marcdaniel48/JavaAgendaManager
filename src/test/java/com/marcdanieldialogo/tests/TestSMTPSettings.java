@@ -56,6 +56,7 @@ public class TestSMTPSettings {
         smtp.setSMTPURL("The Best SMTP URL Ever");
         smtp.setSMTPPort(1337);
         smtp.setDefaultSMTP(0);
+        smtp.setReminderInterval(0);
         
         int records = smtpDAO.create(smtp);
         
@@ -86,6 +87,7 @@ public class TestSMTPSettings {
         smtp.setSMTPURL("The Best SMTP URL Ever");
         smtp.setSMTPPort(1337);
         smtp.setDefaultSMTP(0);
+        smtp.setReminderInterval(0);
         
         smtpDAO.create(smtp);
         
@@ -144,6 +146,8 @@ public class TestSMTPSettings {
         smtp.setEmailPassword("bobby123");
         smtp.setSMTPURL("smtp.bobz.bob");
         smtp.setSMTPPort(808);
+        smtp.setDefaultSMTP(0);
+        smtp.setReminderInterval(smtpDAO.findID(1).getReminderInterval());
         
         int records = smtpDAO.update(smtp);
         
