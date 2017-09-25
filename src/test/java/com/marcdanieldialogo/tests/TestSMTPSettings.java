@@ -237,7 +237,7 @@ public class TestSMTPSettings {
     @AfterClass
     public static void seedAfterTestCompleted() {
         log.info("@AfterClass seeding");
-        new TestGroupRecords().seedDatabase();
+        new TestSMTPSettings().seedDatabase();
     }
     
      /**
