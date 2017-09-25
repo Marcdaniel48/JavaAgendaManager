@@ -59,7 +59,7 @@ public class TestJoddEmail {
     @AfterClass
     public static void seedAfterTestCompleted() {
         log.info("@AfterClass seeding");
-        new TestGroupRecords().seedDatabase();
+        new TestJoddEmail().seedDatabase();
     }
     
      /**
@@ -150,6 +150,10 @@ public class TestJoddEmail {
         return line.startsWith("--") || line.startsWith("//") || line.startsWith("/*");
     }
     
+    /**
+     * Creates 3 test appointments that start 120 minutes from the current time.
+     * @throws SQLException 
+     */
     private void createMail() throws SQLException
     {
         LocalDateTime twoHoursFromNow = LocalDateTime.now().plusMinutes(120);
@@ -192,7 +196,7 @@ public class TestJoddEmail {
     }
     
     /**
-     * Will return any appointments that start 120 minutes from now.
+     * Will return any appointments that start 120 minutes from now & have their alarm reminder set to true.
      * 
      * @return List<Appointment>
      * @throws SQLException 
@@ -201,7 +205,17 @@ public class TestJoddEmail {
     {
         AppointmentDAO dao = new AppointmentDAOImpl();
         
-        return dao.findByDate(LocalDateTime.now().plusMinutes(120));
+        List<Appointment> appointments = dao.findByDate(LocalDateTime.now().plusMinutes(120));
+        
+        for(int i = 0; i < appointments.size(); i++)
+        {
+            if(appointments.get(i).getAlarmReminder() == false)
+            {
+                appointments.remove(i);
+            }
+        }
+        
+        return appointments;
     }
     
     /**
