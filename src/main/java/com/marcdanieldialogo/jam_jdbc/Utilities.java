@@ -16,7 +16,7 @@ public class Utilities
      * 
      * @return 
      */
-    public Connection getConnection()
+    public Connection getConnection() throws SQLException
     {
         try
         {  
@@ -31,6 +31,6 @@ public class Utilities
             sqlex.printStackTrace();
         }
         
-        return null;
+        throw new SQLException("Error using Utilities.getConnection");
     }
 }
