@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcdanieldialogo.controller.DayViewController">
+   <center>
+      <TableView fx:id="appointmentTable" prefHeight="600.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="idCells" prefWidth="75.0" text="%ID" />
+            <TableColumn fx:id="titleCells" prefWidth="75.0" text="%TITLE" />
+            <TableColumn fx:id="locationCells" prefWidth="75.0" text="%LOCATION" />
+            <TableColumn fx:id="startTimeCells" prefWidth="75.0" text="%START_TIME" />
+            <TableColumn fx:id="endTimeCells" prefWidth="75.0" text="%END_TIME" />
+            <TableColumn fx:id="detailsCells" prefWidth="75.0" text="%DETAILS" />
+            <TableColumn fx:id="wholeDayCells" prefWidth="75.0" text="%WHOLE_DAY" />
+            <TableColumn fx:id="appointmentGroupCells" prefWidth="75.0" text="%GROUP" />
+            <TableColumn fx:id="alarmReminderCells" prefWidth="75.0" text="%ALARM_REMINDER" />
+         </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <buttons>
+            <Label fx:id="currentDayLabel" prefHeight="17.0" prefWidth="603.0" text="%CURRENT_DAY" />
+            <Label fx:id="appFormStatusLabel" />
+            <Button mnemonicParsing="false" onAction="#handleNew" text="%NEWBUTTON" />
+            <Button mnemonicParsing="false" onAction="#handlePrevious" text="%PREVIOUSBUTTON" />
+            <Button mnemonicParsing="false" onAction="#handleNext" text="%NEXTBUTTON" />
+        </buttons>
+      </ButtonBar>
+   </bottom>
+</BorderPane>
