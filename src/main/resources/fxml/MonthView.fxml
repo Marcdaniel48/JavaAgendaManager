@@ -14,6 +14,7 @@
             <Label fx:id="currentMonthLabel" prefHeight="17.0" prefWidth="451.0" text="%MONTHLBL" />
           <Button mnemonicParsing="false" onAction="#handlePrevious" text="%PREVIOUSBTN" />
             <Button mnemonicParsing="false" onAction="#handleNext" text="%NEXTBTN" />
+            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExit" text="%EXITBTN" />
         </buttons>
       </ButtonBar>
    </bottom>

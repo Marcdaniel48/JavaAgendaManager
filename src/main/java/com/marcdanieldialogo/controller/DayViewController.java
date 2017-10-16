@@ -20,10 +20,12 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -72,6 +74,9 @@ public class DayViewController {
     
     @FXML // fx:id="currentDayLabel"
     private Label currentDayLabel; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="exitButton"
+    private Button exitButton; // Value injected by FXMLLoader
     
     private LocalDate day;
     
@@ -183,5 +188,40 @@ public class DayViewController {
     {
         this.day = day.plusDays(1);
         display();
+    }
+    
+    
+    public void handleExit()
+    {
+        Stage stage = (Stage) exitButton.getScene().getWindow();
+        stage.close();
+    }
+    
+    @FXML
+    void handleOpenWeekView(ActionEvent event) 
+    {
+        try
+        {
+            Stage dayStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setResources(ResourceBundle.getBundle("WeekViewText"));
+            loader.setLocation(MainApp.class.getResource("/fxml/WeekView.fxml"));
+            Parent dayPane = (BorderPane) loader.load();
+
+            Scene dayScene = new Scene(dayPane);
+
+            dayStage.setScene(dayScene);
+            WeekViewController controller = loader.getController();
+            controller.setDay(day);
+            dayStage.setTitle("Week View");
+            dayStage.show();
+            
+            handleExit();
+        }
+        catch(IOException ioe)
+        {
+            Platform.exit();
+        }
+
     }
 }

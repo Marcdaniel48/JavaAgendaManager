@@ -31,6 +31,8 @@
             <Button mnemonicParsing="false" onAction="#handleNew" text="%NEWBUTTON" />
             <Button mnemonicParsing="false" onAction="#handlePrevious" text="%PREVIOUSBUTTON" />
             <Button mnemonicParsing="false" onAction="#handleNext" text="%NEXTBUTTON" />
+            <Button mnemonicParsing="false" onAction="#handleOpenWeekView" text="%WEEKBUTTON" />
+            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExit" text="%EXITBUTTON" />
         </buttons>
       </ButtonBar>
    </bottom>

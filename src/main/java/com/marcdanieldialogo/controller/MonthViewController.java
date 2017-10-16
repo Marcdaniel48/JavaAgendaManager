@@ -21,6 +21,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TablePosition;
@@ -62,6 +63,9 @@ public class MonthViewController {
     
     @FXML // fx:id="currentMonthLabel"
     private Label currentMonthLabel; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="exitButton"
+    private Button exitButton; // Value injected by FXMLLoader
     
     private ObservableList<TablePosition> theCells;
     private int currentMonth = LocalDate.now().getMonthValue();
@@ -224,5 +228,12 @@ public class MonthViewController {
             
             display();
         }
+    }
+    
+    @FXML
+    private void handleExit()
+    {
+        Stage stage = (Stage) exitButton.getScene().getWindow();
+        stage.close();
     }
 }
