@@ -4,8 +4,10 @@
 
 package com.marcdanieldialogo.controller;
 
+import com.marcdanieldialogo.entities.GroupRecord;
 import com.marcdanieldialogo.entities.Week;
 import com.marcdanieldialogo.jam_jdbc.MainApp;
+import com.marcdanieldialogo.persistence.GroupRecordDAO;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
@@ -17,6 +19,7 @@ import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -109,19 +112,19 @@ public class MonthViewController {
     {
         try
         {   
-            Stage dayStage = new Stage();
+            Stage appointmentFormStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
             loader.setResources(ResourceBundle.getBundle("DayFormText"));
             loader.setLocation(MainApp.class.getResource("/fxml/DayForm.fxml"));
             
-            Parent dayPane = (BorderPane) loader.load();
+            Parent appointmentFormPane = (BorderPane) loader.load();
 
-            Scene dayScene = new Scene(dayPane);
+            Scene appointmentFormScene = new Scene(appointmentFormPane);
             
-            dayStage.setScene(dayScene);
-            dayStage.initModality(Modality.APPLICATION_MODAL);
-            dayStage.setTitle("Appointment Form");
-            dayStage.show();
+            appointmentFormStage.setScene(appointmentFormScene);
+            appointmentFormStage.initModality(Modality.APPLICATION_MODAL);
+            appointmentFormStage.setTitle("Appointment Form");
+            appointmentFormStage.show();
         }
         catch(IOException ioe)
         {
@@ -186,7 +189,7 @@ public class MonthViewController {
             {
                 for(StringProperty item : lastWeek)
                 {
-                    if(item.get() != "")
+                    if(!"".equals(item.get()))
                     {
                         if(date.getDayOfMonth() == Integer.parseInt(item.get()))
                         {
@@ -260,5 +263,30 @@ public class MonthViewController {
     {
         Stage stage = (Stage) exitButton.getScene().getWindow();
         stage.close();
+    }
+    
+    @FXML
+    void handleNewGroupRecord(ActionEvent event) 
+    {
+        try
+        {   
+            Stage groupFormStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setResources(ResourceBundle.getBundle("GroupFormText"));
+            loader.setLocation(MainApp.class.getResource("/fxml/GroupForm.fxml"));
+            
+            Parent groupFormPane = (BorderPane) loader.load();
+
+            Scene groupFormScene = new Scene(groupFormPane);
+            
+            groupFormStage.setScene(groupFormScene);
+            groupFormStage.initModality(Modality.APPLICATION_MODAL);
+            groupFormStage.setTitle("Group Record Form");
+            groupFormStage.show();
+        }
+        catch(IOException ioe)
+        {
+            Platform.exit();
+        }
     }
 }
