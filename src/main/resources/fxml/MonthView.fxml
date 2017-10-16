@@ -41,6 +41,7 @@
             <items>
                   <MenuItem mnemonicParsing="false" onAction="#handleNewAppointment" text="%APPOINTMENTMENU" />
                   <MenuItem mnemonicParsing="false" onAction="#handleNewGroupRecord" text="%GROUPMENU" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSettingsForm" text="%SETTINGSMENU" />
               <MenuItem mnemonicParsing="false" onAction="#handleExit" text="%CLOSEMENU" />
             </items>
           </Menu>

@@ -287,4 +287,30 @@ public class MonthViewController {
             Platform.exit();
         }
     }
+    
+    @FXML
+    void handleSettingsForm(ActionEvent event) 
+    {
+
+        try
+        {   
+            Stage groupFormStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setResources(ResourceBundle.getBundle("SMTPSettingsFormText"));
+            loader.setLocation(MainApp.class.getResource("/fxml/SMTPSettingsForm.fxml"));
+            
+            Parent groupFormPane = (BorderPane) loader.load();
+
+            Scene groupFormScene = new Scene(groupFormPane);
+            
+            groupFormStage.setScene(groupFormScene);
+            groupFormStage.initModality(Modality.APPLICATION_MODAL);
+            groupFormStage.setTitle("SMTP Settings Form");
+            groupFormStage.show();
+        }
+        catch(IOException ioe)
+        {
+            Platform.exit();
+        }
+    }
 }
