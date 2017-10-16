@@ -1,6 +1,5 @@
 package com.marcdanieldialogo.jam_jdbc;
 
-import com.marcdanieldialogo.controller.MonthViewController;
 import java.io.IOException;
 import java.util.ResourceBundle;
 import javafx.application.Application;
@@ -52,8 +51,6 @@ public class MainApp extends Application{
             Scene scene = new Scene(rootPane);
             // Put the Scene on the Stage
             primaryStage.setScene(scene);
-            
-            MonthViewController controller = loader.getController();
         } 
         catch (IOException ex) 
         {
