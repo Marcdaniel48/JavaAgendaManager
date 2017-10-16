@@ -27,6 +27,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class MonthViewController {
@@ -104,6 +105,30 @@ public class MonthViewController {
         monthTable.setFixedCellSize(width / 7.0);
     }
     
+    public void handleNewAppointment()
+    {
+        try
+        {   
+            Stage dayStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setResources(ResourceBundle.getBundle("DayFormText"));
+            loader.setLocation(MainApp.class.getResource("/fxml/DayForm.fxml"));
+            
+            Parent dayPane = (BorderPane) loader.load();
+
+            Scene dayScene = new Scene(dayPane);
+            
+            dayStage.setScene(dayScene);
+            dayStage.initModality(Modality.APPLICATION_MODAL);
+            dayStage.setTitle("Appointment Form");
+            dayStage.show();
+        }
+        catch(IOException ioe)
+        {
+            Platform.exit();
+        }
+    }
+        
     public void handleOpen(LocalDate selectedDay)
     {
         try

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="14" failures="0" name="com.marcdanieldialogo.tests.TestAppointments" time="2.508" errors="0" skipped="0">
+<testsuite tests="14" failures="0" name="com.marcdanieldialogo.tests.TestAppointments" time="2.688" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk1.8.0_144\jre\bin"/>
@@ -14,7 +14,6 @@
     <property name="user.country" value="CA"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="test" value="com.marcdanieldialogo.tests.TestAppointments"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\Marc-Daniel\Desktop\javaProject\JAM_1539756_1"/>
     <property name="java.runtime.version" value="1.8.0_144-b01"/>
@@ -45,7 +44,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="D:\Program Files\Java\jdk1.8.0_144\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=com.marcdanieldialogo.tests.TestAppointments -Dmaven.ext.class.path=D:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=D:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 clean install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -62,18 +61,18 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDateFailure" time="0.353"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindBetweenDates" time="0.132"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testDeleteGroupRecord" time="0.119"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindAll" time="0.12"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDate" time="0.121"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByWeek" time="0.164"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByMonth" time="0.118"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByTitle" time="0.117"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testCreateFailureStringLength" time="0.156"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testUpdateFailureStringLength" time="0.135"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDay" time="0.107"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDateFailure" time="0.391"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindBetweenDates" time="0.141"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testDeleteGroupRecord" time="0.109"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindAll" time="0.125"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDate" time="0.109"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByWeek" time="0.219"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByMonth" time="0.141"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByTitle" time="0.109"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testCreateFailureStringLength" time="0.141"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testUpdateFailureStringLength" time="0.156"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDay" time="0.125"/>
   <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testCreate" time="0.11"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindID" time="0.106"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testUpdate" time="0.153"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindID" time="0.14"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testUpdate" time="0.156"/>
 </testsuite>

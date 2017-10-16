@@ -1048,3 +1048,72 @@ javafx.fxml.LoadException: Error resolving onAction='#handlePrevious', either th
 [INFO ] 2017-10-15 22:37:30.732 [main] TestGroupRecords - Seeding Database
 [INFO ] 2017-10-15 22:37:30.901 [main] TestGroupRecords - @AfterClass seeding
 [INFO ] 2017-10-15 22:37:30.901 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:28.046 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:28.421 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:28.562 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:28.671 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:28.796 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:28.905 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:29.124 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:29.265 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:29.374 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:29.515 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:29.671 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:29.796 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 08:59:29.906 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-16 08:59:29.906 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:30.046 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:30.202 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 08:59:30.202 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:30.312 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:30.453 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:30.546 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:30.656 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:30.765 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:30.874 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 08:59:31.031 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-16 08:59:31.046 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:31.156 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:31.265 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 08:59:31.265 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:31.375 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 08:59:31.578 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-16 08:59:31.593 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-16 08:59:31.593 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-16 08:59:50.377 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 08:59:50.377 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:50.533 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:50.642 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:50.752 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:50.845 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:50.986 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 08:59:51.127 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-16 08:59:51.127 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:51.252 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:51.345 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 08:59:51.455 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 08:59:51.455 [main] TestGroupRecords - Seeding Database
+[ERROR] 2017-10-16 09:18:08.707 [JavaFX Application Thread] MainApp - Error
+javafx.fxml.LoadException: Error resolving onAction='#handleOpen', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Marc-Daniel/Desktop/javaProject/JAM_1539756_1/target/classes/fxml/MonthView.fxml:42
+
+	at javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2597) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.access$100(FXMLLoader.java:103) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader$Element.processEventHandlerAttributes(FXMLLoader.java:610) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader$ValueElement.processEndElement(FXMLLoader.java:770) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.processEndElement(FXMLLoader.java:2823) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2532) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409) ~[jfxrt.jar:?]
+	at com.marcdanieldialogo.jam_jdbc.MainApp.initRootLayout(MainApp.java:50) ~[classes/:?]
+	at com.marcdanieldialogo.jam_jdbc.MainApp.start(MainApp.java:34) ~[classes/:?]
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$162(LauncherImpl.java:863) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$175(PlatformImpl.java:326) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$null$173(PlatformImpl.java:295) ~[jfxrt.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_144]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$174(PlatformImpl.java:294) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$null$148(WinApplication.java:191) ~[jfxrt.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_144]
+[DEBUG] 2017-10-16 09:20:45.735 [JavaFX Application Thread] AppointmentDAOImpl - New record ID is 51
