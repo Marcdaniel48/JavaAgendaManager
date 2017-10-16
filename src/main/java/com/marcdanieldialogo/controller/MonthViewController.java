@@ -4,10 +4,8 @@
 
 package com.marcdanieldialogo.controller;
 
-import com.marcdanieldialogo.entities.GroupRecord;
 import com.marcdanieldialogo.entities.Week;
 import com.marcdanieldialogo.jam_jdbc.MainApp;
-import com.marcdanieldialogo.persistence.GroupRecordDAO;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;

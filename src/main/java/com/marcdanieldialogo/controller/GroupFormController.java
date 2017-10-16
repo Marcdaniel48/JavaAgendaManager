@@ -35,6 +35,9 @@ public class GroupFormController {
     @FXML // fx:id="colourTextField"
     private TextField colourTextField; // Value injected by FXMLLoader
     
+    @FXML // fx:id="groupNumberTextField"
+    private TextField groupNumberTextField; // Value injected by FXMLLoader
+    
     private final Logger log = LoggerFactory.getLogger(this.getClass().getName());
     private GroupRecordDAO groupRecordDAO;
     private GroupRecord groupRecord;
@@ -72,5 +75,21 @@ public class GroupFormController {
     {
         this.groupRecord = groupRecord;
         this.groupRecordDAO = groupRecordDAO;
+    }
+    
+    @FXML
+    void handleUpdate(ActionEvent event) {
+
+    }
+    
+    @FXML
+    void handleDelete(ActionEvent event) {
+
+    }
+    
+    @FXML
+    void handleClear(ActionEvent event) {
+        groupNameTextField.setText("");
+        colourTextField.setText("");
     }
 }

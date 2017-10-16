@@ -45,8 +45,10 @@
    <bottom>
       <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <items>
-            <Label fx:id="weekLbl" prefHeight="17.0" prefWidth="480.0" text="%WEEKLBL" />
-          <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExit" prefHeight="25.0" prefWidth="100.0" text="%EXITBTN" />
+            <Label fx:id="weekLbl" prefHeight="17.0" prefWidth="430.0" text="%WEEKLBL" />
+            <Button mnemonicParsing="false" onAction="#handlePrevious" text="%PREVIOUSBTN" />
+            <Button mnemonicParsing="false" onAction="#handleNext" text="%NEXTBTN" />
+          <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExit" text="%EXITBTN" />
         </items>
       </ToolBar>
    </bottom>

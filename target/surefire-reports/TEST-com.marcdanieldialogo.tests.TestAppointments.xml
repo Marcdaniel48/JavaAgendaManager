@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="14" failures="0" name="com.marcdanieldialogo.tests.TestAppointments" time="2.688" errors="0" skipped="0">
+<testsuite tests="14" failures="0" name="com.marcdanieldialogo.tests.TestAppointments" time="2.626" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk1.8.0_144\jre\bin"/>
@@ -61,18 +61,18 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDateFailure" time="0.391"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDateFailure" time="0.376"/>
   <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindBetweenDates" time="0.141"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testDeleteGroupRecord" time="0.109"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testDeleteGroupRecord" time="0.141"/>
   <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindAll" time="0.125"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDate" time="0.109"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByWeek" time="0.219"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByMonth" time="0.141"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByTitle" time="0.109"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testCreateFailureStringLength" time="0.141"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testUpdateFailureStringLength" time="0.156"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDay" time="0.125"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testCreate" time="0.11"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindID" time="0.14"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testUpdate" time="0.156"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDate" time="0.125"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByWeek" time="0.156"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByMonth" time="0.109"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByTitle" time="0.11"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testCreateFailureStringLength" time="0.14"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testUpdateFailureStringLength" time="0.125"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDay" time="0.141"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testCreate" time="0.141"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindID" time="0.109"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testUpdate" time="0.157"/>
 </testsuite>

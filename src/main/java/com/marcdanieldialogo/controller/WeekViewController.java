@@ -252,4 +252,17 @@ public class WeekViewController {
     }
     
     
+    @FXML
+    void handleNext(ActionEvent event) {
+        day = day.plusWeeks(1);
+        setWeekLabel();
+    }
+
+    @FXML
+    void handlePrevious(ActionEvent event) {
+        day = day.minusWeeks(1);
+        setWeekLabel();
+    }
+    
+    
 }

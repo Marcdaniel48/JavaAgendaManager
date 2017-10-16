@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.beans.binding.Bindings;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -60,6 +61,9 @@ public class DayFormController {
     
     @FXML // fx:id="exitBtn"
     private Button exitBtn; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="idTextField"
+    private TextField idTextField; // Value injected by FXMLLoader
     
     private final Logger log = LoggerFactory.getLogger(this.getClass().getName());
     private LocalDate day;
@@ -155,5 +159,10 @@ public class DayFormController {
     public void handleDelete()
     {
         
+    }
+    
+    @FXML
+    void handleUpdate(ActionEvent event) {
+
     }
 }
