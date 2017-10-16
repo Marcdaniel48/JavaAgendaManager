@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="14" failures="0" name="com.marcdanieldialogo.tests.TestAppointments" time="3.219" errors="0" skipped="0">
+<testsuite tests="14" failures="0" name="com.marcdanieldialogo.tests.TestAppointments" time="2.557" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk1.8.0_144\jre\bin"/>
@@ -16,7 +16,7 @@
     <property name="sun.os.patch.level" value=""/>
     <property name="test" value="com.marcdanieldialogo.tests.TestAppointments"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Marc-Daniel\Documents\NetBeansProjects\JAM_1539756_1"/>
+    <property name="user.dir" value="C:\Users\Marc-Daniel\Desktop\javaProject\JAM_1539756_1"/>
     <property name="java.runtime.version" value="1.8.0_144-b01"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="D:\Program Files\Java\jdk1.8.0_144\jre\lib\endorsed"/>
@@ -30,7 +30,7 @@
     <property name="maven.ext.class.path" value="D:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar"/>
     <property name="classworlds.conf" value="D:\Program Files\NetBeans 8.2\java\maven\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="D:\Program Files\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;c:\program files (x86)\intel\icls client\;c:\program files\intel\icls client\;c:\windows\system32;c:\windows;c:\windows\system32\wbem;c:\windows\system32\windowspowershell\v1.0\;c:\program files\intel\wifi\bin\;c:\program files\common files\intel\wirelesscommon\;c:\program files (x86)\intel\intel(r) management engine components\dal;c:\program files\intel\intel(r) management engine components\dal;c:\program files (x86)\intel\intel(r) management engine components\ipt;c:\program files\intel\intel(r) management engine components\ipt;c:\program files (x86)\common files\acronis\virtualfile\;c:\program files (x86)\common files\acronis\virtualfile64\;c:\program files (x86)\common files\acronis\snapapi\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\wbem;C:\WINDOWS\system32\windowspowershell\v1.0\;D:\Program Files (x86)\Inno Setup 5;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\HashiCorp\Vagrant\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\Program Files\apache-maven-3.5.0\bin;D:\Program Files\Java\jdk1.8.0_144;D:\Marc\Dawson2\Fall2017\Homestead;C:\Users\Marc-Daniel\AppData\Local\Microsoft\WindowsApps;C:\Users\Marc-Daniel\AppData\Local\atom\bin;."/>
+    <property name="java.library.path" value="D:\Program Files\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;c:\program files (x86)\intel\icls client\;c:\program files\intel\icls client\;c:\windows\system32;c:\windows;c:\windows\system32\wbem;c:\windows\system32\windowspowershell\v1.0\;c:\program files\intel\wifi\bin\;c:\program files\common files\intel\wirelesscommon\;c:\program files (x86)\intel\intel(r) management engine components\dal;c:\program files\intel\intel(r) management engine components\dal;c:\program files (x86)\intel\intel(r) management engine components\ipt;c:\program files\intel\intel(r) management engine components\ipt;c:\program files (x86)\common files\acronis\virtualfile\;c:\program files (x86)\common files\acronis\virtualfile64\;c:\program files (x86)\common files\acronis\snapapi\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\wbem;C:\WINDOWS\system32\windowspowershell\v1.0\;D:\Program Files (x86)\Inno Setup 5;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\HashiCorp\Vagrant\bin;D:\Program Files\apache-maven-3.5.0\bin;D:\Program Files\Java\jdk1.8.0_144;D:\Marc\Dawson2\Fall2017\Homestead;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Users\Marc-Daniel\AppData\Local\Microsoft\WindowsApps;C:\Users\Marc-Daniel\AppData\Local\atom\bin;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -62,18 +62,18 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDateFailure" time="0.375"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindBetweenDates" time="0.219"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testDeleteGroupRecord" time="0.125"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindAll" time="0.156"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDate" time="0.203"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByWeek" time="0.282"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByMonth" time="0.125"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByTitle" time="0.156"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testCreateFailureStringLength" time="0.172"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testUpdateFailureStringLength" time="0.187"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDay" time="0.141"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testCreate" time="0.172"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindID" time="0.156"/>
-  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testUpdate" time="0.172"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDateFailure" time="0.339"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindBetweenDates" time="0.136"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testDeleteGroupRecord" time="0.12"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindAll" time="0.106"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDate" time="0.149"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByWeek" time="0.154"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByMonth" time="0.132"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByTitle" time="0.11"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testCreateFailureStringLength" time="0.114"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testUpdateFailureStringLength" time="0.162"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindByDay" time="0.113"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testCreate" time="0.139"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testFindID" time="0.107"/>
+  <testcase classname="com.marcdanieldialogo.tests.TestAppointments" name="testUpdate" time="0.179"/>
 </testsuite>
