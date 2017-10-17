@@ -63,20 +63,20 @@ public class Week {
     }
     
     /**
-     * Getter for LocalDate date
-     * @return 
-     */
-    public LocalDate getDate()
-    {
-        return date;
-    }
-    
-    /**
      * Moves LocalDate date to the next week
      * @return 
      */
     public LocalDate nextWeek()
     {
         return date.plusDays(7);
+    }
+    
+    /**
+     * Getter for LocalDate date
+     * @return 
+     */
+    public LocalDate getDate()
+    {
+        return date;
     }
 }

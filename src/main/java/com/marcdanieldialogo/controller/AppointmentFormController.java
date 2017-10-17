@@ -1,7 +1,3 @@
-/**
- * Sample Skeleton for 'DayForm.fxml' Controller Class
- */
-
 package com.marcdanieldialogo.controller;
 
 import com.marcdanieldialogo.entities.Appointment;
@@ -140,18 +136,6 @@ public class AppointmentFormController {
             log.error("SQLException with AppointmentDAO.findAll probably", ex);
         }
     }
-
-    /**
-     * This sets a LocalDate object which will be used by the DatePickers of the appointment form, if the user wants to create an
-     * appointment for a particular day.
-     * 
-     * @param day
-     */
-    public void setDay(LocalDate day)
-    {
-        tspStart.setDateField(day);
-        tspEnd.setDateField(day);
-    }
     
     /**
      * This method, will take the values inserted into the appointment form's input fields and create & insert a new Appointment object
@@ -195,44 +179,6 @@ public class AppointmentFormController {
     }
     
     /**
-     * This method will close the window for the appointment form.
-     */
-    public void handleExit()
-    {
-        Stage stage = (Stage) exitBtn.getScene().getWindow();
-        stage.close();
-    }
-    
-    /**
-     * This method will reset the values of the input fields of the appointment form
-     */
-    public void handleClear()
-    {
-        titleTextField.setText("");
-        locationTextField.setText("");
-        detailsTextField.setText("");
-        wholeDayComboBox.setValue(false);
-        groupComboBox.setValue("other");
-        alarmReminderComboBox.setValue(false);
-    }
-    
-    /**
-     * This method will take the value that's in the ID text field and use it to delete the record in the appointment table
-     * with the same ID
-     */
-    public void handleDelete()
-    {
-        try 
-        {
-            appointmentDAO.delete(Integer.parseInt(idTextField.getText()));
-        } 
-        catch (SQLException ex) 
-        {
-            log.error("SQLException - Something went wrong. Was a correct ID entered?", ex);
-        }
-    }
-    
-    /**
      * This method will be used to update the values of an appointment record. The record to be updated depends on the ID
      * that is set in the ID text field.
      * @param event 
@@ -272,6 +218,35 @@ public class AppointmentFormController {
         {
             log.error("SQLException - Something went wrong", sqle);
         }
+    }
+    
+    /**
+     * This method will take the value that's in the ID text field and use it to delete the record in the appointment table
+     * with the same ID
+     */
+    public void handleDelete()
+    {
+        try 
+        {
+            appointmentDAO.delete(Integer.parseInt(idTextField.getText()));
+        } 
+        catch (SQLException ex) 
+        {
+            log.error("SQLException - Something went wrong. Was a correct ID entered?", ex);
+        }
+    }
+    
+    /**
+     * This method will reset the values of the input fields of the appointment form
+     */
+    public void handleClear()
+    {
+        titleTextField.setText("");
+        locationTextField.setText("");
+        detailsTextField.setText("");
+        wholeDayComboBox.setValue(false);
+        groupComboBox.setValue("other");
+        alarmReminderComboBox.setValue(false);
     }
     
     /**
@@ -319,5 +294,26 @@ public class AppointmentFormController {
         {
             log.error("SQLException - Something went wrong", sqle);
         }
+    }
+    
+    /**
+     * This method will close the window for the appointment form.
+     */
+    public void handleExit()
+    {
+        Stage stage = (Stage) exitBtn.getScene().getWindow();
+        stage.close();
+    }
+    
+    /**
+     * This sets a LocalDate object which will be used by the DatePickers of the appointment form, if the user wants to create an
+     * appointment for a particular day.
+     * 
+     * @param day
+     */
+    public void setDay(LocalDate day)
+    {
+        tspStart.setDateField(day);
+        tspEnd.setDateField(day);
     }
 }

@@ -1,7 +1,3 @@
-/**
- * Sample Skeleton for 'GroupForm.fxml' Controller Class
- */
-
 package com.marcdanieldialogo.controller;
 
 import com.marcdanieldialogo.entities.GroupRecord;
@@ -38,10 +34,36 @@ public class GroupFormController {
     @FXML // fx:id="groupNumberTextField"
     private TextField groupNumberTextField; // Value injected by FXMLLoader
     
+    // Does my logging
     private final Logger log = LoggerFactory.getLogger(this.getClass().getName());
+    
+    // Allows access and manipulation of the GroupRecord table of the JAM database
     private final GroupRecordDAO groupRecordDAO = new GroupRecordDAOImpl();
     private GroupRecord currentGroup;
-
+    
+    @FXML // This method is called by the FXMLLoader when initialization is complete
+    void initialize() {
+        try
+        {
+            currentGroup = groupRecordDAO.findAll().get(0);
+            displayCurrentGroupRecord();
+        }
+        catch(SQLException ex)
+        {
+            log.error("SQLException with GroupRecordDAO.findAll probably", ex);
+        }
+    }
+    
+    /**
+     * Will set the form's input values, based on the values of this class' GroupRecord currentGroup object
+     */
+    private void displayCurrentGroupRecord()
+    {
+        groupNumberTextField.setText(currentGroup.getGroupNumber()+"");
+        groupNameTextField.setText(currentGroup.getGroupName());
+        colourTextField.setText(currentGroup.getColour());
+    }
+    
     /**
      * Creates a new GroupRecord record, based on the form's input values
      * @param event 
@@ -60,39 +82,6 @@ public class GroupFormController {
         catch(SQLException sqle)
         {
             log.error("SQLException - Something went wrong", sqle);
-        }
-    }
-    
-    /**
-     * Will set the form's input values, based on the values of this class' GroupRecord currentGroup object
-     */
-    private void displayCurrentGroupRecord()
-    {
-        groupNumberTextField.setText(currentGroup.getGroupNumber()+"");
-        groupNameTextField.setText(currentGroup.getGroupName());
-        colourTextField.setText(currentGroup.getColour());
-    }
-
-    /**
-     * Closes the window
-     * @param event 
-     */
-    @FXML
-    void handleExit(ActionEvent event) {
-        Stage stage = (Stage) exitBtn.getScene().getWindow();
-        stage.close();
-    }
-
-    @FXML // This method is called by the FXMLLoader when initialization is complete
-    void initialize() {
-        try
-        {
-            currentGroup = groupRecordDAO.findAll().get(0);
-            displayCurrentGroupRecord();
-        }
-        catch(SQLException ex)
-        {
-            log.error("SQLException with GroupRecordDAO.findAll probably", ex);
         }
     }
     
@@ -185,5 +174,15 @@ public class GroupFormController {
         {
             log.error("SQLException - Something went wrong", sqle);
         }
+    }
+    
+    /**
+     * Closes the window
+     * @param event 
+     */
+    @FXML
+    void handleExit(ActionEvent event) {
+        Stage stage = (Stage) exitBtn.getScene().getWindow();
+        stage.close();
     }
 }

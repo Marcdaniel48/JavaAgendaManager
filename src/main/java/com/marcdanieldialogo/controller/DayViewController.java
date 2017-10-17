@@ -1,7 +1,3 @@
-/**
- * Sample Skeleton for 'DayView.fxml' Controller Class
- */
-
 package com.marcdanieldialogo.controller;
 
 import com.marcdanieldialogo.entities.Appointment;
@@ -100,40 +96,11 @@ public class DayViewController {
     }
     
     /**
-     * Evens out the width of each column of the table which will display all appointments for a particular day
-     */
-    private void adjustColumnWidths() {
-        double width = appointmentTable.getPrefWidth();
-        idCells.setPrefWidth(width / 9.0);
-        titleCells.setPrefWidth(width / 9.0);
-        locationCells.setPrefWidth(width / 9.0);
-        startTimeCells.setPrefWidth(width / 9.0);
-        endTimeCells.setPrefWidth(width / 9.0);
-        detailsCells.setPrefWidth(width / 9.0);
-        wholeDayCells.setPrefWidth(width / 9.0);
-        appointmentGroupCells.setPrefWidth(width / 9.0);
-        alarmReminderCells.setPrefWidth(width / 9.0);
-    }
-    
-    /**
-     * Sets the LocalDate object of this class, then calls the display method which will give column of the table a value
-     * @param day 
-     */
-    public void setDay(LocalDate day)
-    {
-        this.day = day;
-        
-        // Using the passed in day, this method will set the appointments into the view.
-        display();
-    }
-    
-    /**
      * This adds a list of appointments, for a particular day, to the table. This method is where we give the table its values.
      */
     public void display()
     {
         ObservableList<Appointment> list = FXCollections.observableArrayList();
-        
         try 
         {
             AppointmentDAO dao = new AppointmentDAOImpl();
@@ -153,9 +120,24 @@ public class DayViewController {
             log.error("Error, something could have gone wrong with the DAO", ex);
             Platform.exit();
         }
-        
-        
+
         appointmentTable.setItems(list);
+    }
+    
+    /**
+     * Evens out the width of each column of the table which will display all appointments for a particular day
+     */
+    private void adjustColumnWidths() {
+        double width = appointmentTable.getPrefWidth();
+        idCells.setPrefWidth(width / 9.0);
+        titleCells.setPrefWidth(width / 9.0);
+        locationCells.setPrefWidth(width / 9.0);
+        startTimeCells.setPrefWidth(width / 9.0);
+        endTimeCells.setPrefWidth(width / 9.0);
+        detailsCells.setPrefWidth(width / 9.0);
+        wholeDayCells.setPrefWidth(width / 9.0);
+        appointmentGroupCells.setPrefWidth(width / 9.0);
+        alarmReminderCells.setPrefWidth(width / 9.0);
     }
     
     /**
@@ -188,35 +170,6 @@ public class DayViewController {
     }
     
     /**
-     * Makes the Day View go to the previous day
-     */
-    @FXML
-    public void handlePrevious()
-    {
-        this.day = day.minusDays(1);
-        display();
-    }
-    
-    /**
-     * Makes the Day View go to the next day
-     */
-    @FXML
-    public void handleNext()
-    {
-        this.day = day.plusDays(1);
-        display();
-    }
-    
-    /**
-     * Closes the window
-     */
-    public void handleExit()
-    {
-        Stage stage = (Stage) exitButton.getScene().getWindow();
-        stage.close();
-    }
-    
-    /**
      * Will open the Week View and display the week that this controller's 'LocalDate day' is in.
      * @param event 
      */
@@ -232,7 +185,6 @@ public class DayViewController {
             Parent dayPane = (BorderPane) loader.load();
 
             Scene dayScene = new Scene(dayPane);
-
             dayStage.setScene(dayScene);
             WeekViewController controller = loader.getController();
             controller.setDay(day);
@@ -245,6 +197,46 @@ public class DayViewController {
         {
             Platform.exit();
         }
-
+    }
+    
+    /**
+     * Makes the Day View go to the next day
+     */
+    @FXML
+    public void handleNext()
+    {
+        this.day = day.plusDays(1);
+        display();
+    }
+    
+    /**
+     * Makes the Day View go to the previous day
+     */
+    @FXML
+    public void handlePrevious()
+    {
+        this.day = day.minusDays(1);
+        display();
+    }
+    
+    /**
+     * Closes the window
+     */
+    public void handleExit()
+    {
+        Stage stage = (Stage) exitButton.getScene().getWindow();
+        stage.close();
+    }
+    
+    /**
+     * Sets the LocalDate object of this class, then calls the display method which will give column of the table a value
+     * @param day 
+     */
+    public void setDay(LocalDate day)
+    {
+        this.day = day;
+        
+        // Using the passed in day, this method will set the appointments into the view.
+        display();
     }
 }

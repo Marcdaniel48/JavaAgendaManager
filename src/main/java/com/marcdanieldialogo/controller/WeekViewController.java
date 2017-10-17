@@ -58,39 +58,27 @@ public class WeekViewController {
     
     private LocalDate day;
 
-    /**
-     * Closes the window
-     */
-    public void handleExit() {
-        Stage stage = (Stage) exitButton.getScene().getWindow();
-        stage.close();
+    @FXML // This method is called by the FXMLLoader when initialization is complete
+    void initialize() {
     }
 
     /**
-     * Will open the day view for this week's Friday
+     * Will open the day view for this week's Sunday
      * @param event 
      */
     @FXML
-    void handleFriday(ActionEvent event) {
-        LocalDate friday = day;
-        if(friday.getDayOfWeek() != DayOfWeek.FRIDAY)
+    void handleSunday(ActionEvent event) {
+        LocalDate sunday = day;
+        while(sunday.getDayOfWeek() != DayOfWeek.SUNDAY)
         {
-            while(friday.getDayOfWeek() == DayOfWeek.MONDAY || friday.getDayOfWeek() == DayOfWeek.TUESDAY || friday.getDayOfWeek() == DayOfWeek.WEDNESDAY
-                    || friday.getDayOfWeek() == DayOfWeek.THURSDAY || friday.getDayOfWeek() == DayOfWeek.SUNDAY)
-            {
-                friday = friday.plusDays(1);
-            }
-            while(friday.getDayOfWeek() == DayOfWeek.SATURDAY)
-            {
-                friday = friday.minusDays(1);
-            }
+            sunday = sunday.minusDays(1);
         }
 
-        fridayLbl.setText(friday.getDayOfMonth() + " " + friday.getMonth());
-        handleOpen(friday);
+        sundayLbl.setText(sunday.getDayOfMonth() + " " + sunday.getMonth());
+        handleOpen(sunday);
         handleExit();
     }
-
+    
     /**
      * Will open the day view for this week's Monday
      * @param event 
@@ -113,41 +101,6 @@ public class WeekViewController {
 
         mondayLbl.setText(monday.getDayOfMonth() + " " + monday.getMonth());
         handleOpen(monday);
-        handleExit();
-    }
-
-    /**
-     * Will open the day view for this week's Saturday
-     * @param event 
-     */
-    @FXML
-    void handleSaturday(ActionEvent event) {
-        LocalDate saturday = day;
-        
-        while(saturday.getDayOfWeek() != DayOfWeek.SATURDAY)
-        {
-            saturday = saturday.plusDays(1);
-        }
-        
-        saturdayLbl.setText(saturday.getDayOfMonth() + " " + saturday.getMonth());
-        handleOpen(saturday);
-        handleExit();
-    }
-
-    /**
-     * Will open the day view for this week's Sunday
-     * @param event 
-     */
-    @FXML
-    void handleSunday(ActionEvent event) {
-        LocalDate sunday = day;
-        while(sunday.getDayOfWeek() != DayOfWeek.SUNDAY)
-        {
-            sunday = sunday.minusDays(1);
-        }
-
-        sundayLbl.setText(sunday.getDayOfMonth() + " " + sunday.getMonth());
-        handleOpen(sunday);
         handleExit();
     }
 
@@ -226,19 +179,48 @@ public class WeekViewController {
         handleOpen(thursday);
         handleExit();
     }
+    
+    /**
+     * Will open the day view for this week's Friday
+     * @param event 
+     */
+    @FXML
+    void handleFriday(ActionEvent event) {
+        LocalDate friday = day;
+        if(friday.getDayOfWeek() != DayOfWeek.FRIDAY)
+        {
+            while(friday.getDayOfWeek() == DayOfWeek.MONDAY || friday.getDayOfWeek() == DayOfWeek.TUESDAY || friday.getDayOfWeek() == DayOfWeek.WEDNESDAY
+                    || friday.getDayOfWeek() == DayOfWeek.THURSDAY || friday.getDayOfWeek() == DayOfWeek.SUNDAY)
+            {
+                friday = friday.plusDays(1);
+            }
+            while(friday.getDayOfWeek() == DayOfWeek.SATURDAY)
+            {
+                friday = friday.minusDays(1);
+            }
+        }
 
-    @FXML // This method is called by the FXMLLoader when initialization is complete
-    void initialize() {
+        fridayLbl.setText(friday.getDayOfMonth() + " " + friday.getMonth());
+        handleOpen(friday);
+        handleExit();
     }
     
     /**
-     * Sets the LocalDate object of this class
-     * @param day 
+     * Will open the day view for this week's Saturday
+     * @param event 
      */
-    public void setDay(LocalDate day)
-    {
-        this.day = day;
-        setWeekLabel();
+    @FXML
+    void handleSaturday(ActionEvent event) {
+        LocalDate saturday = day;
+        
+        while(saturday.getDayOfWeek() != DayOfWeek.SATURDAY)
+        {
+            saturday = saturday.plusDays(1);
+        }
+        
+        saturdayLbl.setText(saturday.getDayOfMonth() + " " + saturday.getMonth());
+        handleOpen(saturday);
+        handleExit();
     }
     
     /**
@@ -313,5 +295,21 @@ public class WeekViewController {
         setWeekLabel();
     }
     
+    /**
+     * Closes the window
+     */
+    public void handleExit() {
+        Stage stage = (Stage) exitButton.getScene().getWindow();
+        stage.close();
+    }
     
+    /**
+     * Sets the LocalDate object of this class
+     * @param day 
+     */
+    public void setDay(LocalDate day)
+    {
+        this.day = day;
+        setWeekLabel();
+    }
 }

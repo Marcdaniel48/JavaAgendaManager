@@ -1,7 +1,3 @@
-/**
- * Sample Skeleton for 'MonthView.fxml' Controller Class
- */
-
 package com.marcdanieldialogo.controller;
 
 import com.marcdanieldialogo.entities.Week;
@@ -69,7 +65,10 @@ public class MonthViewController {
     @FXML // fx:id="exitButton"
     private Button exitButton; // Value injected by FXMLLoader
     
+    // The individual cells of the month table
     private ObservableList<TablePosition> theCells;
+    
+    // Keeps track of the current month and year
     private int currentMonth = LocalDate.now().getMonthValue();
     private int currentYear = LocalDate.now().getYear();
 
@@ -89,77 +88,6 @@ public class MonthViewController {
         theCells = monthTable.getSelectionModel().getSelectedCells();
         theCells.addListener(this::showSingleCellDetails);
         adjustColumnWidths();
-    }
-    
-    /**
-    *    Turns the cells into squares, to make the table look more like a calendar
-    */
-    private void adjustColumnWidths() {
-        double width = monthTable.getPrefWidth();
-        mondayCells.setPrefWidth(width / 7.0);
-        tuesdayCells.setPrefWidth(width / 7.0);
-        wednesdayCells.setPrefWidth(width / 7.0);
-        thursdayCells.setPrefWidth(width / 7.0);
-        fridayCells.setPrefWidth(width / 7.0);
-        saturdayCells.setPrefWidth(width / 7.0);
-        sundayCells.setPrefWidth(width / 7.0);
-        monthTable.setFixedCellSize(width / 7.0);
-    }
-    
-    /**
-     * Opens the appointment form
-     */
-    public void handleNewAppointment()
-    {
-        try
-        {   
-            Stage appointmentFormStage = new Stage();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setResources(ResourceBundle.getBundle("AppointmentFormText"));
-            loader.setLocation(MainApp.class.getResource("/fxml/AppointmentForm.fxml"));
-            
-            Parent appointmentFormPane = (BorderPane) loader.load();
-
-            Scene appointmentFormScene = new Scene(appointmentFormPane);
-            
-            appointmentFormStage.setScene(appointmentFormScene);
-            appointmentFormStage.initModality(Modality.APPLICATION_MODAL);
-            appointmentFormStage.setTitle("Appointment Form");
-            appointmentFormStage.show();
-        }
-        catch(IOException ioe)
-        {
-            Platform.exit();
-        }
-    }
-        
-    /**
-     * When the user clicks on a square of the calendar, this method handles opening up the day view for that particular square
-     * @param selectedDay 
-     */
-    public void handleOpen(LocalDate selectedDay)
-    {
-        try
-        {   
-            Stage dayStage = new Stage();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setResources(ResourceBundle.getBundle("DayViewText"));
-            loader.setLocation(MainApp.class.getResource("/fxml/DayView.fxml"));
-            
-            Parent dayPane = (BorderPane) loader.load();
-
-            Scene dayScene = new Scene(dayPane);
-            
-            dayStage.setScene(dayScene);
-            DayViewController controller = loader.getController();
-            controller.setDay(selectedDay);
-            dayStage.setTitle("Day View");
-            dayStage.show();
-        }
-        catch(IOException ioe)
-        {
-            Platform.exit();
-        }
     }
     
     /**
@@ -205,8 +133,22 @@ public class MonthViewController {
                 }
             }
         }
-        
         monthTable.setItems(list);
+    }
+    
+    /**
+    *    Turns the cells into squares, to make the table look more like a calendar
+    */
+    private void adjustColumnWidths() {
+        double width = monthTable.getPrefWidth();
+        mondayCells.setPrefWidth(width / 7.0);
+        tuesdayCells.setPrefWidth(width / 7.0);
+        wednesdayCells.setPrefWidth(width / 7.0);
+        thursdayCells.setPrefWidth(width / 7.0);
+        fridayCells.setPrefWidth(width / 7.0);
+        saturdayCells.setPrefWidth(width / 7.0);
+        sundayCells.setPrefWidth(width / 7.0);
+        monthTable.setFixedCellSize(width / 7.0);
     }
     
     /**
@@ -229,6 +171,35 @@ public class MonthViewController {
                 
                 handleOpen(selectedDay);
             }
+        }
+    }
+    
+    /**
+     * When the user clicks on a square of the calendar, this method handles opening up the day view for that particular square
+     * @param selectedDay 
+     */
+    public void handleOpen(LocalDate selectedDay)
+    {
+        try
+        {   
+            Stage dayStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setResources(ResourceBundle.getBundle("DayViewText"));
+            loader.setLocation(MainApp.class.getResource("/fxml/DayView.fxml"));
+            
+            Parent dayPane = (BorderPane) loader.load();
+
+            Scene dayScene = new Scene(dayPane);
+            
+            dayStage.setScene(dayScene);
+            DayViewController controller = loader.getController();
+            controller.setDay(selectedDay);
+            dayStage.setTitle("Day View");
+            dayStage.show();
+        }
+        catch(IOException ioe)
+        {
+            Platform.exit();
         }
     }
     
@@ -275,13 +246,30 @@ public class MonthViewController {
     }
     
     /**
-     * Closes the window
+     * Opens the appointment form
      */
-    @FXML
-    private void handleExit()
+    public void handleNewAppointment()
     {
-        Stage stage = (Stage) exitButton.getScene().getWindow();
-        stage.close();
+        try
+        {   
+            Stage appointmentFormStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setResources(ResourceBundle.getBundle("AppointmentFormText"));
+            loader.setLocation(MainApp.class.getResource("/fxml/AppointmentForm.fxml"));
+            
+            Parent appointmentFormPane = (BorderPane) loader.load();
+
+            Scene appointmentFormScene = new Scene(appointmentFormPane);
+            
+            appointmentFormStage.setScene(appointmentFormScene);
+            appointmentFormStage.initModality(Modality.APPLICATION_MODAL);
+            appointmentFormStage.setTitle("Appointment Form");
+            appointmentFormStage.show();
+        }
+        catch(IOException ioe)
+        {
+            Platform.exit();
+        }
     }
     
     /**
@@ -320,7 +308,6 @@ public class MonthViewController {
     @FXML
     void handleSettingsForm(ActionEvent event) 
     {
-
         try
         {   
             Stage groupFormStage = new Stage();
@@ -341,5 +328,15 @@ public class MonthViewController {
         {
             Platform.exit();
         }
+    }
+    
+    /**
+     * Closes the window
+     */
+    @FXML
+    private void handleExit()
+    {
+        Stage stage = (Stage) exitButton.getScene().getWindow();
+        stage.close();
     }
 }
