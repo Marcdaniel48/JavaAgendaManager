@@ -39,25 +39,31 @@ public class GroupFormController {
     private TextField groupNumberTextField; // Value injected by FXMLLoader
     
     private final Logger log = LoggerFactory.getLogger(this.getClass().getName());
-    private GroupRecordDAO groupRecordDAO;
-    private GroupRecord groupRecord;
+    private final GroupRecordDAO groupRecordDAO = new GroupRecordDAOImpl();
+    private GroupRecord currentGroup;
 
     @FXML
     void handleCreate(ActionEvent event) {
         try{
             
-        groupRecordDAO = new GroupRecordDAOImpl();
-        groupRecord = new GroupRecord();
+        currentGroup = new GroupRecord();
         
-        groupRecord.setGroupName(groupNameTextField.getText());
-        groupRecord.setColour(colourTextField.getText());
+        currentGroup.setGroupName(groupNameTextField.getText());
+        currentGroup.setColour(colourTextField.getText());
         
-        groupRecordDAO.create(groupRecord);
+        groupRecordDAO.create(currentGroup);
         }
         catch(SQLException sqle)
         {
             log.error("SQLException - Something went wrong", sqle);
         }
+    }
+    
+    private void displayCurrentGroupRecord()
+    {
+        groupNumberTextField.setText(currentGroup.getGroupNumber()+"");
+        groupNameTextField.setText(currentGroup.getGroupName());
+        colourTextField.setText(currentGroup.getColour());
     }
 
     @FXML
@@ -68,28 +74,83 @@ public class GroupFormController {
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
-
-    }
-    
-    public void setGroupRecordDAO(GroupRecord groupRecord, GroupRecordDAO groupRecordDAO)
-    {
-        this.groupRecord = groupRecord;
-        this.groupRecordDAO = groupRecordDAO;
+        try
+        {
+            currentGroup = groupRecordDAO.findAll().get(0);
+            displayCurrentGroupRecord();
+        }
+        catch(SQLException ex)
+        {
+            log.error("SQLException with GroupRecordDAO.findAll probably", ex);
+        }
     }
     
     @FXML
     void handleUpdate(ActionEvent event) {
+        try
+        {
+            GroupRecord updatedRecord = new GroupRecord();
 
+            updatedRecord.setGroupNumber(currentGroup.getGroupNumber());
+            updatedRecord.setGroupName(currentGroup.getGroupName());
+            updatedRecord.setColour(currentGroup.getColour());
+
+            groupRecordDAO.update(updatedRecord);
+            this.currentGroup = updatedRecord;
+        }
+        catch(SQLException ex)
+        {
+            log.error("SQLException trying to update a GroupRecord", ex);
+        }
     }
     
     @FXML
     void handleDelete(ActionEvent event) {
-
+        try 
+        {
+            groupRecordDAO.deleteGroupRecord(Integer.parseInt(groupNumberTextField.getText()));
+        } 
+        catch (SQLException ex) 
+        {
+            log.error("SQLException - Something went wrong. Was a correct ID entered?", ex);
+        }
     }
     
     @FXML
     void handleClear(ActionEvent event) {
         groupNameTextField.setText("");
         colourTextField.setText("");
+    }
+    
+    @FXML
+    void handleNext(ActionEvent event) {
+        try
+        {
+            if(!(groupNumberTextField.getText().isEmpty()))
+            {
+                this.currentGroup = groupRecordDAO.findID(Integer.parseInt(groupNumberTextField.getText()) + 1);
+                displayCurrentGroupRecord();
+            }
+        }
+        catch(SQLException sqle)
+        {
+            log.error("SQLException - Something went wrong", sqle);
+        }
+    }
+
+    @FXML
+    void handlePrevious(ActionEvent event) {
+        try
+        {
+            if(!(groupNumberTextField.getText().isEmpty()))
+            {
+                this.currentGroup = groupRecordDAO.findID(Integer.parseInt(groupNumberTextField.getText()) - 1);
+                displayCurrentGroupRecord();
+            }
+        }
+        catch(SQLException sqle)
+        {
+            log.error("SQLException - Something went wrong", sqle);
+        }
     }
 }
