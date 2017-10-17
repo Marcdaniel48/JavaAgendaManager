@@ -75,6 +75,7 @@ public class DayFormController {
     
     private final TimestampBean tspStart = new TimestampBean();
     private final TimestampBean tspEnd = new TimestampBean();
+    
     private final GroupRecordDAO groupRecordDAO = new GroupRecordDAOImpl();
     private final AppointmentDAO appointmentDAO = new AppointmentDAOImpl();
     private Appointment currentAppointment;
@@ -97,13 +98,14 @@ public class DayFormController {
             
             // Initializes the currentAppointment field to the first Appointment found in the AppointmentDAO
             currentAppointment = appointmentDAO.findAll().get(0);
+            
+            // Display data of the current appointment. At this point, it's the first appointment in the DB.
+            displayCurrentAppointment();
         }
         catch(SQLException ex)
         {
             log.error("SQLException with AppointmentDAO.findAll probably", ex);
         }
-        
-        displayCurrentAppointment();
     }
     
     private void displayCurrentAppointment()
