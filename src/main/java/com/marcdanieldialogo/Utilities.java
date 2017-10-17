@@ -1,4 +1,4 @@
-package com.marcdanieldialogo.jam_jdbc;
+package com.marcdanieldialogo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

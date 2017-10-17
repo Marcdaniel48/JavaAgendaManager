@@ -1,7 +1,7 @@
 package com.marcdanieldialogo.tests;
 
 import com.marcdanieldialogo.entities.Appointment;
-import com.marcdanieldialogo.jam_jdbc.JoddEmail;
+import com.marcdanieldialogo.JoddEmail;
 import com.marcdanieldialogo.persistence.AppointmentDAO;
 import com.marcdanieldialogo.persistence.AppointmentDAOImpl;
 import java.io.BufferedReader;

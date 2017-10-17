@@ -1,4 +1,4 @@
-package com.marcdanieldialogo.jam_jdbc;
+package com.marcdanieldialogo;
 
 import com.marcdanieldialogo.entities.Appointment;
 import jodd.mail.Email;

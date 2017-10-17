@@ -1,7 +1,7 @@
 package com.marcdanieldialogo.persistence;
 
 import com.marcdanieldialogo.entities.SMTPSettings;
-import com.marcdanieldialogo.jam_jdbc.Utilities;
+import com.marcdanieldialogo.Utilities;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

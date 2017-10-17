@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.marcdanieldialogo.tests.TestSMTPSettings" time="1.094" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.marcdanieldialogo.tests.TestSMTPSettings" time="1.078" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -7,7 +7,7 @@
     <property name="java.specification.version" value="1.8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\Marc-Daniel\Desktop\javaProject\JAM_1539756_1\target\test-classes;C:\Users\Marc-Daniel\Desktop\javaProject\JAM_1539756_1\target\classes;C:\Users\Marc-Daniel\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\Marc-Daniel\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.8.2\log4j-slf4j-impl-2.8.2.jar;C:\Users\Marc-Daniel\.m2\repository\org\apache\logging\log4j\log4j-api\2.8.2\log4j-api-2.8.2.jar;C:\Users\Marc-Daniel\.m2\repository\org\apache\logging\log4j\log4j-core\2.8.2\log4j-core-2.8.2.jar;C:\Users\Marc-Daniel\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Marc-Daniel\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Marc-Daniel\.m2\repository\mysql\mysql-connector-java\5.1.43\mysql-connector-java-5.1.43.jar;C:\Users\Marc-Daniel\.m2\repository\org\jodd\jodd-mail\3.8.6\jodd-mail-3.8.6.jar;C:\Users\Marc-Daniel\.m2\repository\org\jodd\jodd-core\3.8.6\jodd-core-3.8.6.jar;C:\Users\Marc-Daniel\.m2\repository\javax\mail\javax.mail-api\1.5.6\javax.mail-api-1.5.6.jar;C:\Users\Marc-Daniel\.m2\repository\com\sun\mail\javax.mail\1.5.6\javax.mail-1.5.6.jar;C:\Users\Marc-Daniel\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;"/>
+    <property name="java.class.path" value="C:\Users\Marc-Daniel\Documents\NetBeansProjects\JAM_1539756_1\target\test-classes;C:\Users\Marc-Daniel\Documents\NetBeansProjects\JAM_1539756_1\target\classes;C:\Users\Marc-Daniel\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\Marc-Daniel\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.8.2\log4j-slf4j-impl-2.8.2.jar;C:\Users\Marc-Daniel\.m2\repository\org\apache\logging\log4j\log4j-api\2.8.2\log4j-api-2.8.2.jar;C:\Users\Marc-Daniel\.m2\repository\org\apache\logging\log4j\log4j-core\2.8.2\log4j-core-2.8.2.jar;C:\Users\Marc-Daniel\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Marc-Daniel\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Marc-Daniel\.m2\repository\mysql\mysql-connector-java\5.1.43\mysql-connector-java-5.1.43.jar;C:\Users\Marc-Daniel\.m2\repository\org\jodd\jodd-mail\3.8.6\jodd-mail-3.8.6.jar;C:\Users\Marc-Daniel\.m2\repository\org\jodd\jodd-core\3.8.6\jodd-core-3.8.6.jar;C:\Users\Marc-Daniel\.m2\repository\javax\mail\javax.mail-api\1.5.6\javax.mail-api-1.5.6.jar;C:\Users\Marc-Daniel\.m2\repository\com\sun\mail\javax.mail\1.5.6\javax.mail-1.5.6.jar;C:\Users\Marc-Daniel\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -18,20 +18,20 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CA"/>
     <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk1.8.0_144\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\MARC-D~1\AppData\Local\Temp\surefire3089105712220114521\surefirebooter1012271294101466333.jar C:\Users\Marc-Daniel\AppData\Local\Temp\surefire3089105712220114521 2017-10-16T23-45-48_842-jvmRun1 surefire6030852421123048464tmp surefire_04446303961350951714tmp"/>
-    <property name="surefire.test.class.path" value="C:\Users\Marc-Daniel\Desktop\javaProject\JAM_1539756_1\target\test-classes;C:\Users\Marc-Daniel\Desktop\javaProject\JAM_1539756_1\target\classes;C:\Users\Marc-Daniel\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\Marc-Daniel\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.8.2\log4j-slf4j-impl-2.8.2.jar;C:\Users\Marc-Daniel\.m2\repository\org\apache\logging\log4j\log4j-api\2.8.2\log4j-api-2.8.2.jar;C:\Users\Marc-Daniel\.m2\repository\org\apache\logging\log4j\log4j-core\2.8.2\log4j-core-2.8.2.jar;C:\Users\Marc-Daniel\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Marc-Daniel\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Marc-Daniel\.m2\repository\mysql\mysql-connector-java\5.1.43\mysql-connector-java-5.1.43.jar;C:\Users\Marc-Daniel\.m2\repository\org\jodd\jodd-mail\3.8.6\jodd-mail-3.8.6.jar;C:\Users\Marc-Daniel\.m2\repository\org\jodd\jodd-core\3.8.6\jodd-core-3.8.6.jar;C:\Users\Marc-Daniel\.m2\repository\javax\mail\javax.mail-api\1.5.6\javax.mail-api-1.5.6.jar;C:\Users\Marc-Daniel\.m2\repository\com\sun\mail\javax.mail\1.5.6\javax.mail-1.5.6.jar;C:\Users\Marc-Daniel\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;"/>
+    <property name="sun.java.command" value="C:\Users\MARC-D~1\AppData\Local\Temp\surefire1942513659141182305\surefirebooter4928176821520250485.jar C:\Users\Marc-Daniel\AppData\Local\Temp\surefire1942513659141182305 2017-10-16T23-53-05_182-jvmRun1 surefire5206451764428339596tmp surefire_07018613886989299331tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\Marc-Daniel\Documents\NetBeansProjects\JAM_1539756_1\target\test-classes;C:\Users\Marc-Daniel\Documents\NetBeansProjects\JAM_1539756_1\target\classes;C:\Users\Marc-Daniel\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\Marc-Daniel\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.8.2\log4j-slf4j-impl-2.8.2.jar;C:\Users\Marc-Daniel\.m2\repository\org\apache\logging\log4j\log4j-api\2.8.2\log4j-api-2.8.2.jar;C:\Users\Marc-Daniel\.m2\repository\org\apache\logging\log4j\log4j-core\2.8.2\log4j-core-2.8.2.jar;C:\Users\Marc-Daniel\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Marc-Daniel\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Marc-Daniel\.m2\repository\mysql\mysql-connector-java\5.1.43\mysql-connector-java-5.1.43.jar;C:\Users\Marc-Daniel\.m2\repository\org\jodd\jodd-mail\3.8.6\jodd-mail-3.8.6.jar;C:\Users\Marc-Daniel\.m2\repository\org\jodd\jodd-core\3.8.6\jodd-core-3.8.6.jar;C:\Users\Marc-Daniel\.m2\repository\javax\mail\javax.mail-api\1.5.6\javax.mail-api-1.5.6.jar;C:\Users\Marc-Daniel\.m2\repository\com\sun\mail\javax.mail\1.5.6\javax.mail-1.5.6.jar;C:\Users\Marc-Daniel\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Marc-Daniel"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.home" value="D:\Program Files\Java\jdk1.8.0_144\jre"/>
-    <property name="basedir" value="C:\Users\Marc-Daniel\Desktop\javaProject\JAM_1539756_1"/>
+    <property name="basedir" value="C:\Users\Marc-Daniel\Documents\NetBeansProjects\JAM_1539756_1"/>
     <property name="file.separator" value="\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\MARC-D~1\AppData\Local\Temp\surefire3089105712220114521\surefirebooter1012271294101466333.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\MARC-D~1\AppData\Local\Temp\surefire1942513659141182305\surefirebooter4928176821520250485.jar"/>
     <property name="sun.boot.class.path" value="D:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;D:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;D:\Program Files\Java\jdk1.8.0_144\jre\lib\sunrsasign.jar;D:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;D:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.8.0_144\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -48,7 +48,7 @@
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\MARC-D~1\AppData\Local\Temp\"/>
     <property name="java.version" value="1.8.0_144"/>
-    <property name="user.dir" value="C:\Users\Marc-Daniel\Desktop\javaProject\JAM_1539756_1"/>
+    <property name="user.dir" value="C:\Users\Marc-Daniel\Documents\NetBeansProjects\JAM_1539756_1"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
@@ -62,11 +62,11 @@
     <property name="java.class.version" value="52.0"/>
   </properties>
   <testcase name="testFindAll" classname="com.marcdanieldialogo.tests.TestSMTPSettings" time="0.125"/>
-  <testcase name="testFindByEmail" classname="com.marcdanieldialogo.tests.TestSMTPSettings" time="0.125"/>
+  <testcase name="testFindByEmail" classname="com.marcdanieldialogo.tests.TestSMTPSettings" time="0.109"/>
   <testcase name="testCreateFailureStringLength" classname="com.marcdanieldialogo.tests.TestSMTPSettings" time="0.11"/>
-  <testcase name="testUpdateFailureStringLength" classname="com.marcdanieldialogo.tests.TestSMTPSettings" time="0.125"/>
-  <testcase name="testCreate" classname="com.marcdanieldialogo.tests.TestSMTPSettings" time="0.109"/>
+  <testcase name="testUpdateFailureStringLength" classname="com.marcdanieldialogo.tests.TestSMTPSettings" time="0.109"/>
+  <testcase name="testCreate" classname="com.marcdanieldialogo.tests.TestSMTPSettings" time="0.11"/>
   <testcase name="testDelete" classname="com.marcdanieldialogo.tests.TestSMTPSettings" time="0.125"/>
-  <testcase name="testFindID" classname="com.marcdanieldialogo.tests.TestSMTPSettings" time="0.125"/>
-  <testcase name="testUpdate" classname="com.marcdanieldialogo.tests.TestSMTPSettings" time="0.141"/>
+  <testcase name="testFindID" classname="com.marcdanieldialogo.tests.TestSMTPSettings" time="0.14"/>
+  <testcase name="testUpdate" classname="com.marcdanieldialogo.tests.TestSMTPSettings" time="0.11"/>
 </testsuite>
