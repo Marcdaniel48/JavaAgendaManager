@@ -3,11 +3,9 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.BorderPane?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../styles/monthview.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcdanieldialogo.controller.MonthViewController">
@@ -35,17 +33,13 @@
       </TableView>
    </center>
    <top>
-      <MenuBar BorderPane.alignment="CENTER">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-                  <MenuItem mnemonicParsing="false" onAction="#handleNewAppointment" text="%APPOINTMENTMENU" />
-                  <MenuItem mnemonicParsing="false" onAction="#handleNewGroupRecord" text="%GROUPMENU" />
-                  <MenuItem mnemonicParsing="false" onAction="#handleSettingsForm" text="%SETTINGSMENU" />
-              <MenuItem mnemonicParsing="false" onAction="#handleExit" text="%CLOSEMENU" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button mnemonicParsing="false" onAction="#handleNewAppointment" text="%APPOINTMENTFORM" />
+            <Button mnemonicParsing="false" onAction="#handleNewGroupRecord" text="%GROUPFORM" />
+            <Button mnemonicParsing="false" onAction="#handleSettingsForm" text="%SMTPFORM" />
+            <Label contentDisplay="RIGHT" text="%TIP" textAlignment="CENTER" />
+        </items>
+      </ToolBar>
    </top>
 </BorderPane>
