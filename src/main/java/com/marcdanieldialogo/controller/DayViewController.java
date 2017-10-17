@@ -5,7 +5,7 @@
 package com.marcdanieldialogo.controller;
 
 import com.marcdanieldialogo.entities.Appointment;
-import com.marcdanieldialogo.jam_jdbc.MainApp;
+import com.marcdanieldialogo.MainApp;
 import com.marcdanieldialogo.persistence.AppointmentDAO;
 import com.marcdanieldialogo.persistence.AppointmentDAOImpl;
 import java.io.IOException;
@@ -15,6 +15,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -173,7 +175,6 @@ public class DayViewController {
         {
             Platform.exit();
         }
-        
     }
     
     @FXML
