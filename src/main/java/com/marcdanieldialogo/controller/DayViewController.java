@@ -158,14 +158,14 @@ public class DayViewController {
         {
             Stage dayStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            loader.setResources(ResourceBundle.getBundle("DayFormText"));
-            loader.setLocation(MainApp.class.getResource("/fxml/DayForm.fxml"));
+            loader.setResources(ResourceBundle.getBundle("AppointmentFormText"));
+            loader.setLocation(MainApp.class.getResource("/fxml/AppointmentForm.fxml"));
             Parent dayPane = (BorderPane) loader.load();
 
             Scene dayScene = new Scene(dayPane);
 
             dayStage.setScene(dayScene);
-            DayFormController controller = loader.getController();
+            AppointmentFormController controller = loader.getController();
             controller.setDay(day);
             dayStage.setTitle("Appointment form");
             dayStage.initModality(Modality.APPLICATION_MODAL);

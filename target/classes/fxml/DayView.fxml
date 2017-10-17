@@ -11,11 +11,11 @@
    <center>
       <TableView fx:id="appointmentTable" prefHeight="600.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
          <columns>
+            <TableColumn fx:id="startTimeCells" prefWidth="75.0" text="%START_TIME" />
+            <TableColumn fx:id="endTimeCells" prefWidth="75.0" text="%END_TIME" />
             <TableColumn fx:id="idCells" prefWidth="75.0" text="%ID" />
             <TableColumn fx:id="titleCells" prefWidth="75.0" text="%TITLE" />
             <TableColumn fx:id="locationCells" prefWidth="75.0" text="%LOCATION" />
-            <TableColumn fx:id="startTimeCells" prefWidth="75.0" text="%START_TIME" />
-            <TableColumn fx:id="endTimeCells" prefWidth="75.0" text="%END_TIME" />
             <TableColumn fx:id="detailsCells" prefWidth="75.0" text="%DETAILS" />
             <TableColumn fx:id="wholeDayCells" prefWidth="75.0" text="%WHOLE_DAY" />
             <TableColumn fx:id="appointmentGroupCells" prefWidth="75.0" text="%GROUP" />

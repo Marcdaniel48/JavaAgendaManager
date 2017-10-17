@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcdanieldialogo.controller.SMTPSettingsFormController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcdanieldialogo.controller.SMTPSettingsFormController">
    <bottom>
       <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <buttons>
@@ -18,6 +18,8 @@
             <Button mnemonicParsing="false" onAction="#handleClear" text="%CLEARBTN" />
             <Button mnemonicParsing="false" onAction="#handleUpdate" text="%UPDATEBTN" />
             <Button mnemonicParsing="false" onAction="#handleCreate" text="%CREATEBTN" />
+            <Button mnemonicParsing="false" onAction="#handlePrevious" text="%PREVIOUSBTN" />
+            <Button mnemonicParsing="false" onAction="#handleNext" text="%NEXTBTN" />
             <Button fx:id="exitBtn" mnemonicParsing="false" onAction="#handleExit" text="%EXITBTN" />
         </buttons>
       </ButtonBar>

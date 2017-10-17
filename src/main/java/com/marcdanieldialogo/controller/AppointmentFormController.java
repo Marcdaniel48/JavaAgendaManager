@@ -14,9 +14,7 @@ import com.marcdanieldialogo.persistence.GroupRecordDAOImpl;
 import java.net.URL;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.util.List;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,7 +27,7 @@ import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class DayFormController {
+public class AppointmentFormController {
 
     @FXML // ResourceBundle that was given to the FXMLLoader
     private ResourceBundle resources;

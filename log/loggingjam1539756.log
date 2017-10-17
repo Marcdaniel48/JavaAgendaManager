@@ -1208,3 +1208,516 @@ javafx.fxml.LoadException: Error resolving onAction='#handleOpen', either the ev
 [INFO ] 2017-10-16 12:37:50.111 [main] TestGroupRecords - Seeding Database
 [INFO ] 2017-10-16 12:37:50.270 [main] TestGroupRecords - @AfterClass seeding
 [INFO ] 2017-10-16 12:37:50.271 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:21:56.888 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:21:59.091 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:24:07.739 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:24:09.911 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:24:11.942 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:24:13.988 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:24:16.019 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:24:18.051 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:24:20.113 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:24:22.160 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:24:24.191 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:24:26.241 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:24:28.287 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:24:30.334 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:24:32.381 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:24:34.412 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 16:24:36.458 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 16:24:36.458 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:18:30.668 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:18:33.017 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:18:35.064 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:18:37.112 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:18:39.159 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:18:41.207 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:18:43.239 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:18:45.286 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:18:47.318 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:18:49.350 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:18:51.413 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:18:53.464 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:18:55.496 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:18:57.528 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:18:59.560 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 17:18:59.560 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:01.592 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:03.655 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:05.296 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:05.421 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:05.608 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:05.718 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 17:19:05.858 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-16 17:19:05.858 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:05.999 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:06.202 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 17:19:06.202 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:06.421 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 17:19:06.734 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-16 17:19:06.749 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-16 17:19:06.765 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-16 17:19:12.348 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 17:19:12.348 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:12.473 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:12.598 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:12.770 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:12.942 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:13.050 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 17:19:13.190 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-16 17:19:13.190 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:13.347 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:13.472 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:13.706 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 17:19:13.706 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:19.386 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:19.761 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:19.964 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:20.167 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:20.339 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:20.511 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:20.761 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:20.933 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:21.105 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:21.277 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:21.449 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:21.574 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 17:19:21.683 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-16 17:19:21.683 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:21.824 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:22.058 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 17:19:22.058 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:22.215 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:22.371 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:22.496 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:22.605 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:22.730 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:22.855 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 17:19:23.106 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-16 17:19:23.121 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:23.246 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:23.371 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 17:19:23.371 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:23.496 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 17:19:23.637 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-16 17:19:23.637 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-16 17:19:23.653 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-16 17:19:28.029 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 17:19:28.029 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:28.232 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:28.388 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:28.529 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:28.685 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:28.857 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 17:19:28.998 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-16 17:19:29.014 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:29.217 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:29.358 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:19:29.514 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 17:19:29.514 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:08.496 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:08.902 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:09.043 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:09.183 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:09.308 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:09.480 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:09.668 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:09.809 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:09.934 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:10.074 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:10.277 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:10.418 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 17:23:10.528 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-16 17:23:10.528 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:10.684 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:10.856 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 17:23:10.856 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:10.996 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:11.184 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:11.293 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:11.434 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:11.622 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:11.794 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 17:23:11.919 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-16 17:23:11.934 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:12.184 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:12.372 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 17:23:12.372 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:12.559 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 17:23:12.841 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-16 17:23:12.856 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-16 17:23:12.872 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-16 17:23:17.455 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 17:23:17.455 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:17.627 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:17.814 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:17.955 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:18.080 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:18.221 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 17:23:18.424 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-16 17:23:18.440 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:18.643 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:18.893 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:23:19.112 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 17:23:19.112 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:28.557 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:28.948 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:29.089 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:29.214 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:29.386 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:29.589 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:29.839 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:29.980 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:30.120 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:30.277 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:30.433 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:30.558 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 17:24:30.715 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-16 17:24:30.715 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:30.965 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:31.246 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 17:24:31.246 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:31.340 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:31.496 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:31.606 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:31.715 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:31.856 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:32.028 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 17:24:32.215 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-16 17:24:32.215 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:32.372 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:32.528 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 17:24:32.528 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:32.700 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 17:24:32.888 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-16 17:24:32.903 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-16 17:24:32.919 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-16 17:24:37.750 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 17:24:37.750 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:37.922 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:38.047 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:38.156 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:38.269 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:38.394 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 17:24:38.566 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-16 17:24:38.566 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:38.738 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:38.863 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 17:24:39.035 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 17:24:39.035 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:52.691 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:53.066 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:53.206 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:53.347 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:53.472 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:53.675 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:53.863 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:53.988 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:54.097 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:54.222 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:54.394 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:54.519 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:31:54.644 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-16 21:31:54.660 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:54.769 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:54.925 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:31:54.925 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:55.035 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:55.172 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:55.268 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:55.377 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:55.487 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:55.612 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:31:55.752 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-16 21:31:55.768 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:55.878 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:56.002 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:31:56.002 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:31:56.112 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:31:56.252 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-16 21:31:56.252 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-16 21:31:56.252 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-16 21:32:02.534 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:32:02.534 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:32:02.667 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:32:02.811 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:32:02.920 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:32:03.035 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:32:03.163 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:32:03.290 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-16 21:32:03.294 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:32:03.409 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:32:03.518 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:32:03.659 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:32:03.659 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:32:32.442 [JavaFX Application Thread] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-16 21:34:19.788 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:20.148 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:20.288 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:20.429 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:20.570 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:20.710 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:20.866 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:20.991 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:21.116 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:21.257 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:21.413 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:21.538 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:34:21.648 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-16 21:34:21.648 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:21.757 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:21.913 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:34:21.913 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:22.023 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:22.179 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:22.273 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:22.382 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:22.476 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:22.585 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:34:22.710 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-16 21:34:22.710 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:22.804 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:22.945 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:34:22.945 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:23.086 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:34:23.226 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-16 21:34:23.226 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-16 21:34:23.242 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-16 21:34:31.519 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:34:31.519 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:31.628 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:31.738 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:31.863 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:31.956 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:32.066 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:34:32.206 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-16 21:34:32.206 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:32.332 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:32.441 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:34:32.550 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:34:32.550 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:49.003 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:49.378 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:49.535 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:49.675 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:49.800 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:49.925 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:50.097 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:50.253 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:50.363 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:50.488 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:50.628 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:50.753 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:35:50.863 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-16 21:35:50.863 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:50.988 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:51.144 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:35:51.144 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:51.269 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:51.379 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:51.519 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:51.660 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:51.769 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:51.879 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:35:51.988 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-16 21:35:51.988 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:52.097 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:52.254 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:35:52.254 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:35:52.363 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:35:52.488 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-16 21:35:52.488 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-16 21:35:52.504 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-16 21:36:05.959 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:36:05.959 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:36:06.068 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:36:06.178 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:36:06.303 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:36:06.412 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:36:06.537 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:36:06.693 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-16 21:36:06.693 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:36:06.818 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:36:06.912 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:36:07.037 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:36:07.037 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:18.437 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:18.781 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:18.906 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:19.031 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:19.150 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:19.291 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:19.447 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:19.572 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:19.697 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:19.899 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:20.053 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:20.178 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:46:20.287 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-16 21:46:20.287 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:20.412 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:20.584 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:46:20.584 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:20.694 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:20.819 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:20.944 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:21.053 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:21.225 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:21.334 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:46:21.459 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-16 21:46:21.459 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:21.569 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:21.694 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:46:21.694 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:21.788 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:46:22.007 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-16 21:46:22.022 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-16 21:46:22.022 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-16 21:46:26.732 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:46:26.732 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:26.841 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:26.966 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:27.075 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:27.200 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:27.310 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:46:27.419 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-16 21:46:27.419 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:27.544 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:27.654 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:46:27.779 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:46:27.779 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:36.447 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:36.837 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:36.962 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:37.119 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:37.244 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:37.369 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:37.525 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:37.665 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:37.775 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:37.884 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:38.025 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:38.181 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:47:38.291 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-16 21:47:38.291 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:38.447 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:38.603 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:47:38.603 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:38.733 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:38.858 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:38.983 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:39.139 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:39.249 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:39.374 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:47:39.467 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-16 21:47:39.483 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:39.592 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:39.733 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:47:39.733 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:39.827 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:47:39.952 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-16 21:47:39.952 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-16 21:47:39.968 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-16 21:47:43.835 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:47:43.835 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:43.991 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:44.116 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:44.225 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:44.350 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:44.475 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 21:47:44.569 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-16 21:47:44.585 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:44.694 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:44.819 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 21:47:44.944 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 21:47:44.944 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:21.273 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:21.633 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:21.770 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:21.904 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:22.042 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:22.194 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:22.354 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:22.482 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:22.587 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:22.701 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:22.842 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:22.957 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 22:30:23.091 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-16 22:30:23.096 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:23.207 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:23.355 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 22:30:23.355 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:23.458 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:23.577 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:23.703 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:23.808 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:23.929 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:24.058 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 22:30:24.161 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-16 22:30:24.166 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:24.270 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:24.397 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 22:30:24.397 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:24.499 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 22:30:24.620 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-16 22:30:24.625 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-16 22:30:24.631 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-16 22:30:29.125 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 22:30:29.125 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:29.241 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:29.353 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:29.457 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:29.561 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:29.663 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 22:30:29.792 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-16 22:30:29.797 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:29.905 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:30.007 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:30:30.168 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 22:30:30.168 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:44.871 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:45.231 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:45.360 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:45.481 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:45.598 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:45.721 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:45.918 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:46.044 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:46.187 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:46.301 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:46.447 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:46.561 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 22:32:46.668 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-16 22:32:46.674 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:46.784 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:46.939 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 22:32:46.940 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:47.041 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:47.187 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:47.298 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:47.404 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:47.503 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:47.604 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 22:32:47.716 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-16 22:32:47.721 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:47.827 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:47.966 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 22:32:47.966 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:48.069 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 22:32:48.269 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-16 22:32:48.276 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-16 22:32:48.282 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-16 22:32:52.545 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 22:32:52.546 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:52.666 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:52.789 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:52.896 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:53.004 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:53.141 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-16 22:32:53.254 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-16 22:32:53.259 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:53.377 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:53.482 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-16 22:32:53.596 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-16 22:32:53.596 [main] TestGroupRecords - Seeding Database

@@ -112,8 +112,8 @@ public class MonthViewController {
         {   
             Stage appointmentFormStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            loader.setResources(ResourceBundle.getBundle("DayFormText"));
-            loader.setLocation(MainApp.class.getResource("/fxml/DayForm.fxml"));
+            loader.setResources(ResourceBundle.getBundle("AppointmentFormText"));
+            loader.setLocation(MainApp.class.getResource("/fxml/AppointmentForm.fxml"));
             
             Parent appointmentFormPane = (BorderPane) loader.load();
 
