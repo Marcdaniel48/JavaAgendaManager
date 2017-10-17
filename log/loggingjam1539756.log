@@ -2145,3 +2145,48 @@ java.sql.SQLException: Error using Utilities.getConnection
 	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[jfxrt.jar:?]
 	at com.sun.glass.ui.win.WinApplication.lambda$null$148(WinApplication.java:191) ~[jfxrt.jar:?]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_144]
+[INFO ] 2017-10-17 00:06:13.105 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:13.448 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:13.573 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:13.714 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:13.823 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:13.948 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:14.105 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:14.230 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:14.339 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:14.464 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:14.605 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:14.730 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-17 00:06:14.824 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-17 00:06:14.839 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:14.980 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:15.136 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-17 00:06:15.136 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:15.261 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:15.417 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:15.527 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:15.667 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:15.777 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:15.886 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-17 00:06:15.996 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-17 00:06:15.996 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:16.121 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:16.245 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-17 00:06:16.245 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:16.339 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-17 00:06:16.464 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-17 00:06:16.464 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-17 00:06:16.480 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-17 00:06:20.449 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-17 00:06:20.449 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:20.558 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:20.668 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:20.777 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:20.902 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:20.996 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-17 00:06:21.136 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-17 00:06:21.136 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:21.277 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:21.386 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-17 00:06:21.496 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-17 00:06:21.496 [main] TestGroupRecords - Seeding Database
