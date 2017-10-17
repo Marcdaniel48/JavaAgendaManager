@@ -71,9 +71,11 @@ public class AppointmentFormController {
     // Does my logging
     private final Logger log = LoggerFactory.getLogger(this.getClass().getName());
     
+    // Useful when working with DatePickers
     private final TimestampBean tspStart = new TimestampBean();
     private final TimestampBean tspEnd = new TimestampBean();
     
+    // These will be used to access and manipulate the JAM database
     private final GroupRecordDAO groupRecordDAO = new GroupRecordDAOImpl();
     private final AppointmentDAO appointmentDAO = new AppointmentDAOImpl();
     private Appointment currentAppointment;
@@ -106,6 +108,9 @@ public class AppointmentFormController {
         }
     }
     
+    /**
+     * This method will set the input fields to the values that this class' private Appointment object.
+     */
     private void displayCurrentAppointment()
     {
         // Fills the combo box with the names of the group records
@@ -135,14 +140,23 @@ public class AppointmentFormController {
             log.error("SQLException with AppointmentDAO.findAll probably", ex);
         }
     }
-    
-    // Used to set the DatePickers to the same value as the passed in LocalDate parameter
+
+    /**
+     * This sets a LocalDate object which will be used by the DatePickers of the appointment form, if the user wants to create an
+     * appointment for a particular day.
+     * 
+     * @param day
+     */
     public void setDay(LocalDate day)
     {
         tspStart.setDateField(day);
         tspEnd.setDateField(day);
     }
     
+    /**
+     * This method, will take the values inserted into the appointment form's input fields and create & insert a new Appointment object
+     * into the database.
+     */
     public void handleCreate()
     {
         try{
@@ -180,12 +194,18 @@ public class AppointmentFormController {
         }
     }
     
+    /**
+     * This method will close the window for the appointment form.
+     */
     public void handleExit()
     {
         Stage stage = (Stage) exitBtn.getScene().getWindow();
         stage.close();
     }
     
+    /**
+     * This method will reset the values of the input fields of the appointment form
+     */
     public void handleClear()
     {
         titleTextField.setText("");
@@ -196,6 +216,10 @@ public class AppointmentFormController {
         alarmReminderComboBox.setValue(false);
     }
     
+    /**
+     * This method will take the value that's in the ID text field and use it to delete the record in the appointment table
+     * with the same ID
+     */
     public void handleDelete()
     {
         try 
@@ -208,6 +232,11 @@ public class AppointmentFormController {
         }
     }
     
+    /**
+     * This method will be used to update the values of an appointment record. The record to be updated depends on the ID
+     * that is set in the ID text field.
+     * @param event 
+     */
     @FXML
     void handleUpdate(ActionEvent event) {
         try{
@@ -245,6 +274,10 @@ public class AppointmentFormController {
         }
     }
     
+    /**
+     * Will set the form's fields to the next appointment record of the appointment table.
+     * @param event 
+     */
     @FXML
     void handleNext(ActionEvent event) 
     {
@@ -265,6 +298,10 @@ public class AppointmentFormController {
         }
     }
 
+    /**
+     * Will set the form's field to the previous appointment record of the appointment table.
+     * @param event 
+     */
     @FXML
     void handlePrevious(ActionEvent event) {
         try

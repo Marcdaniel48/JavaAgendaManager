@@ -51,9 +51,14 @@ public class SMTPSettingsFormController {
     // Does my logging
     private final Logger log = LoggerFactory.getLogger(this.getClass().getName());
     
+    // These are used to manipulate and access the SMTPSettings table of the JAM database
     private final SMTPSettingsDAO smtpDAO = new SMTPSettingsDAOImpl();
     private SMTPSettings currentSMTP;
 
+    /**
+     * Clears the input fields of the form
+     * @param event 
+     */
     @FXML
     void handleClear(ActionEvent event) {
         usernameTextField.setText("");
@@ -65,6 +70,10 @@ public class SMTPSettingsFormController {
         defaultSmtpComboBox.setValue(0);
     }
 
+    /**
+     * Takes in the values of the input fields, and inserts an SMTPSettings record into the database
+     * @param event 
+     */
     @FXML
     void handleCreate(ActionEvent event) {
         try{
@@ -90,6 +99,10 @@ public class SMTPSettingsFormController {
         }
     }
 
+    /**
+     * Deletes a record of the SMTPSettings table, depending on the ID value set in the ID text field
+     * @param event 
+     */
     @FXML
     void handleDelete(ActionEvent event) {
 
@@ -103,12 +116,21 @@ public class SMTPSettingsFormController {
         }
     }
 
+    /**
+     * Closes the window
+     * @param event 
+     */
     @FXML
     void handleExit(ActionEvent event) {
         Stage stage = (Stage) exitBtn.getScene().getWindow();
         stage.close();
     }
 
+    /**
+     * Uses the values of the input fields to update the SMTPSettings record in the database with the same ID as the ID
+     * set in the ID text field
+     * @param event 
+     */
     @FXML
     void handleUpdate(ActionEvent event) {
         try{
@@ -135,6 +157,10 @@ public class SMTPSettingsFormController {
         }
     }
     
+    /**
+     * Sets the input fields to the next SMTPSettings record in the database, relative to this class' currentSMTP object
+     * @param event 
+     */
     @FXML
     void handleNext(ActionEvent event) {
         try
@@ -151,6 +177,10 @@ public class SMTPSettingsFormController {
         }
     }
 
+    /**
+     * Sets the input fields to the previous SMTPSettings record in the database, relative to this class' currentSMTP object
+     * @param event 
+     */
     @FXML
     void handlePrevious(ActionEvent event) {
         try
@@ -184,6 +214,9 @@ public class SMTPSettingsFormController {
 
     }
     
+    /**
+     * Sets the input fields to the values of this class' currentSMTP object
+     */
     private void displayCurrentSMTP()
     {
         // Fills the combo box with the names of the group records

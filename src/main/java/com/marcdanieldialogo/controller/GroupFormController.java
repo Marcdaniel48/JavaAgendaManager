@@ -42,6 +42,10 @@ public class GroupFormController {
     private final GroupRecordDAO groupRecordDAO = new GroupRecordDAOImpl();
     private GroupRecord currentGroup;
 
+    /**
+     * Creates a new GroupRecord record, based on the form's input values
+     * @param event 
+     */
     @FXML
     void handleCreate(ActionEvent event) {
         try{
@@ -59,6 +63,9 @@ public class GroupFormController {
         }
     }
     
+    /**
+     * Will set the form's input values, based on the values of this class' GroupRecord currentGroup object
+     */
     private void displayCurrentGroupRecord()
     {
         groupNumberTextField.setText(currentGroup.getGroupNumber()+"");
@@ -66,6 +73,10 @@ public class GroupFormController {
         colourTextField.setText(currentGroup.getColour());
     }
 
+    /**
+     * Closes the window
+     * @param event 
+     */
     @FXML
     void handleExit(ActionEvent event) {
         Stage stage = (Stage) exitBtn.getScene().getWindow();
@@ -85,6 +96,11 @@ public class GroupFormController {
         }
     }
     
+    /**
+     * Updates the GroupRecord in the database that has the same group number as the group number set
+     * in the form's text field
+     * @param event 
+     */
     @FXML
     void handleUpdate(ActionEvent event) {
         try
@@ -104,6 +120,11 @@ public class GroupFormController {
         }
     }
     
+    /**
+     * Deletes the GroupRecord in the database that has the same group number as the group number set
+     * in the form's text field
+     * @param event 
+     */
     @FXML
     void handleDelete(ActionEvent event) {
         try 
@@ -116,12 +137,20 @@ public class GroupFormController {
         }
     }
     
+    /**
+     * Clears the values of the form's input fields
+     * @param event 
+     */
     @FXML
     void handleClear(ActionEvent event) {
         groupNameTextField.setText("");
         colourTextField.setText("");
     }
     
+    /**
+     * Sets the form's input fields to the next GroupRecord in the database, the record after this class' GroupRecord object
+     * @param event 
+     */
     @FXML
     void handleNext(ActionEvent event) {
         try
@@ -138,6 +167,10 @@ public class GroupFormController {
         }
     }
 
+    /**
+     * Makes the form's input fields to the previous GroupRecord in the database, the record before this class' GroupRecord object
+     * @param event 
+     */
     @FXML
     void handlePrevious(ActionEvent event) {
         try

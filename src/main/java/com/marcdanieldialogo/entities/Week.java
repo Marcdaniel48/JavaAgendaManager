@@ -8,11 +8,12 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /**
- *
+ * This class is mainly used by the MonthViewController to display the days of a month on a calendar-looking table
  * @author Marc-Daniel
  */
 public class Week {
     
+    // Used to know the range of the week
     private LocalDate date;
     
     public Week(LocalDate date)
@@ -20,6 +21,10 @@ public class Week {
         this.date = date;
     }
     
+    /**
+     * Returns a list of StringProperty that holds the numbers of each day for a particular week
+     * @return 
+     */
     public List<StringProperty> getWeek()
     {
         List<StringProperty> week = new ArrayList<StringProperty>();
@@ -57,11 +62,19 @@ public class Week {
         return week;
     }
     
+    /**
+     * Getter for LocalDate date
+     * @return 
+     */
     public LocalDate getDate()
     {
         return date;
     }
     
+    /**
+     * Moves LocalDate date to the next week
+     * @return 
+     */
     public LocalDate nextWeek()
     {
         return date.plusDays(7);

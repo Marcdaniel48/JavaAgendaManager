@@ -91,8 +91,8 @@ public class MonthViewController {
         adjustColumnWidths();
     }
     
-    /*
-        Turns the cells into squares, to make the table look more like a calendar
+    /**
+    *    Turns the cells into squares, to make the table look more like a calendar
     */
     private void adjustColumnWidths() {
         double width = monthTable.getPrefWidth();
@@ -106,6 +106,9 @@ public class MonthViewController {
         monthTable.setFixedCellSize(width / 7.0);
     }
     
+    /**
+     * Opens the appointment form
+     */
     public void handleNewAppointment()
     {
         try
@@ -130,6 +133,10 @@ public class MonthViewController {
         }
     }
         
+    /**
+     * When the user clicks on a square of the calendar, this method handles opening up the day view for that particular square
+     * @param selectedDay 
+     */
     public void handleOpen(LocalDate selectedDay)
     {
         try
@@ -156,7 +163,7 @@ public class MonthViewController {
     }
     
     /**
-     * Will display the days of the current month on a table
+     * Will fill the table with days of the current month, making the table look more like a calendar
      */
     public void display()
     {
@@ -202,6 +209,11 @@ public class MonthViewController {
         monthTable.setItems(list);
     }
     
+    /**
+     * This method is what allows the user to pass in the number of a square in the calendar to a daily view. With the passed in number of the day,
+     * the month view can open the correct day view.
+     * @param change 
+     */
     private void showSingleCellDetails(ListChangeListener.Change<? extends TablePosition> change)
     {
         if(theCells.size() > 0)
@@ -220,6 +232,9 @@ public class MonthViewController {
         }
     }
     
+    /**
+     * Will fill the table with the days of the next month
+     */
     @FXML
     private void handleNext()
     {
@@ -238,6 +253,9 @@ public class MonthViewController {
         }
     }
     
+    /**
+     * Will fill the table with the days of the previous month
+     */
     @FXML
     private void handlePrevious()
     {
@@ -256,6 +274,9 @@ public class MonthViewController {
         }
     }
     
+    /**
+     * Closes the window
+     */
     @FXML
     private void handleExit()
     {
@@ -263,6 +284,10 @@ public class MonthViewController {
         stage.close();
     }
     
+    /**
+     * Opens up the GroupRecord Form
+     * @param event 
+     */
     @FXML
     void handleNewGroupRecord(ActionEvent event) 
     {
@@ -288,6 +313,10 @@ public class MonthViewController {
         }
     }
     
+    /**
+     * Opens up the SMTP Settings Form
+     * @param event 
+     */
     @FXML
     void handleSettingsForm(ActionEvent event) 
     {
