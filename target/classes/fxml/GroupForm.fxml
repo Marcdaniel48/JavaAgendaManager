@@ -2,11 +2,13 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ColorPicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="253.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcdanieldialogo.controller.GroupFormController">
@@ -38,9 +40,13 @@
             <Label text="%GROUPNAME" GridPane.rowIndex="1" />
             <Label text="%COLOUR" GridPane.rowIndex="2" />
             <TextField fx:id="groupNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="colourTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="groupNumberTextField" GridPane.columnIndex="1" />
             <Label text="%GROUPNUMBER" />
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <ColorPicker fx:id="colorPicker" />
+               </children>
+            </HBox>
          </children>
       </GridPane>
    </center>

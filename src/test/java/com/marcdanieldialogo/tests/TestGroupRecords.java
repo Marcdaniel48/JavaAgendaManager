@@ -117,7 +117,7 @@ public class TestGroupRecords {
         GroupRecord groupRecord = new GroupRecord();
         groupRecord.setGroupNumber(1);
         groupRecord.setGroupName("Club Activities");
-        groupRecord.setColour("Some colour");
+        groupRecord.setColour("#95f441");
         
         int records = groupRecordDAO.update(groupRecord);
         
@@ -131,8 +131,8 @@ public class TestGroupRecords {
      * Tests the "update" method for a String length failure.
      * 
      * This method will try to update a record of the GROUP_RECORD table with a
-     * colour that exceeds 16 characters (The max length of the COLOUR field
-     * is 16). An exception should be thrown.
+     * group name that exceeds 30 characters (The max length of the group name field
+     * is 30). An exception should be thrown.
      * 
      * @throws SQLException 
      */
@@ -143,9 +143,9 @@ public class TestGroupRecords {
 
         GroupRecord groupRecord = new GroupRecord();
         groupRecord.setGroupNumber(1);
-        groupRecord.setGroupName("Club Activities");
-        // The COLOUR column should have a character limit of 16.
-        groupRecord.setColour("Some colourrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
+        // The group name column should have a character limit of 16.
+        groupRecord.setGroupName("Club Activitiesgjfgfhjgfjy6rkuyfgvjkcfukgchgmchjgfhjgfjhgcvbncyjuj5eud6");
+        groupRecord.setColour("#f442c8");
         
         groupRecordDAO.create(groupRecord);
         

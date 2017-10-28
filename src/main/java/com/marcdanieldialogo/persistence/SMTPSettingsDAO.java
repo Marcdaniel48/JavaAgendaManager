@@ -26,4 +26,7 @@ public interface SMTPSettingsDAO {
     
     // Queries
     public SMTPSettings findByEmail(String email) throws SQLException;
+    
+    public SMTPSettings findNextByID(SMTPSettings smtpSettings) throws SQLException;
+    public SMTPSettings findPrevByID(SMTPSettings smtpSettings) throws SQLException;
 }

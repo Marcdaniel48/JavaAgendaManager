@@ -2,6 +2,15 @@ package com.marcdanieldialogo.controller;
 
 import com.marcdanieldialogo.entities.Week;
 import com.marcdanieldialogo.MainApp;
+import com.marcdanieldialogo.entities.Appointment;
+import com.marcdanieldialogo.entities.GroupRecord;
+import com.marcdanieldialogo.entities.SMTPSettings;
+import com.marcdanieldialogo.persistence.AppointmentDAO;
+import com.marcdanieldialogo.persistence.AppointmentDAOImpl;
+import com.marcdanieldialogo.persistence.GroupRecordDAO;
+import com.marcdanieldialogo.persistence.GroupRecordDAOImpl;
+import com.marcdanieldialogo.persistence.SMTPSettingsDAO;
+import com.marcdanieldialogo.persistence.SMTPSettingsDAOImpl;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
@@ -26,6 +35,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MonthViewController {
 
@@ -65,13 +76,36 @@ public class MonthViewController {
     @FXML // fx:id="exitButton"
     private Button exitButton; // Value injected by FXMLLoader
     
+    private final Logger log = LoggerFactory.getLogger(getClass().getName());
+    
     // The individual cells of the month table
     private ObservableList<TablePosition> theCells;
     
     // Keeps track of the current month and year
     private int currentMonth = LocalDate.now().getMonthValue();
     private int currentYear = LocalDate.now().getYear();
-
+    
+    private SMTPSettingsDAO smtpDAO;
+    private SMTPSettings smtp;
+    private GroupRecordDAO groupRecordDAO;
+    private GroupRecord groupRecord;
+    private AppointmentDAO appointmentDAO;
+    private Appointment appointment;
+    
+    
+    /**
+     * Constructor
+     */
+    public MonthViewController() {
+        super();
+        smtpDAO = new SMTPSettingsDAOImpl();
+        smtp = new SMTPSettings();
+        groupRecordDAO = new GroupRecordDAOImpl();
+        groupRecord = new GroupRecord();
+        appointmentDAO = new AppointmentDAOImpl();
+        appointment = new Appointment();
+    }
+    
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
 
@@ -264,6 +298,9 @@ public class MonthViewController {
             appointmentFormStage.setScene(appointmentFormScene);
             appointmentFormStage.initModality(Modality.APPLICATION_MODAL);
             appointmentFormStage.setTitle("Appointment Form");
+            
+            AppointmentFormController controller = loader.getController();
+            controller.setAppointment(appointmentDAO, appointment);
             appointmentFormStage.show();
         }
         catch(IOException ioe)
@@ -281,23 +318,26 @@ public class MonthViewController {
     {
         try
         {   
-            Stage groupFormStage = new Stage();
+            Stage groupRecordStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
             loader.setResources(ResourceBundle.getBundle("GroupFormText"));
             loader.setLocation(MainApp.class.getResource("/fxml/GroupForm.fxml"));
             
-            Parent groupFormPane = (BorderPane) loader.load();
+            Parent groupRecordFormPane = (BorderPane) loader.load();
 
-            Scene groupFormScene = new Scene(groupFormPane);
+            Scene groupRecordFormScene = new Scene(groupRecordFormPane);
             
-            groupFormStage.setScene(groupFormScene);
-            groupFormStage.initModality(Modality.APPLICATION_MODAL);
-            groupFormStage.setTitle("Group Record Form");
-            groupFormStage.show();
+            groupRecordStage.setScene(groupRecordFormScene);
+            groupRecordStage.initModality(Modality.APPLICATION_MODAL);
+            groupRecordStage.setTitle("SMTP Settings Form");
+            
+            GroupFormController controller = loader.getController();
+            controller.setGroupRecord(groupRecordDAO, groupRecord);
+            groupRecordStage.show();
         }
         catch(IOException ioe)
         {
-            Platform.exit();
+            log.error("IOException in handleSettingsForm method", ioe.getMessage());
         }
     }
     
@@ -310,23 +350,26 @@ public class MonthViewController {
     {
         try
         {   
-            Stage groupFormStage = new Stage();
+            Stage smtpFormStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
             loader.setResources(ResourceBundle.getBundle("SMTPSettingsFormText"));
             loader.setLocation(MainApp.class.getResource("/fxml/SMTPSettingsForm.fxml"));
             
-            Parent groupFormPane = (BorderPane) loader.load();
+            Parent smtpFormPane = (BorderPane) loader.load();
 
-            Scene groupFormScene = new Scene(groupFormPane);
+            Scene smtpFormScene = new Scene(smtpFormPane);
             
-            groupFormStage.setScene(groupFormScene);
-            groupFormStage.initModality(Modality.APPLICATION_MODAL);
-            groupFormStage.setTitle("SMTP Settings Form");
-            groupFormStage.show();
+            smtpFormStage.setScene(smtpFormScene);
+            smtpFormStage.initModality(Modality.APPLICATION_MODAL);
+            smtpFormStage.setTitle("SMTP Settings Form");
+            
+            SMTPSettingsFormController controller = loader.getController();
+            controller.setSMTPSettings(smtpDAO, smtp);
+            smtpFormStage.show();
         }
         catch(IOException ioe)
         {
-            Platform.exit();
+            log.error("IOException in handleSettingsForm method", ioe.getMessage());
         }
     }
     

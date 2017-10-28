@@ -496,4 +496,71 @@ public class AppointmentDAOImpl implements AppointmentDAO{
         
         return appointments;
     }
+
+    @Override
+    public Appointment findNextByID(Appointment appointment) throws SQLException {
+        String selectQuery = "SELECT * FROM APPOINTMENT WHERE APPOINTMENT_ID = (SELECT MIN(APPOINTMENT_ID) from APPOINTMENT WHERE APPOINTMENT_ID > ?)";
+
+        try (Connection connection = util.getConnection();
+                PreparedStatement pStatement = connection.prepareStatement(selectQuery);) 
+        {
+            
+            pStatement.setInt(1, appointment.getAppointmentID());
+            
+            try (ResultSet resultSet = pStatement.executeQuery()) 
+            {
+                if (resultSet.next()) 
+                {
+                    createBoundAppointment(resultSet, appointment);
+                }
+            }
+        }
+        log.info("Found " + appointment.getAppointmentID());
+        return appointment;
+    }
+
+    @Override
+    public Appointment findPrevByID(Appointment appointment) throws SQLException {
+                String selectQuery = "SELECT * FROM APPOINTMENT WHERE APPOINTMENT_ID = (SELECT MAX(APPOINTMENT_ID) from APPOINTMENT WHERE APPOINTMENT_ID < ?)";
+
+        try (Connection connection = util.getConnection();
+                PreparedStatement pStatement = connection.prepareStatement(selectQuery);) 
+        {
+            
+            pStatement.setInt(1, appointment.getAppointmentID());
+            
+            try (ResultSet resultSet = pStatement.executeQuery()) 
+            {
+                if (resultSet.next()) 
+                {
+                    createBoundAppointment(resultSet, appointment);
+                }
+            }
+        }
+        log.info("Found " + appointment.getAppointmentID());
+        return appointment;
+    }
+    
+     /**
+     * Fill an existing bean that is bound to a form
+     *
+     * @param resultSet
+     * @param smtpSettings
+     * @return
+     * @throws SQLException
+     */
+    private Appointment createBoundAppointment(ResultSet resultSet, Appointment appointment) throws SQLException 
+    {
+        appointment.setAppointmentID(resultSet.getInt("APPOINTMENT_ID"));
+        appointment.setTitle(resultSet.getString("TITLE"));
+        appointment.setLocation(resultSet.getString("LOCATION"));
+        appointment.setStartTime(resultSet.getTimestamp("START_TIME"));
+        appointment.setEndTime(resultSet.getTimestamp("END_TIME"));
+        appointment.setDetails(resultSet.getString("DETAILS"));
+        appointment.setWholeDay(resultSet.getBoolean("WHOLE_DAY"));
+        appointment.setAppointmentGroup(resultSet.getInt("APPOINTMENT_GROUP"));
+        appointment.setAlarmReminder(resultSet.getBoolean("ALARM_REMINDER"));
+        
+        return appointment;
+    }
 }

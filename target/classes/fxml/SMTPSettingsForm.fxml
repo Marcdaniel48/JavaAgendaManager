@@ -2,7 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
@@ -48,7 +48,6 @@
             <Label text="%URL" GridPane.rowIndex="4" />
             <Label text="%PORT" GridPane.rowIndex="5" />
             <Label text="%DEFAULT" GridPane.rowIndex="6" />
-            <ComboBox fx:id="defaultSmtpComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <TextField fx:id="idTextField" GridPane.columnIndex="1" />
             <TextField fx:id="usernameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="emailTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
@@ -57,6 +56,7 @@
             <TextField fx:id="smtpPortTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <Label text="%REMINDER" GridPane.rowIndex="7" />
             <TextField fx:id="reminderIntervalTextField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <CheckBox fx:id="defaultCheckBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
          </children>
       </GridPane>
    </center>

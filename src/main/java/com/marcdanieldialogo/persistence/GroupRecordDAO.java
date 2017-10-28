@@ -26,4 +26,7 @@ public interface GroupRecordDAO {
     
     // Queries
     public GroupRecord findByGroupName(String groupName) throws SQLException;
+    
+    public GroupRecord findNextByID(GroupRecord groupRecord) throws SQLException;
+    public GroupRecord findPrevByID(GroupRecord groupRecord) throws SQLException;
 }

@@ -22,7 +22,7 @@ public class SMTPSettingsDAOImpl implements SMTPSettingsDAO{
     private final Logger log = LoggerFactory.getLogger(this.getClass().getName());
     
     // Has a method that can make and return a connection.
-    private Utilities util = new Utilities();
+    private final Utilities util = new Utilities();
     
     /**
      * Takes in an SMTPSettings object and inserts its values into the SMTP_SETTINGS table as a record.
@@ -44,12 +44,12 @@ public class SMTPSettingsDAOImpl implements SMTPSettingsDAO{
             stmt.setString(3, smtp.getEmailPassword());
             stmt.setString(4, smtp.getSMTPURL());
             stmt.setInt(5, smtp.getSMTPPort());
-            stmt.setInt(6, smtp.getDefaultSMTP());
+            stmt.setBoolean(6, smtp.getDefaultSMTP());
             stmt.setInt(7, smtp.getReminderInterval());
             
-            if(smtp.getDefaultSMTP() == 1)
+            if(smtp.getDefaultSMTP())
             {
-                String updateDefaultSQL = "UPDATE SMTP_SETTINGS SET DEFAULT_SMTP = 0 WHERE DEFAULT_SMTP = 1";
+                String updateDefaultSQL = "UPDATE SMTP_SETTINGS SET DEFAULT_SMTP = 0 WHERE DEFAULT_SMTP = true";
                 try(PreparedStatement updateDefaultStmt = conn.prepareStatement(updateDefaultSQL))
                 {
                     updateDefaultStmt.executeUpdate();
@@ -161,13 +161,13 @@ public class SMTPSettingsDAOImpl implements SMTPSettingsDAO{
             pStatement.setString(3, smtp.getEmailPassword());
             pStatement.setString(4, smtp.getSMTPURL());
             pStatement.setInt(5, smtp.getSMTPPort());
-            pStatement.setInt(6, smtp.getDefaultSMTP());
+            pStatement.setBoolean(6, smtp.getDefaultSMTP());
             pStatement.setInt(7, smtp.getReminderInterval());
             pStatement.setInt(8, smtp.getSMTPID());
             
-            if(smtp.getDefaultSMTP() == 1)
+            if(smtp.getDefaultSMTP())
             {
-                String updateDefaultSQL = "UPDATE SMTP_SETTINGS SET DEFAULT_SMTP = 0 WHERE DEFAULT_SMTP = 1";
+                String updateDefaultSQL = "UPDATE SMTP_SETTINGS SET DEFAULT_SMTP = false WHERE DEFAULT_SMTP = true";
                 try(PreparedStatement updateDefaultStmt = conn.prepareStatement(updateDefaultSQL))
                 {
                     updateDefaultStmt.executeUpdate();
@@ -233,12 +233,77 @@ public class SMTPSettingsDAOImpl implements SMTPSettingsDAO{
                     smtp.setEmailPassword(resultSet.getString("EMAIL_PASSWORD"));
                     smtp.setSMTPURL(resultSet.getString("SMTP_URL"));
                     smtp.setSMTPPort(resultSet.getInt("SMTP_PORT"));
-                    smtp.setDefaultSMTP(resultSet.getInt("DEFAULT_SMTP"));
+                    smtp.setDefaultSMTP(resultSet.getBoolean("DEFAULT_SMTP"));
                     smtp.setReminderInterval(resultSet.getInt("REMINDER_INTERVAL"));
                 }
             }
         }
         return smtp;
+    }
+
+    @Override
+    public SMTPSettings findNextByID(SMTPSettings smtpSettings) throws SQLException {
+        String selectQuery = "SELECT * FROM SMTP_SETTINGS WHERE SMTP_ID = (SELECT MIN(SMTP_ID) from SMTP_SETTINGS WHERE SMTP_ID > ?)";
+
+        try (Connection connection = util.getConnection();
+                PreparedStatement pStatement = connection.prepareStatement(selectQuery);) 
+        {
+            
+            pStatement.setInt(1, smtpSettings.getSMTPID());
+            
+            try (ResultSet resultSet = pStatement.executeQuery()) 
+            {
+                if (resultSet.next()) 
+                {
+                    createBoundSMTPSettings(resultSet, smtpSettings);
+                }
+            }
+        }
+        log.info("Found " + smtpSettings.getSMTPID());
+        return smtpSettings;
+    }
+
+    @Override
+    public SMTPSettings findPrevByID(SMTPSettings smtpSettings) throws SQLException {
+        String selectQuery = "SELECT * FROM SMTP_SETTINGS WHERE SMTP_ID = (SELECT MAX(SMTP_ID) from SMTP_SETTINGS WHERE SMTP_ID < ?)";
+
+        try (Connection connection = util.getConnection();
+                PreparedStatement pStatement = connection.prepareStatement(selectQuery);) 
+        {
+            pStatement.setInt(1, smtpSettings.getSMTPID());
+            
+            try (ResultSet resultSet = pStatement.executeQuery()) 
+            {
+                if (resultSet.next()) 
+                {
+                    createBoundSMTPSettings(resultSet, smtpSettings);
+                }
+            }
+        }
+        log.info("Found " + smtpSettings.getSMTPID());
+        return smtpSettings;
+    }
+    
+    /**
+     * Fill an existing bean that is bound to a form
+     *
+     * @param resultSet
+     * @param smtpSettings
+     * @return
+     * @throws SQLException
+     */
+    private SMTPSettings createBoundSMTPSettings(ResultSet resultSet, SMTPSettings smtpSettings) throws SQLException 
+    {
+        smtpSettings.setSMTPID(resultSet.getInt("SMTP_ID"));
+        smtpSettings.setUsername(resultSet.getString("USERNAME"));
+        smtpSettings.setEmail(resultSet.getString("EMAIL"));
+        smtpSettings.setEmailPassword(resultSet.getString("EMAIL_PASSWORD"));
+        smtpSettings.setSMTPURL(resultSet.getString("SMTP_URL"));
+        smtpSettings.setSMTPPort(resultSet.getInt("SMTP_PORT"));
+        smtpSettings.setDefaultSMTP(resultSet.getBoolean("DEFAULT_SMTP"));
+        smtpSettings.setReminderInterval(resultSet.getInt("REMINDER_INTERVAL"));
+        
+        return smtpSettings;
     }
     
 }

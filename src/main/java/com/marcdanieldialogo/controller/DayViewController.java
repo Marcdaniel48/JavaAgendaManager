@@ -158,7 +158,6 @@ public class DayViewController {
 
             dayStage.setScene(dayScene);
             AppointmentFormController controller = loader.getController();
-            controller.setDay(day);
             dayStage.setTitle("Appointment form");
             dayStage.initModality(Modality.APPLICATION_MODAL);
             dayStage.show();

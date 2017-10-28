@@ -20,7 +20,7 @@ public class Utilities
     {
         try
         {  
-            String url = "jdbc:mysql://localhost:3306/jamdb";
+            String url = "jdbc:mysql://localhost:3306/jamdb?autoReconnect=true&useSSL=false";
             String user = "MarcDaniel";
             String password = "dbsurfing";
             

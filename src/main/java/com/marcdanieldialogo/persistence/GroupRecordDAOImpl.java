@@ -22,7 +22,7 @@ public class GroupRecordDAOImpl implements GroupRecordDAO{
     private final Logger log = LoggerFactory.getLogger(this.getClass().getName());
     
     // Has a method that can make and return a connection.
-    private Utilities util = new Utilities();
+    private final Utilities util = new Utilities();
     
      /**
      * Create a GroupRecord record
@@ -207,5 +207,65 @@ public class GroupRecordDAOImpl implements GroupRecordDAO{
         
         return groupRecord;
     }
+
+    @Override
+    public GroupRecord findNextByID(GroupRecord groupRecord) throws SQLException {
+        String selectQuery = "SELECT * FROM GROUP_RECORD WHERE GROUP_NUMBER = (SELECT MIN(GROUP_NUMBER) from GROUP_RECORD WHERE GROUP_NUMBER > ?)";
+
+        try (Connection connection = util.getConnection();
+                PreparedStatement pStatement = connection.prepareStatement(selectQuery);) 
+        {
+            
+            pStatement.setInt(1, groupRecord.getGroupNumber());
+            
+            try (ResultSet resultSet = pStatement.executeQuery()) 
+            {
+                if (resultSet.next()) 
+                {
+                    createBoundGroupRecord(resultSet, groupRecord);
+                }
+            }
+        }
+        log.info("Found " + groupRecord.getGroupNumber());
+        return groupRecord;
+    }
+
+    @Override
+    public GroupRecord findPrevByID(GroupRecord groupRecord) throws SQLException {
+        String selectQuery = "SELECT * FROM GROUP_RECORD WHERE GROUP_NUMBER = (SELECT MAX(GROUP_NUMBER) from GROUP_RECORD WHERE GROUP_NUMBER < ?)";
+
+        try (Connection connection = util.getConnection();
+                PreparedStatement pStatement = connection.prepareStatement(selectQuery);) 
+        {
+            
+            pStatement.setInt(1, groupRecord.getGroupNumber());
+            
+            try (ResultSet resultSet = pStatement.executeQuery()) 
+            {
+                if (resultSet.next()) 
+                {
+                    createBoundGroupRecord(resultSet, groupRecord);
+                }
+            }
+        }
+        log.info("Found " + groupRecord.getGroupNumber());
+        return groupRecord;
+    }
     
+     /**
+     * Fill an existing bean that is bound to a form
+     *
+     * @param resultSet
+     * @param groupRecord
+     * @return
+     * @throws SQLException
+     */
+    private GroupRecord createBoundGroupRecord(ResultSet resultSet, GroupRecord groupRecord) throws SQLException 
+    {
+        groupRecord.setGroupNumber(resultSet.getInt("GROUP_NUMBER"));
+        groupRecord.setGroupName(resultSet.getString("GROUP_NAME"));
+        groupRecord.setColour(resultSet.getString("COLOUR"));
+        
+        return groupRecord;
+    }
 }

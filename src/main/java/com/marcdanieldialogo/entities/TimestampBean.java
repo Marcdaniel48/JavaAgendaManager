@@ -2,7 +2,9 @@ package com.marcdanieldialogo.entities;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
+import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
 /**
@@ -22,10 +24,16 @@ public class TimestampBean {
 
     // This is the property we will bind
     ObjectProperty<LocalDate> dateField;
+    
+    IntegerProperty hourField;
+    IntegerProperty minuteField;
 
     public TimestampBean() {
         // Initialize to the current date
         dateField = new SimpleObjectProperty<>(LocalDate.now());
+        
+        hourField = new SimpleIntegerProperty(0);
+        minuteField = new SimpleIntegerProperty(0);
     }
 
     /**
@@ -37,7 +45,7 @@ public class TimestampBean {
     public Timestamp getTimeStampValue() {
         // Timestamp can map to a LocalDateTime only so we need to add the time
         // portion to our Localdate with atStartOfDay
-        return Timestamp.valueOf(dateField.get().atStartOfDay());
+        return Timestamp.valueOf(dateField.get().atTime(hourField.get(), minuteField.get()));
     }
 
     /**
@@ -50,6 +58,9 @@ public class TimestampBean {
         // Timestamp uses toLocalDateTime to convert to LocalDateTime
         // Next we convert LocalDateTime to LocalDate with toLocaldate
         dateField.set(ts.toLocalDateTime().toLocalDate());
+        
+        hourField.set(ts.toLocalDateTime().getHour());
+        minuteField.set(ts.toLocalDateTime().getMinute());
     }
 
     // The usual methods below
@@ -63,6 +74,14 @@ public class TimestampBean {
 
     public ObjectProperty<LocalDate> dateFieldProperty() {
         return dateField;
+    }
+    
+    public IntegerProperty hourFieldProperty() {
+        return hourField;
+    }
+    
+    public IntegerProperty minuteFieldProperty() {
+        return minuteField;
     }
 
 }

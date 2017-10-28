@@ -17,22 +17,13 @@ public class JoddEmail {
     private final Logger log = LoggerFactory.getLogger(getClass().getName());
 
     private final String smtpServerName = "smtp.gmail.com";
-    private final String imapServerName = "imap.gmail.com";
     
     // The gmail account that's going to be used to send email notifications
     private final String emailSend = "JAMEmailReminder@gmail.com";
     private final String emailSendPwd = "thunderboltx";
     
-    private final String emailReceive = "JAMEmailReminder@gmail.com";
+    private final String emailReceive = "JAMEmailReceiver@gmail.com";
     private final String emailReceivePwd = "thunderboltx";
-    
-    private final String emailCC1 = "";
-    private final String emailCC2 = "";
-
-    // You will need a folder with this name or change it to another
-    // existing folder
-    private final String attachmentFolder = "C:\\Temp\\Attach\\";
-    
 
     /**
      * A method that takes in an Appointment and sends an email to the receiver email address
@@ -47,9 +38,7 @@ public class JoddEmail {
     public void sendAppointmentEmail(Appointment appointment) {
 
         // Create am SMTP server object
-        SmtpServer<SmtpSslServer> smtpServer = SmtpSslServer
-                .create(smtpServerName)
-                .authenticateWith(emailSend, emailSendPwd);
+        SmtpServer<SmtpSslServer> smtpServer = SmtpSslServer.create(smtpServerName).authenticateWith(emailSend, emailSendPwd);
 
         // Display Java Mail debug conversation with the server
         smtpServer.debug(true);

@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
@@ -9,6 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcdanieldialogo.controller.AppointmentFormController">
@@ -30,8 +32,6 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <DatePicker fx:id="startDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <DatePicker fx:id="endDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label text="%LOCATION" GridPane.rowIndex="2" />
             <Label text="%TITLE" GridPane.rowIndex="1" />
             <Label text="%START_TIME" GridPane.rowIndex="3" />
@@ -43,11 +43,25 @@
             <TextField fx:id="titleTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="locationTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="detailsTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <ComboBox fx:id="wholeDayComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <ComboBox fx:id="groupComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <ComboBox fx:id="alarmReminderComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             <Label text="%ID" />
             <TextField fx:id="idTextField" GridPane.columnIndex="1" />
+            <CheckBox fx:id="wholeDayCheckBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <CheckBox fx:id="alarmReminderCheckBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <DatePicker fx:id="startDatePicker" />
+                  <ComboBox fx:id="startHourComboBox" prefWidth="150.0" />
+                  <ComboBox fx:id="startMinuteComboBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <DatePicker fx:id="endDatePicker" />
+                  <ComboBox fx:id="endHourComboBox" prefWidth="150.0" />
+                  <ComboBox fx:id="endMinuteComboBox" prefWidth="150.0" />
+               </children>
+            </HBox>
          </children>
       </GridPane>
    </center>

@@ -1,16 +1,20 @@
 package com.marcdanieldialogo.controller;
 
+import com.marcdanieldialogo.entities.ColorBean;
 import com.marcdanieldialogo.entities.GroupRecord;
 import com.marcdanieldialogo.persistence.GroupRecordDAO;
 import com.marcdanieldialogo.persistence.GroupRecordDAOImpl;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ColorPicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.util.converter.NumberStringConverter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,40 +32,31 @@ public class GroupFormController {
     @FXML // fx:id="groupNameTextField"
     private TextField groupNameTextField; // Value injected by FXMLLoader
 
-    @FXML // fx:id="colourTextField"
-    private TextField colourTextField; // Value injected by FXMLLoader
-    
     @FXML // fx:id="groupNumberTextField"
     private TextField groupNumberTextField; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="colorPicker"
+    private ColorPicker colorPicker; // Value injected by FXMLLoader
     
     // Does my logging
     private final Logger log = LoggerFactory.getLogger(this.getClass().getName());
     
     // Allows access and manipulation of the GroupRecord table of the JAM database
-    private final GroupRecordDAO groupRecordDAO = new GroupRecordDAOImpl();
-    private GroupRecord currentGroup;
+    private GroupRecordDAO groupRecordDAO;
+    private GroupRecord groupRecord;
+    
+    private ColorBean colorBean;
     
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
-        try
-        {
-            currentGroup = groupRecordDAO.findAll().get(0);
-            displayCurrentGroupRecord();
-        }
-        catch(SQLException ex)
-        {
-            log.error("SQLException with GroupRecordDAO.findAll probably", ex);
-        }
+        groupNumberTextField.setEditable(false);
     }
     
-    /**
-     * Will set the form's input values, based on the values of this class' GroupRecord currentGroup object
-     */
-    private void displayCurrentGroupRecord()
+    private void doBindings()
     {
-        groupNumberTextField.setText(currentGroup.getGroupNumber()+"");
-        groupNameTextField.setText(currentGroup.getGroupName());
-        colourTextField.setText(currentGroup.getColour());
+        Bindings.bindBidirectional(groupNumberTextField.textProperty(), groupRecord.groupNumberProperty(), new NumberStringConverter());
+        Bindings.bindBidirectional(groupNameTextField.textProperty(), groupRecord.groupNameProperty());
+        Bindings.bindBidirectional(colorPicker.valueProperty(), groupRecord.colourProperty());
     }
     
     /**
@@ -70,14 +65,10 @@ public class GroupFormController {
      */
     @FXML
     void handleCreate(ActionEvent event) {
-        try{
-            
-        currentGroup = new GroupRecord();
-        
-        currentGroup.setGroupName(groupNameTextField.getText());
-        currentGroup.setColour(colourTextField.getText());
-        
-        groupRecordDAO.create(currentGroup);
+        try
+        {
+            int records = groupRecordDAO.create(groupRecord);
+            log.info("Records created: " + records);
         }
         catch(SQLException sqle)
         {
@@ -94,18 +85,12 @@ public class GroupFormController {
     void handleUpdate(ActionEvent event) {
         try
         {
-            GroupRecord updatedRecord = new GroupRecord();
-
-            updatedRecord.setGroupNumber(currentGroup.getGroupNumber());
-            updatedRecord.setGroupName(currentGroup.getGroupName());
-            updatedRecord.setColour(currentGroup.getColour());
-
-            groupRecordDAO.update(updatedRecord);
-            this.currentGroup = updatedRecord;
+            int records = groupRecordDAO.update(groupRecord);
+            log.info("Records updated: " + records);
         }
-        catch(SQLException ex)
+        catch(SQLException sqle)
         {
-            log.error("SQLException trying to update a GroupRecord", ex);
+            log.error("SQLException - Something went wrong", sqle);
         }
     }
     
@@ -116,13 +101,14 @@ public class GroupFormController {
      */
     @FXML
     void handleDelete(ActionEvent event) {
-        try 
+        try
         {
-            groupRecordDAO.deleteGroupRecord(Integer.parseInt(groupNumberTextField.getText()));
-        } 
-        catch (SQLException ex) 
+            int records = groupRecordDAO.deleteGroupRecord(groupRecord.getGroupNumber());
+            log.info("Records deleted: " + records);
+        }
+        catch(SQLException sqle)
         {
-            log.error("SQLException - Something went wrong. Was a correct ID entered?", ex);
+            log.error("SQLException - Something went wrong", sqle);
         }
     }
     
@@ -132,8 +118,9 @@ public class GroupFormController {
      */
     @FXML
     void handleClear(ActionEvent event) {
-        groupNameTextField.setText("");
-        colourTextField.setText("");
+        groupRecord.setGroupNumber(-1);
+        groupRecord.setGroupName("");
+        groupRecord.setColour("");
     }
     
     /**
@@ -144,11 +131,7 @@ public class GroupFormController {
     void handleNext(ActionEvent event) {
         try
         {
-            if(!(groupNumberTextField.getText().isEmpty()))
-            {
-                this.currentGroup = groupRecordDAO.findID(Integer.parseInt(groupNumberTextField.getText()) + 1);
-                displayCurrentGroupRecord();
-            }
+            groupRecordDAO.findNextByID(groupRecord);
         }
         catch(SQLException sqle)
         {
@@ -164,11 +147,7 @@ public class GroupFormController {
     void handlePrevious(ActionEvent event) {
         try
         {
-            if(!(groupNumberTextField.getText().isEmpty()))
-            {
-                this.currentGroup = groupRecordDAO.findID(Integer.parseInt(groupNumberTextField.getText()) - 1);
-                displayCurrentGroupRecord();
-            }
+            groupRecordDAO.findPrevByID(groupRecord);
         }
         catch(SQLException sqle)
         {
@@ -184,5 +163,22 @@ public class GroupFormController {
     void handleExit(ActionEvent event) {
         Stage stage = (Stage) exitBtn.getScene().getWindow();
         stage.close();
+    }
+    
+    public void setGroupRecord(GroupRecordDAO groupRecordDAO, GroupRecord groupRecord)
+    {
+        this.groupRecord = groupRecord;
+        doBindings();
+        
+        try 
+        {
+            this.groupRecordDAO = groupRecordDAO;
+            groupRecordDAO.findNextByID(groupRecord);
+        } 
+        catch (SQLException ex) 
+        {
+            log.error("SQL Error", ex);
+        }
+        
     }
 }
