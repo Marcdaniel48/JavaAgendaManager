@@ -4761,3 +4761,243 @@ Caused by: java.lang.NullPointerException
 [INFO ] 2017-10-28 14:37:08.206 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 2
 [INFO ] 2017-10-28 14:37:08.930 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
 [INFO ] 2017-10-28 14:37:09.828 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 2
+[INFO ] 2017-10-28 14:51:54.148 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:54.480 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:54.673 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:54.813 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:54.941 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:55.060 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:55.175 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:55.294 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:55.400 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:55.514 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:55.647 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:55.862 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-28 14:51:55.967 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-28 14:51:55.971 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:56.074 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:56.234 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-28 14:51:56.234 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:56.330 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:56.459 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:56.574 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:56.694 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:56.801 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:56.924 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-28 14:51:57.030 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-28 14:51:57.034 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:57.140 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:57.245 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-28 14:51:57.245 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:51:57.346 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-28 14:51:57.466 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-28 14:51:57.471 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-28 14:51:57.475 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-28 14:52:58.173 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:52:58.502 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:52:58.697 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:52:58.819 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:52:58.943 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:52:59.088 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:52:59.216 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:52:59.339 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:52:59.442 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:52:59.560 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:52:59.816 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:52:59.935 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-28 14:53:00.043 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-28 14:53:00.048 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:00.165 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:00.324 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-28 14:53:00.324 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:00.417 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:00.550 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:00.674 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:00.829 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:00.932 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:01.037 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-28 14:53:01.142 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-28 14:53:01.147 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:01.264 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:01.430 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-28 14:53:01.430 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:01.529 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-28 14:53:01.640 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-28 14:53:01.646 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-28 14:53:01.652 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-28 14:53:18.549 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-28 14:53:18.550 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:18.659 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:18.769 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:18.872 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:18.972 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:19.095 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-28 14:53:19.195 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-28 14:53:19.200 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:19.342 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:19.438 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:19.544 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-28 14:53:19.544 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:53:27.131 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-28 14:53:30.492 [JavaFX Application Thread] AppointmentDAOImpl - Found 2
+[INFO ] 2017-10-28 14:53:30.976 [JavaFX Application Thread] AppointmentDAOImpl - Found 3
+[INFO ] 2017-10-28 14:53:31.319 [JavaFX Application Thread] AppointmentDAOImpl - Found 4
+[INFO ] 2017-10-28 14:53:31.502 [JavaFX Application Thread] AppointmentDAOImpl - Found 5
+[INFO ] 2017-10-28 14:53:31.834 [JavaFX Application Thread] AppointmentDAOImpl - Found 6
+[INFO ] 2017-10-28 14:53:32.006 [JavaFX Application Thread] AppointmentDAOImpl - Found 7
+[INFO ] 2017-10-28 14:53:32.173 [JavaFX Application Thread] AppointmentDAOImpl - Found 8
+[INFO ] 2017-10-28 14:53:32.418 [JavaFX Application Thread] AppointmentDAOImpl - Found 9
+[INFO ] 2017-10-28 14:53:32.578 [JavaFX Application Thread] AppointmentDAOImpl - Found 10
+[INFO ] 2017-10-28 14:53:32.748 [JavaFX Application Thread] AppointmentDAOImpl - Found 11
+[INFO ] 2017-10-28 14:53:32.915 [JavaFX Application Thread] AppointmentDAOImpl - Found 12
+[INFO ] 2017-10-28 14:53:33.084 [JavaFX Application Thread] AppointmentDAOImpl - Found 13
+[INFO ] 2017-10-28 14:53:33.252 [JavaFX Application Thread] AppointmentDAOImpl - Found 14
+[INFO ] 2017-10-28 14:53:33.413 [JavaFX Application Thread] AppointmentDAOImpl - Found 15
+[INFO ] 2017-10-28 14:53:33.573 [JavaFX Application Thread] AppointmentDAOImpl - Found 16
+[INFO ] 2017-10-28 14:53:33.735 [JavaFX Application Thread] AppointmentDAOImpl - Found 17
+[INFO ] 2017-10-28 14:53:33.903 [JavaFX Application Thread] AppointmentDAOImpl - Found 18
+[INFO ] 2017-10-28 14:53:34.082 [JavaFX Application Thread] AppointmentDAOImpl - Found 19
+[INFO ] 2017-10-28 14:53:34.256 [JavaFX Application Thread] AppointmentDAOImpl - Found 20
+[INFO ] 2017-10-28 14:53:34.418 [JavaFX Application Thread] AppointmentDAOImpl - Found 21
+[INFO ] 2017-10-28 14:53:34.685 [JavaFX Application Thread] AppointmentDAOImpl - Found 22
+[INFO ] 2017-10-28 14:53:38.848 [JavaFX Application Thread] AppointmentDAOImpl - Found 23
+[INFO ] 2017-10-28 14:53:39.946 [JavaFX Application Thread] AppointmentDAOImpl - Found 24
+[INFO ] 2017-10-28 14:53:40.123 [JavaFX Application Thread] AppointmentDAOImpl - Found 25
+[INFO ] 2017-10-28 14:53:40.293 [JavaFX Application Thread] AppointmentDAOImpl - Found 26
+[INFO ] 2017-10-28 14:53:40.462 [JavaFX Application Thread] AppointmentDAOImpl - Found 27
+[INFO ] 2017-10-28 14:53:40.624 [JavaFX Application Thread] AppointmentDAOImpl - Found 28
+[INFO ] 2017-10-28 14:53:40.787 [JavaFX Application Thread] AppointmentDAOImpl - Found 29
+[INFO ] 2017-10-28 14:53:40.954 [JavaFX Application Thread] AppointmentDAOImpl - Found 30
+[INFO ] 2017-10-28 14:53:41.101 [JavaFX Application Thread] AppointmentDAOImpl - Found 31
+[INFO ] 2017-10-28 14:53:41.277 [JavaFX Application Thread] AppointmentDAOImpl - Found 32
+[INFO ] 2017-10-28 14:53:41.437 [JavaFX Application Thread] AppointmentDAOImpl - Found 33
+[INFO ] 2017-10-28 14:53:41.600 [JavaFX Application Thread] AppointmentDAOImpl - Found 34
+[INFO ] 2017-10-28 14:53:41.745 [JavaFX Application Thread] AppointmentDAOImpl - Found 35
+[INFO ] 2017-10-28 14:53:41.927 [JavaFX Application Thread] AppointmentDAOImpl - Found 36
+[INFO ] 2017-10-28 14:53:42.095 [JavaFX Application Thread] AppointmentDAOImpl - Found 37
+[INFO ] 2017-10-28 14:53:42.266 [JavaFX Application Thread] AppointmentDAOImpl - Found 38
+[INFO ] 2017-10-28 14:53:42.448 [JavaFX Application Thread] AppointmentDAOImpl - Found 39
+[INFO ] 2017-10-28 14:53:42.612 [JavaFX Application Thread] AppointmentDAOImpl - Found 40
+[INFO ] 2017-10-28 14:53:42.777 [JavaFX Application Thread] AppointmentDAOImpl - Found 41
+[INFO ] 2017-10-28 14:53:42.935 [JavaFX Application Thread] AppointmentDAOImpl - Found 42
+[INFO ] 2017-10-28 14:53:43.117 [JavaFX Application Thread] AppointmentDAOImpl - Found 43
+[INFO ] 2017-10-28 14:53:43.285 [JavaFX Application Thread] AppointmentDAOImpl - Found 44
+[INFO ] 2017-10-28 14:53:43.451 [JavaFX Application Thread] AppointmentDAOImpl - Found 45
+[INFO ] 2017-10-28 14:53:43.627 [JavaFX Application Thread] AppointmentDAOImpl - Found 46
+[INFO ] 2017-10-28 14:53:43.803 [JavaFX Application Thread] AppointmentDAOImpl - Found 47
+[INFO ] 2017-10-28 14:53:43.979 [JavaFX Application Thread] AppointmentDAOImpl - Found 48
+[INFO ] 2017-10-28 14:53:44.149 [JavaFX Application Thread] AppointmentDAOImpl - Found 49
+[INFO ] 2017-10-28 14:53:44.331 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:53:44.506 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:53:44.699 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:53:44.876 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:53:45.065 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:53:45.259 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:53:45.442 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:53:45.651 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:53:45.830 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:53:46.024 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:53:46.210 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:54:27.776 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:54:29.321 [JavaFX Application Thread] AppointmentDAOImpl - Found 49
+[INFO ] 2017-10-28 14:54:30.167 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:54:30.338 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:54:30.515 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:54:30.794 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:56:28.161 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:28.505 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:28.724 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:28.849 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:28.990 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:29.146 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:29.287 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:29.443 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:29.568 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:29.693 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:29.834 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:29.943 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-28 14:56:30.037 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-28 14:56:30.052 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:30.240 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:30.396 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-28 14:56:30.412 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:30.568 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:30.693 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:30.802 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:30.912 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:31.021 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:31.177 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-28 14:56:31.287 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-28 14:56:31.302 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:31.412 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:31.521 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-28 14:56:31.521 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:31.615 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-28 14:56:31.724 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-28 14:56:31.740 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-28 14:56:31.740 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-28 14:56:49.678 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-28 14:56:49.678 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:49.788 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:49.897 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:49.991 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:50.084 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:50.194 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-28 14:56:50.319 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-28 14:56:50.319 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:50.451 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:50.535 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:50.691 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-28 14:56:50.691 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-28 14:56:55.607 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-28 14:56:57.817 [JavaFX Application Thread] AppointmentDAOImpl - Found 2
+[INFO ] 2017-10-28 14:56:57.967 [JavaFX Application Thread] AppointmentDAOImpl - Found 3
+[INFO ] 2017-10-28 14:56:58.105 [JavaFX Application Thread] AppointmentDAOImpl - Found 4
+[INFO ] 2017-10-28 14:56:58.263 [JavaFX Application Thread] AppointmentDAOImpl - Found 5
+[INFO ] 2017-10-28 14:56:58.403 [JavaFX Application Thread] AppointmentDAOImpl - Found 6
+[INFO ] 2017-10-28 14:56:58.547 [JavaFX Application Thread] AppointmentDAOImpl - Found 7
+[INFO ] 2017-10-28 14:56:58.685 [JavaFX Application Thread] AppointmentDAOImpl - Found 8
+[INFO ] 2017-10-28 14:56:58.827 [JavaFX Application Thread] AppointmentDAOImpl - Found 9
+[INFO ] 2017-10-28 14:56:58.977 [JavaFX Application Thread] AppointmentDAOImpl - Found 10
+[INFO ] 2017-10-28 14:56:59.124 [JavaFX Application Thread] AppointmentDAOImpl - Found 11
+[INFO ] 2017-10-28 14:56:59.271 [JavaFX Application Thread] AppointmentDAOImpl - Found 12
+[INFO ] 2017-10-28 14:56:59.426 [JavaFX Application Thread] AppointmentDAOImpl - Found 13
+[INFO ] 2017-10-28 14:56:59.569 [JavaFX Application Thread] AppointmentDAOImpl - Found 14
+[INFO ] 2017-10-28 14:56:59.715 [JavaFX Application Thread] AppointmentDAOImpl - Found 15
+[INFO ] 2017-10-28 14:56:59.867 [JavaFX Application Thread] AppointmentDAOImpl - Found 16
+[INFO ] 2017-10-28 14:57:00.027 [JavaFX Application Thread] AppointmentDAOImpl - Found 17
+[INFO ] 2017-10-28 14:57:00.189 [JavaFX Application Thread] AppointmentDAOImpl - Found 18
+[INFO ] 2017-10-28 14:57:00.340 [JavaFX Application Thread] AppointmentDAOImpl - Found 19
+[INFO ] 2017-10-28 14:57:00.491 [JavaFX Application Thread] AppointmentDAOImpl - Found 20
+[INFO ] 2017-10-28 14:57:00.633 [JavaFX Application Thread] AppointmentDAOImpl - Found 21
+[INFO ] 2017-10-28 14:57:00.793 [JavaFX Application Thread] AppointmentDAOImpl - Found 22
+[INFO ] 2017-10-28 14:57:00.943 [JavaFX Application Thread] AppointmentDAOImpl - Found 23
+[INFO ] 2017-10-28 14:57:01.061 [JavaFX Application Thread] AppointmentDAOImpl - Found 24
+[INFO ] 2017-10-28 14:57:01.221 [JavaFX Application Thread] AppointmentDAOImpl - Found 25
+[INFO ] 2017-10-28 14:57:01.354 [JavaFX Application Thread] AppointmentDAOImpl - Found 26
+[INFO ] 2017-10-28 14:57:01.490 [JavaFX Application Thread] AppointmentDAOImpl - Found 27
+[INFO ] 2017-10-28 14:57:01.635 [JavaFX Application Thread] AppointmentDAOImpl - Found 28
+[INFO ] 2017-10-28 14:57:01.780 [JavaFX Application Thread] AppointmentDAOImpl - Found 29
+[INFO ] 2017-10-28 14:57:01.924 [JavaFX Application Thread] AppointmentDAOImpl - Found 30
+[INFO ] 2017-10-28 14:57:02.193 [JavaFX Application Thread] AppointmentDAOImpl - Found 31
+[INFO ] 2017-10-28 14:57:02.342 [JavaFX Application Thread] AppointmentDAOImpl - Found 32
+[INFO ] 2017-10-28 14:57:02.482 [JavaFX Application Thread] AppointmentDAOImpl - Found 33
+[INFO ] 2017-10-28 14:57:02.620 [JavaFX Application Thread] AppointmentDAOImpl - Found 34
+[INFO ] 2017-10-28 14:57:02.799 [JavaFX Application Thread] AppointmentDAOImpl - Found 35
+[INFO ] 2017-10-28 14:57:02.940 [JavaFX Application Thread] AppointmentDAOImpl - Found 36
+[INFO ] 2017-10-28 14:57:03.100 [JavaFX Application Thread] AppointmentDAOImpl - Found 37
+[INFO ] 2017-10-28 14:57:03.256 [JavaFX Application Thread] AppointmentDAOImpl - Found 38
+[INFO ] 2017-10-28 14:57:03.408 [JavaFX Application Thread] AppointmentDAOImpl - Found 39
+[INFO ] 2017-10-28 14:57:03.550 [JavaFX Application Thread] AppointmentDAOImpl - Found 40
+[INFO ] 2017-10-28 14:57:03.727 [JavaFX Application Thread] AppointmentDAOImpl - Found 41
+[INFO ] 2017-10-28 14:57:03.902 [JavaFX Application Thread] AppointmentDAOImpl - Found 42
+[INFO ] 2017-10-28 14:57:04.041 [JavaFX Application Thread] AppointmentDAOImpl - Found 43
+[INFO ] 2017-10-28 14:57:04.206 [JavaFX Application Thread] AppointmentDAOImpl - Found 44
+[INFO ] 2017-10-28 14:57:04.380 [JavaFX Application Thread] AppointmentDAOImpl - Found 45
+[INFO ] 2017-10-28 14:57:04.550 [JavaFX Application Thread] AppointmentDAOImpl - Found 46
+[INFO ] 2017-10-28 14:57:04.708 [JavaFX Application Thread] AppointmentDAOImpl - Found 47
+[INFO ] 2017-10-28 14:57:04.878 [JavaFX Application Thread] AppointmentDAOImpl - Found 48
+[INFO ] 2017-10-28 14:57:05.064 [JavaFX Application Thread] AppointmentDAOImpl - Found 49
+[INFO ] 2017-10-28 14:57:05.239 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:57:05.423 [JavaFX Application Thread] AppointmentDAOImpl - Found 50
+[INFO ] 2017-10-28 14:57:06.235 [JavaFX Application Thread] AppointmentDAOImpl - Found 50

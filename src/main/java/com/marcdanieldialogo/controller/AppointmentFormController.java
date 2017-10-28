@@ -132,7 +132,7 @@ public class AppointmentFormController {
         
         Bindings.bindBidirectional(endDatePicker.valueProperty(), appointment.endTimeBean().dateFieldProperty());
         Bindings.bindBidirectional(endHourComboBox.valueProperty(), appointment.endTimeBean().hourFieldProperty(), new NumberStringConverter());
-        Bindings.bindBidirectional(endMinuteComboBox.valueProperty(), appointment.endTimeBean().hourFieldProperty(), new NumberStringConverter());
+        Bindings.bindBidirectional(endMinuteComboBox.valueProperty(), appointment.endTimeBean().minuteFieldProperty(), new NumberStringConverter());
         
         
         
