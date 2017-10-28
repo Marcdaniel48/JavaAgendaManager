@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
 public class TestJoddEmail {
     
     // Information needed to connect to the JAM database.
-    private final String url = "jdbc:mysql://localhost:3306/jamdb";
+    private final String url = "jdbc:mysql://localhost:3306/jamdb?autoReconnect=true&useSSL=false";
     private final String user = "MarcDaniel";
     private final String password = "dbsurfing";
     
