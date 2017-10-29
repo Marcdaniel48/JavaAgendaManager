@@ -14,41 +14,13 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../styles/monthview.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcdanieldialogo.controller.MonthViewController">
-   <bottom>
-      <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-        <buttons>
-            <Label fx:id="currentMonthLabel" prefHeight="17.0" prefWidth="451.0" text="%MONTHLBL">
-               <font>
-                  <Font size="14.0" />
-               </font></Label>
-            <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="518.0">
-               <children>
-                <Button mnemonicParsing="false" onAction="#handlePrevious" prefWidth="150.0" text="%PREVIOUSBTN">
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#handleNext" prefWidth="150.0" text="%NEXTBTN">
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExit" prefWidth="150.0" text="%EXITBTN">
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-            </HBox>
-        </buttons>
-      </ButtonBar>
-   </bottom>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../styles/monthview.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcdanieldialogo.controller.MonthViewController">
    <top>
-      <VBox prefHeight="7.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+      <VBox BorderPane.alignment="CENTER">
          <children>
             <MenuBar>
               <menus>
@@ -61,33 +33,53 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <ToolBar prefHeight="40.0" prefWidth="200.0">
+            <ToolBar>
               <items>
-                <Button mnemonicParsing="false" onAction="#handleNewAppointment" text="%APPOINTMENTFORM" />
-                  <Button mnemonicParsing="false" onAction="#handleNewGroupRecord" text="%GROUPFORM" />
-                  <Button mnemonicParsing="false" onAction="#handleSettingsForm" text="%SMTPFORM" />
-                  <Label contentDisplay="RIGHT" text="%TIP" textAlignment="CENTER" />
-                  <Button mnemonicParsing="false">
+                <Button mnemonicParsing="false" onAction="#handleNewAppointment">
                      <graphic>
-                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/appointmentImage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button mnemonicParsing="false" onAction="#handleNewGroupRecord">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/groupRecordImage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button mnemonicParsing="false" onAction="#handleSettingsForm">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/smtpSettingsImage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button mnemonicParsing="false" onAction="#openMonthView">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/monthlyViewImage.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false">
+                  <Button mnemonicParsing="false" onAction="#openWeekView">
                      <graphic>
-                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/weeklyViewImage.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false">
+                  <Button mnemonicParsing="false" onAction="#openDayView">
                      <graphic>
-                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/dailyViewImage.png" />
                            </image>
@@ -99,17 +91,53 @@
          </children>
       </VBox>
    </top>
-   <right>
-      <TableView fx:id="monthTable" prefHeight="600.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
-         <columns>
-            <TableColumn fx:id="sundayCells" prefWidth="75.0" text="%SUNDAY" />
-            <TableColumn fx:id="mondayCells" prefWidth="75.0" text="%MONDAY" />
-            <TableColumn fx:id="tuesdayCells" prefWidth="75.0" text="%TUESDAY" />
-            <TableColumn fx:id="wednesdayCells" prefWidth="75.0" text="%WEDNESDAY" />
-            <TableColumn fx:id="thursdayCells" prefWidth="75.0" text="%THURSDAY" />
-            <TableColumn fx:id="fridayCells" prefWidth="75.0" text="%FRIDAY" />
-            <TableColumn fx:id="saturdayCells" prefWidth="75.0" text="%SATURDAY" />
-         </columns>
-      </TableView>
-   </right>
+   <center>
+      <StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" BorderPane.alignment="CENTER">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1100.0">
+               <children>
+                  <TableView fx:id="monthTable" prefHeight="580.0" prefWidth="1100.0">
+                     <columns>
+                        <TableColumn fx:id="sundayCells" prefWidth="75.0" text="%SUNDAY" />
+                        <TableColumn fx:id="mondayCells" prefWidth="75.0" text="%MONDAY" />
+                        <TableColumn fx:id="tuesdayCells" prefWidth="75.0" text="%TUESDAY" />
+                        <TableColumn fx:id="wednesdayCells" prefWidth="75.0" text="%WEDNESDAY" />
+                        <TableColumn fx:id="thursdayCells" prefWidth="75.0" text="%THURSDAY" />
+                        <TableColumn fx:id="fridayCells" prefWidth="75.0" text="%FRIDAY" />
+                        <TableColumn fx:id="saturdayCells" prefWidth="75.0" text="%SATURDAY" />
+                     </columns>
+                  </TableView>
+                  <ButtonBar maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1100.0">
+                    <buttons>
+                        <Label fx:id="currentMonthLabel" alignment="TOP_LEFT" prefHeight="27.0" prefWidth="578.0" text="%MONTHLBL">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT">
+                           <children>
+                            <Button mnemonicParsing="false" onAction="#handlePrevious" prefWidth="150.0" text="%PREVIOUSBTN">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleNext" prefWidth="150.0" text="%NEXTBTN">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExit" prefWidth="150.0" text="%EXITBTN">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                    </buttons>
+                  </ButtonBar>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
 </BorderPane>

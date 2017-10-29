@@ -19,6 +19,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
 import javafx.application.Platform;
 import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
@@ -27,6 +28,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -35,6 +37,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
@@ -94,7 +99,11 @@ public class MonthViewController {
     private AppointmentDAO appointmentDAO;
     private Appointment appointment;
     
+    DayViewController dayController;
+    WeekViewController weekController;
     
+    @FXML//delete
+    private StackPane stackPane;//delete
     /**
      * Constructor
      */
@@ -129,6 +138,8 @@ public class MonthViewController {
         theCells.addListener(this::showSingleCellDetails);
         
         displayTable();
+        
+        addOtherViewsToStackPane();
     }
     
     /**
@@ -200,37 +211,10 @@ public class MonthViewController {
             {
                 LocalDate selectedDay = LocalDate.of(currentYear, currentMonth, Integer.parseInt(data));
                 
-                handleOpen(selectedDay);
+                dayController.setDay(selectedDay);
+                weekController.setDay(selectedDay);
+                openDayView(null);
             }
-        }
-    }
-    
-    /**
-     * When the user clicks on a square of the calendar, this method handles opening up the day view for that particular square
-     * @param selectedDay 
-     */
-    public void handleOpen(LocalDate selectedDay)
-    {
-        try
-        {   
-            Stage dayStage = new Stage();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setResources(ResourceBundle.getBundle("DayViewText"));
-            loader.setLocation(MainApp.class.getResource("/fxml/DayView.fxml"));
-            
-            Parent dayPane = (BorderPane) loader.load();
-
-            Scene dayScene = new Scene(dayPane);
-            
-            dayStage.setScene(dayScene);
-            DayViewController controller = loader.getController();
-            controller.setDay(selectedDay);
-            dayStage.setTitle("Day View");
-            dayStage.show();
-        }
-        catch(IOException ioe)
-        {
-            Platform.exit();
         }
     }
     
@@ -295,6 +279,8 @@ public class MonthViewController {
             AppointmentFormController controller = loader.getController();
             controller.setAppointment(appointmentDAO, appointment);
             appointmentFormStage.show();
+            
+            
         }
         catch(IOException ioe)
         {
@@ -374,5 +360,64 @@ public class MonthViewController {
     {
         Stage stage = (Stage) exitButton.getScene().getWindow();
         stage.close();
+    }
+    
+    @FXML
+    void openDayView(ActionEvent event) {
+       stackPane.getChildren().get(0).setVisible(false);
+       stackPane.getChildren().get(1).setVisible(true);
+       stackPane.getChildren().get(2).setVisible(false);
+    }
+    
+    @FXML
+    void openWeekView(ActionEvent event) {
+       stackPane.getChildren().get(0).setVisible(false);
+       stackPane.getChildren().get(1).setVisible(false);
+       stackPane.getChildren().get(2).setVisible(true);
+    }
+    
+    @FXML
+    void openMonthView(ActionEvent event) {
+       stackPane.getChildren().get(0).setVisible(true);
+       stackPane.getChildren().get(1).setVisible(false);
+       stackPane.getChildren().get(2).setVisible(false);
+    }
+    
+    private void addOtherViewsToStackPane()
+    {
+        FXMLLoader dayLoader = new FXMLLoader();
+        dayLoader.setResources(ResourceBundle.getBundle("DayViewText"));
+        dayLoader.setLocation(MainApp.class.getResource("/fxml/DayView.fxml"));
+        try 
+        {
+            Pane pane = dayLoader.load();
+            pane.setPrefWidth(1100);
+            pane.setPrefHeight(600);
+            dayController = dayLoader.getController();
+            dayController.setDay(LocalDate.now());
+            stackPane.getChildren().add(pane);
+        } 
+        catch (IOException ex) 
+        {
+            java.util.logging.Logger.getLogger(MonthViewController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        FXMLLoader weekLoader = new FXMLLoader();
+        weekLoader.setResources(ResourceBundle.getBundle("WeekViewText"));
+        weekLoader.setLocation(MainApp.class.getResource("/fxml/WeekView.fxml"));
+        try 
+        {
+            Pane pane = weekLoader.load();
+            pane.setPrefWidth(1100);
+            pane.setPrefHeight(600);
+            weekController = weekLoader.getController();
+            weekController.setDay(LocalDate.now());
+            stackPane.getChildren().add(pane);
+        } 
+        catch (IOException ex) 
+        {
+            java.util.logging.Logger.getLogger(MonthViewController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        openMonthView(null);
     }
 }
