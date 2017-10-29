@@ -5,6 +5,7 @@ import com.marcdanieldialogo.MainApp;
 import com.marcdanieldialogo.entities.Appointment;
 import com.marcdanieldialogo.entities.GroupRecord;
 import com.marcdanieldialogo.entities.SMTPSettings;
+import com.marcdanieldialogo.entities.WeekBean;
 import com.marcdanieldialogo.persistence.AppointmentDAO;
 import com.marcdanieldialogo.persistence.AppointmentDAOImpl;
 import com.marcdanieldialogo.persistence.GroupRecordDAO;
@@ -13,6 +14,7 @@ import com.marcdanieldialogo.persistence.SMTPSettingsDAO;
 import com.marcdanieldialogo.persistence.SMTPSettingsDAOImpl;
 import java.io.IOException;
 import java.net.URL;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -47,28 +49,28 @@ public class MonthViewController {
     private URL location;
 
     @FXML // fx:id="monthTable"
-    private TableView<Week> monthTable; // Value injected by FXMLLoader
+    private TableView<WeekBean> monthTable; // Value injected by FXMLLoader
 
     @FXML // fx:id="sundayCells"
-    private TableColumn<Week, String> sundayCells; // Value injected by FXMLLoader
+    private TableColumn<WeekBean, String> sundayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="mondayCells"
-    private TableColumn<Week, String> mondayCells; // Value injected by FXMLLoader
+    private TableColumn<WeekBean, String> mondayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="tuesdayCells"
-    private TableColumn<Week, String> tuesdayCells; // Value injected by FXMLLoader
+    private TableColumn<WeekBean, String> tuesdayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="wednesdayCells"
-    private TableColumn<Week, String> wednesdayCells; // Value injected by FXMLLoader
+    private TableColumn<WeekBean, String> wednesdayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="thursdayCells"
-    private TableColumn<Week, String> thursdayCells; // Value injected by FXMLLoader
+    private TableColumn<WeekBean, String> thursdayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="fridayCells"
-    private TableColumn<Week, String> fridayCells; // Value injected by FXMLLoader
+    private TableColumn<WeekBean, String> fridayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="saturdayCells"
-    private TableColumn<Week, String> saturdayCells; // Value injected by FXMLLoader
+    private TableColumn<WeekBean, String> saturdayCells; // Value injected by FXMLLoader
     
     @FXML // fx:id="currentMonthLabel"
     private Label currentMonthLabel; // Value injected by FXMLLoader
@@ -82,8 +84,8 @@ public class MonthViewController {
     private ObservableList<TablePosition> theCells;
     
     // Keeps track of the current month and year
-    private int currentMonth = LocalDate.now().getMonthValue();
-    private int currentYear = LocalDate.now().getYear();
+    private int currentMonth;
+    private int currentYear;
     
     private SMTPSettingsDAO smtpDAO;
     private SMTPSettings smtp;
@@ -104,71 +106,65 @@ public class MonthViewController {
         groupRecord = new GroupRecord();
         appointmentDAO = new AppointmentDAOImpl();
         appointment = new Appointment();
+        
+        currentMonth = LocalDate.now().getMonthValue();
+        currentYear = LocalDate.now().getYear();
     }
     
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
 
-        sundayCells.setCellValueFactory(cellData -> cellData.getValue().getWeek().get(0));
-        mondayCells.setCellValueFactory(cellData -> cellData.getValue().getWeek().get(1));
-        tuesdayCells.setCellValueFactory(cellData -> cellData.getValue().getWeek().get(2));
-        wednesdayCells.setCellValueFactory(cellData -> cellData.getValue().getWeek().get(3));
-        thursdayCells.setCellValueFactory(cellData -> cellData.getValue().getWeek().get(4));
-        fridayCells.setCellValueFactory(cellData -> cellData.getValue().getWeek().get(5));
-        saturdayCells.setCellValueFactory(cellData -> cellData.getValue().getWeek().get(6));
+        sundayCells.setCellValueFactory(cellData -> cellData.getValue().sundayColProperty());
+        mondayCells.setCellValueFactory(cellData -> cellData.getValue().mondayColProperty());
+        tuesdayCells.setCellValueFactory(cellData -> cellData.getValue().tuesdayColProperty());
+        wednesdayCells.setCellValueFactory(cellData -> cellData.getValue().wednesdayColProperty());
+        thursdayCells.setCellValueFactory(cellData -> cellData.getValue().thursdayColProperty());
+        fridayCells.setCellValueFactory(cellData -> cellData.getValue().fridayColProperty());
+        saturdayCells.setCellValueFactory(cellData -> cellData.getValue().saturdayColProperty());
         
-        display();
+        adjustColumnWidths();
+        
         monthTable.getSelectionModel().cellSelectionEnabledProperty().set(true);
         theCells = monthTable.getSelectionModel().getSelectedCells();
         theCells.addListener(this::showSingleCellDetails);
-        adjustColumnWidths();
+        
+        displayTable();
     }
     
     /**
      * Will fill the table with days of the current month, making the table look more like a calendar
      */
-    public void display()
+    public void displayTable()
     {
-        ObservableList<Week> list = FXCollections.observableArrayList();
+        ObservableList<WeekBean> weekList = FXCollections.observableArrayList();
         
-        LocalDate date = LocalDate.of(currentYear, currentMonth, 1);
-        currentMonthLabel.setText(date.getMonth().toString() + " " + date.getYear());
-
-        List<StringProperty> lastWeek = new ArrayList<StringProperty>();
+        LocalDate currentDate = LocalDate.of(currentYear, currentMonth, 1);
+        currentMonthLabel.setText(currentDate.getMonth().toString() + " " + currentDate.getYear());
         
-        boolean dayInCalendarAlready = false;
-        for(int i = 0; i < 6; i ++)
+        for(int i = 0; i < 6; i++)
         {
-            Week week = new Week(date);
-            if(!dayInCalendarAlready)
-                list.add(week);
+            WeekBean weekBean = new WeekBean();
+            weekBean.setDate(currentDate);
+            weekBean.setWeek();
             
-            lastWeek = week.getWeek();
-            date = date.plusDays(7);
+            weekList.add(weekBean);
             
-            while(date.getMonthValue() != currentMonth)
+            currentDate = currentDate.plusWeeks(1);
+            if(currentDate.getMonthValue() != currentMonth)
             {
-                date = date.minusDays(1);
-            }
-            
-            // The last line will be skipped if the month doesn't enter a 6th week
-            if(!lastWeek.isEmpty())
-            {
-                for(StringProperty item : lastWeek)
+                while(currentDate.getDayOfWeek() != DayOfWeek.SUNDAY)
                 {
-                    if(!"".equals(item.get()))
-                    {
-                        if(date.getDayOfMonth() == Integer.parseInt(item.get()))
-                        {
-                            dayInCalendarAlready = true;
-                            break;
-                        }
-                    }
+                    currentDate = currentDate.minusDays(1);
                 }
+                
+                if(currentDate.getMonthValue() != currentMonth)
+                    break;
             }
         }
-        monthTable.setItems(list);
+        
+        monthTable.setItems(weekList);
     }
+    
     
     /**
     *    Turns the cells into squares, to make the table look more like a calendar
@@ -197,11 +193,12 @@ public class MonthViewController {
             TablePosition selectedCell = theCells.get(0);
             TableColumn column = selectedCell.getTableColumn();
             int rowIndex = selectedCell.getRow();
-            Object data = column.getCellObservableValue(rowIndex).getValue();
+            String data = (String)column.getCellObservableValue(rowIndex).getValue();
+            data = data.split("\\n")[0];
         
             if(!((String)data).equals(""))
             {
-                LocalDate selectedDay = LocalDate.of(currentYear, currentMonth, Integer.parseInt((String)data));
+                LocalDate selectedDay = LocalDate.of(currentYear, currentMonth, Integer.parseInt(data));
                 
                 handleOpen(selectedDay);
             }
@@ -247,14 +244,12 @@ public class MonthViewController {
         {
             currentMonth = 1;
             currentYear += 1;
-            
-            display();
+            displayTable();
         }
         else
         {
             currentMonth += 1;
-            
-            display();
+            displayTable();
         }
     }
     
@@ -268,14 +263,12 @@ public class MonthViewController {
         {
             currentMonth = 12;
             currentYear -= 1;
-            
-            display();
+            displayTable();
         }
         else
         {
             currentMonth -= 1;
-            
-            display();
+            displayTable();
         }
     }
     

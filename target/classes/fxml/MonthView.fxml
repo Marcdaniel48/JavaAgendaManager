@@ -1,25 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../styles/monthview.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcdanieldialogo.controller.MonthViewController">
    <bottom>
       <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <buttons>
-            <Label fx:id="currentMonthLabel" prefHeight="17.0" prefWidth="451.0" text="%MONTHLBL" />
-          <Button mnemonicParsing="false" onAction="#handlePrevious" text="%PREVIOUSBTN" />
-            <Button mnemonicParsing="false" onAction="#handleNext" text="%NEXTBTN" />
-            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExit" text="%EXITBTN" />
+            <Label fx:id="currentMonthLabel" prefHeight="17.0" prefWidth="451.0" text="%MONTHLBL">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="518.0">
+               <children>
+                <Button mnemonicParsing="false" onAction="#handlePrevious" prefWidth="150.0" text="%PREVIOUSBTN">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleNext" prefWidth="150.0" text="%NEXTBTN">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExit" prefWidth="150.0" text="%EXITBTN">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
         </buttons>
       </ButtonBar>
    </bottom>
-   <center>
+   <top>
+      <VBox prefHeight="7.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="%APPOINTMENTFORM" />
+                        <MenuItem mnemonicParsing="false" text="%GROUPFORM" />
+                        <MenuItem mnemonicParsing="false" text="%SMTPFORM" />
+                     </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#handleNewAppointment" text="%APPOINTMENTFORM" />
+                  <Button mnemonicParsing="false" onAction="#handleNewGroupRecord" text="%GROUPFORM" />
+                  <Button mnemonicParsing="false" onAction="#handleSettingsForm" text="%SMTPFORM" />
+                  <Label contentDisplay="RIGHT" text="%TIP" textAlignment="CENTER" />
+                  <Button mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/monthlyViewImage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/weeklyViewImage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/dailyViewImage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+              </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
+   <right>
       <TableView fx:id="monthTable" prefHeight="600.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
          <columns>
             <TableColumn fx:id="sundayCells" prefWidth="75.0" text="%SUNDAY" />
@@ -31,15 +111,5 @@
             <TableColumn fx:id="saturdayCells" prefWidth="75.0" text="%SATURDAY" />
          </columns>
       </TableView>
-   </center>
-   <top>
-      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-        <items>
-          <Button mnemonicParsing="false" onAction="#handleNewAppointment" text="%APPOINTMENTFORM" />
-            <Button mnemonicParsing="false" onAction="#handleNewGroupRecord" text="%GROUPFORM" />
-            <Button mnemonicParsing="false" onAction="#handleSettingsForm" text="%SMTPFORM" />
-            <Label contentDisplay="RIGHT" text="%TIP" textAlignment="CENTER" />
-        </items>
-      </ToolBar>
-   </top>
+   </right>
 </BorderPane>

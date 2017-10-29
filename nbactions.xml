@@ -4,11 +4,4 @@
             <actionName>CUSTOM-run</actionName>
             <displayName>run</displayName>
         </action>
-        <action>
-            <actionName>CUSTOM-no test</actionName>
-            <displayName>no test</displayName>
-            <properties>
-                <skipTests>true</skipTests>
-            </properties>
-        </action>
 </actions>
