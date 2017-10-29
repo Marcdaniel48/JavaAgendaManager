@@ -5355,3 +5355,335 @@ Caused by: java.lang.NullPointerException
 [INFO ] 2017-10-29 13:06:17.339 [main] TestGroupRecords - Seeding Database
 [INFO ] 2017-10-29 13:06:17.455 [main] TestGroupRecords - @AfterClass seeding
 [INFO ] 2017-10-29 13:06:17.455 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 13:10:16.673 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-29 13:10:20.900 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-29 13:10:21.429 [JavaFX Application Thread] GroupRecordDAOImpl - Found 3
+[INFO ] 2017-10-29 13:10:21.652 [JavaFX Application Thread] GroupRecordDAOImpl - Found 4
+[INFO ] 2017-10-29 13:10:21.941 [JavaFX Application Thread] GroupRecordDAOImpl - Found 5
+[INFO ] 2017-10-29 13:10:22.691 [JavaFX Application Thread] GroupRecordDAOImpl - Found 4
+[INFO ] 2017-10-29 13:10:22.834 [JavaFX Application Thread] GroupRecordDAOImpl - Found 3
+[INFO ] 2017-10-29 13:10:22.987 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-29 13:10:23.138 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-29 13:10:23.834 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-29 13:10:24.026 [JavaFX Application Thread] GroupRecordDAOImpl - Found 3
+[INFO ] 2017-10-29 13:10:26.960 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 13:10:27.982 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 2
+[INFO ] 2017-10-29 13:10:29.273 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 13:10:41.072 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 13:10:41.991 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 13:10:43.073 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 13:10:43.902 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 2
+[INFO ] 2017-10-29 13:10:44.429 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 13:10:46.700 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 13:10:47.132 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 13:12:41.727 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-29 13:12:45.221 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-29 13:12:48.305 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-29 13:12:51.017 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 13:12:54.225 [JavaFX Application Thread] GroupRecordDAOImpl - Found 3
+[INFO ] 2017-10-29 13:12:56.104 [JavaFX Application Thread] AppointmentDAOImpl - Found 2
+[INFO ] 2017-10-29 13:14:39.212 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-29 13:15:24.294 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 13:15:26.948 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-29 13:17:08.361 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-29 13:23:17.280 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[ERROR] 2017-10-29 14:04:29.816 [JavaFX Application Thread] MainApp - Error
+javafx.fxml.LoadException: 
+file:/C:/Users/Marc-Daniel/Documents/NetBeansProjects/JAM_1539756_1/target/JAM_1539756_1-1.0-SNAPSHOT.jar!/fxml/MonthView.fxml
+
+	at javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2601) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2571) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409) ~[jfxrt.jar:?]
+	at com.marcdanieldialogo.MainApp.initRootLayout(MainApp.java:49) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.MainApp.start(MainApp.java:33) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$162(LauncherImpl.java:863) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$175(PlatformImpl.java:326) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$null$173(PlatformImpl.java:295) ~[jfxrt.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_144]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$174(PlatformImpl.java:294) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$null$148(WinApplication.java:191) ~[jfxrt.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_144]
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_144]
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_144]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566) ~[jfxrt.jar:?]
+	... 13 more
+Caused by: java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653) ~[?:1.8.0_144]
+	at java.util.ArrayList.get(ArrayList.java:429) ~[?:1.8.0_144]
+	at com.sun.javafx.collections.ObservableListWrapper.get(ObservableListWrapper.java:89) ~[jfxrt.jar:?]
+	at com.sun.javafx.collections.VetoableListDecorator.get(VetoableListDecorator.java:306) ~[jfxrt.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.openMonthView(MonthViewController.java:377) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.addOtherViewsToStackPane(MonthViewController.java:415) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.initialize(MonthViewController.java:136) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_144]
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_144]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566) ~[jfxrt.jar:?]
+	... 13 more
+[ERROR] 2017-10-29 14:04:56.599 [JavaFX Application Thread] MainApp - Error
+javafx.fxml.LoadException: 
+file:/C:/Users/Marc-Daniel/Documents/NetBeansProjects/JAM_1539756_1/target/JAM_1539756_1-1.0-SNAPSHOT.jar!/fxml/MonthView.fxml
+
+	at javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2601) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2571) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409) ~[jfxrt.jar:?]
+	at com.marcdanieldialogo.MainApp.initRootLayout(MainApp.java:49) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.MainApp.start(MainApp.java:33) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$162(LauncherImpl.java:863) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$175(PlatformImpl.java:326) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$null$173(PlatformImpl.java:295) ~[jfxrt.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_144]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$174(PlatformImpl.java:294) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$null$148(WinApplication.java:191) ~[jfxrt.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_144]
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_144]
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_144]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566) ~[jfxrt.jar:?]
+	... 13 more
+Caused by: java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653) ~[?:1.8.0_144]
+	at java.util.ArrayList.get(ArrayList.java:429) ~[?:1.8.0_144]
+	at com.sun.javafx.collections.ObservableListWrapper.get(ObservableListWrapper.java:89) ~[jfxrt.jar:?]
+	at com.sun.javafx.collections.VetoableListDecorator.get(VetoableListDecorator.java:306) ~[jfxrt.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.openMonthView(MonthViewController.java:377) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.addOtherViewsToStackPane(MonthViewController.java:415) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.initialize(MonthViewController.java:136) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_144]
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_144]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566) ~[jfxrt.jar:?]
+	... 13 more
+[ERROR] 2017-10-29 14:10:47.932 [JavaFX Application Thread] MainApp - Error
+javafx.fxml.LoadException: 
+file:/C:/Users/Marc-Daniel/Documents/NetBeansProjects/JAM_1539756_1/target/JAM_1539756_1-1.0-SNAPSHOT.jar!/fxml/MonthView.fxml
+
+	at javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2601) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2571) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409) ~[jfxrt.jar:?]
+	at com.marcdanieldialogo.MainApp.initRootLayout(MainApp.java:49) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.MainApp.start(MainApp.java:33) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$162(LauncherImpl.java:863) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$175(PlatformImpl.java:326) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$null$173(PlatformImpl.java:295) ~[jfxrt.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_144]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$174(PlatformImpl.java:294) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$null$148(WinApplication.java:191) ~[jfxrt.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_144]
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_144]
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_144]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566) ~[jfxrt.jar:?]
+	... 13 more
+Caused by: java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653) ~[?:1.8.0_144]
+	at java.util.ArrayList.get(ArrayList.java:429) ~[?:1.8.0_144]
+	at com.sun.javafx.collections.ObservableListWrapper.get(ObservableListWrapper.java:89) ~[jfxrt.jar:?]
+	at com.sun.javafx.collections.VetoableListDecorator.get(VetoableListDecorator.java:306) ~[jfxrt.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.openMonthView(MonthViewController.java:377) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.addOtherViewsToStackPane(MonthViewController.java:415) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.initialize(MonthViewController.java:136) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_144]
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_144]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566) ~[jfxrt.jar:?]
+	... 13 more
+[ERROR] 2017-10-29 14:11:22.115 [JavaFX Application Thread] MainApp - Error
+javafx.fxml.LoadException: 
+file:/C:/Users/Marc-Daniel/Documents/NetBeansProjects/JAM_1539756_1/target/JAM_1539756_1-1.0-SNAPSHOT.jar!/fxml/MonthView.fxml
+
+	at javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2601) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2571) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409) ~[jfxrt.jar:?]
+	at com.marcdanieldialogo.MainApp.initRootLayout(MainApp.java:49) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.MainApp.start(MainApp.java:33) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$162(LauncherImpl.java:863) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$175(PlatformImpl.java:326) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$null$173(PlatformImpl.java:295) ~[jfxrt.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_144]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$174(PlatformImpl.java:294) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$null$148(WinApplication.java:191) ~[jfxrt.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_144]
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_144]
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_144]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566) ~[jfxrt.jar:?]
+	... 13 more
+Caused by: java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653) ~[?:1.8.0_144]
+	at java.util.ArrayList.get(ArrayList.java:429) ~[?:1.8.0_144]
+	at com.sun.javafx.collections.ObservableListWrapper.get(ObservableListWrapper.java:89) ~[jfxrt.jar:?]
+	at com.sun.javafx.collections.VetoableListDecorator.get(VetoableListDecorator.java:306) ~[jfxrt.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.openMonthView(MonthViewController.java:377) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.addOtherViewsToStackPane(MonthViewController.java:415) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.initialize(MonthViewController.java:136) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_144]
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_144]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566) ~[jfxrt.jar:?]
+	... 13 more
+[INFO ] 2017-10-29 14:12:12.944 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[ERROR] 2017-10-29 14:43:55.342 [JavaFX Application Thread] MainApp - Error
+javafx.fxml.LoadException: 
+file:/C:/Users/Marc-Daniel/Documents/NetBeansProjects/JAM_1539756_1/target/JAM_1539756_1-1.0-SNAPSHOT.jar!/fxml/MonthView.fxml
+
+	at javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2601) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2571) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409) ~[jfxrt.jar:?]
+	at com.marcdanieldialogo.MainApp.initRootLayout(MainApp.java:49) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.MainApp.start(MainApp.java:33) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$162(LauncherImpl.java:863) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$175(PlatformImpl.java:326) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$null$173(PlatformImpl.java:295) ~[jfxrt.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_144]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$174(PlatformImpl.java:294) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$null$148(WinApplication.java:191) ~[jfxrt.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_144]
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_144]
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_144]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566) ~[jfxrt.jar:?]
+	... 13 more
+Caused by: java.lang.NullPointerException
+	at com.marcdanieldialogo.entities.DayBean.setDate(DayBean.java:74) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.DayViewController.displayTable(DayViewController.java:64) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.DayViewController.setDay(DayViewController.java:119) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.addOtherViewsToStackPane(MonthViewController.java:391) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.initialize(MonthViewController.java:136) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_144]
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_144]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566) ~[jfxrt.jar:?]
+	... 13 more
+[INFO ] 2017-10-29 14:45:18.955 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-29 14:48:39.538 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-29 14:58:46.006 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-29 14:58:56.882 [JavaFX Application Thread] AppointmentDAOImpl - Found 2
+[INFO ] 2017-10-29 15:03:49.289 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 15:13:32.304 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 15:15:26.652 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:27.015 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:27.234 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:27.383 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:27.520 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:27.649 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:27.801 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:27.930 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:28.043 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:28.192 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:28.359 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:28.499 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-29 15:15:28.608 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-29 15:15:28.613 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:28.713 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:28.932 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-29 15:15:28.932 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:29.031 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:29.171 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:29.280 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:29.407 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:29.518 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:29.635 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-29 15:15:29.768 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-29 15:15:29.775 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:29.893 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:30.010 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-29 15:15:30.010 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:30.119 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-29 15:15:30.235 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-29 15:15:30.242 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-29 15:15:30.247 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-29 15:15:48.837 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-29 15:15:48.837 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:48.947 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:49.055 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:49.153 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:49.252 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:49.354 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-29 15:15:49.451 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-29 15:15:49.456 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:49.571 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:49.674 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:15:49.865 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-29 15:15:49.865 [main] TestGroupRecords - Seeding Database

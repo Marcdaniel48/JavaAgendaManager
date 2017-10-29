@@ -1,6 +1,5 @@
 package com.marcdanieldialogo.controller;
 
-import com.marcdanieldialogo.entities.Week;
 import com.marcdanieldialogo.MainApp;
 import com.marcdanieldialogo.entities.Appointment;
 import com.marcdanieldialogo.entities.GroupRecord;
@@ -16,19 +15,15 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import javafx.application.Platform;
-import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -39,7 +34,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
@@ -392,7 +386,7 @@ public class MonthViewController {
         {
             Pane pane = dayLoader.load();
             pane.setPrefWidth(1100);
-            pane.setPrefHeight(600);
+            pane.setPrefHeight(610);
             dayController = dayLoader.getController();
             dayController.setDay(LocalDate.now());
             stackPane.getChildren().add(pane);
@@ -409,7 +403,7 @@ public class MonthViewController {
         {
             Pane pane = weekLoader.load();
             pane.setPrefWidth(1100);
-            pane.setPrefHeight(600);
+            pane.setPrefHeight(610);
             weekController = weekLoader.getController();
             weekController.setDay(LocalDate.now());
             stackPane.getChildren().add(pane);

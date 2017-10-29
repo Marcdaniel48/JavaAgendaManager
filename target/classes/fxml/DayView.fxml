@@ -1,39 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcdanieldialogo.controller.DayViewController">
-   <center>
-      <TableView fx:id="appointmentTable" prefHeight="600.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
-         <columns>
-            <TableColumn fx:id="startTimeCells" prefWidth="75.0" text="%START_TIME" />
-            <TableColumn fx:id="endTimeCells" prefWidth="75.0" text="%END_TIME" />
-            <TableColumn fx:id="idCells" prefWidth="75.0" text="%ID" />
-            <TableColumn fx:id="titleCells" prefWidth="75.0" text="%TITLE" />
-            <TableColumn fx:id="locationCells" prefWidth="75.0" text="%LOCATION" />
-            <TableColumn fx:id="detailsCells" prefWidth="75.0" text="%DETAILS" />
-            <TableColumn fx:id="wholeDayCells" prefWidth="75.0" text="%WHOLE_DAY" />
-            <TableColumn fx:id="appointmentGroupCells" prefWidth="75.0" text="%GROUP" />
-            <TableColumn fx:id="alarmReminderCells" prefWidth="75.0" text="%ALARM_REMINDER" />
-         </columns>
-      </TableView>
-   </center>
    <bottom>
-      <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <ButtonBar prefWidth="1100.0" BorderPane.alignment="CENTER">
         <buttons>
-            <Label fx:id="currentDayLabel" prefHeight="17.0" prefWidth="603.0" text="%CURRENT_DAY" />
+            <Label fx:id="currentDayLabel" prefHeight="17.0" prefWidth="603.0" text="%CURRENT_DAY">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
             <Label fx:id="appFormStatusLabel" />
-            <Button mnemonicParsing="false" onAction="#handleNew" text="%NEWBUTTON" />
-            <Button mnemonicParsing="false" onAction="#handleOpenWeekView" text="%WEEKBUTTON" />
-            <Button mnemonicParsing="false" onAction="#handlePrevious" text="%PREVIOUSBUTTON" />
-            <Button mnemonicParsing="false" onAction="#handleNext" text="%NEXTBUTTON" />
-            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExit" text="%EXITBUTTON" />
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handlePrevious" prefWidth="150.0" text="%PREVIOUSBUTTON">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleNext" prefWidth="150.0" text="%NEXTBUTTON">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExit" prefWidth="150.0" text="%EXITBUTTON">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
         </buttons>
       </ButtonBar>
    </bottom>
+   <center>
+      <TableView fx:id="dayTable" prefWidth="1100.0" stylesheets="@../styles/dayview.css" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="timeCells" prefWidth="75.0" text="%TimeColumn" />
+            <TableColumn fx:id="appointmentCells" prefWidth="133.0" text="%AppointmentColumn" />
+         </columns>
+      </TableView>
+   </center>
 </BorderPane>

@@ -5,3 +5,8 @@
 .mainFxmlClass {
 
 }
+
+.table-view .table-cell
+{
+    -fx-font-size:18px;
+}

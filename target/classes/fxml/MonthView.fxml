@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../styles/monthview.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcdanieldialogo.controller.MonthViewController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcdanieldialogo.controller.MonthViewController">
    <top>
       <VBox BorderPane.alignment="CENTER">
          <children>
@@ -26,9 +26,10 @@
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="%APPOINTMENTFORM" />
-                        <MenuItem mnemonicParsing="false" text="%GROUPFORM" />
-                        <MenuItem mnemonicParsing="false" text="%SMTPFORM" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleNewAppointment" text="%APPOINTMENTFORM" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleNewGroupRecord" text="%GROUPFORM" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleSettingsForm" text="%SMTPFORM" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleExit" text="%EXITBTN" />
                      </items>
                 </Menu>
               </menus>
@@ -94,7 +95,7 @@
    <center>
       <StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" BorderPane.alignment="CENTER">
          <children>
-            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1100.0">
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1100.0" stylesheets="@../styles/monthview.css">
                <children>
                   <TableView fx:id="monthTable" prefHeight="580.0" prefWidth="1100.0">
                      <columns>
