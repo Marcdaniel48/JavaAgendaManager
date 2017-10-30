@@ -4,7 +4,7 @@ import com.marcdanieldialogo.MainApp;
 import com.marcdanieldialogo.entities.Appointment;
 import com.marcdanieldialogo.entities.GroupRecord;
 import com.marcdanieldialogo.entities.SMTPSettings;
-import com.marcdanieldialogo.entities.WeekBean;
+import com.marcdanieldialogo.entities.MonthViewBean;
 import com.marcdanieldialogo.persistence.AppointmentDAO;
 import com.marcdanieldialogo.persistence.AppointmentDAOImpl;
 import com.marcdanieldialogo.persistence.GroupRecordDAO;
@@ -48,28 +48,28 @@ public class MonthViewController {
     private URL location;
 
     @FXML // fx:id="monthTable"
-    private TableView<WeekBean> monthTable; // Value injected by FXMLLoader
+    private TableView<MonthViewBean> monthTable; // Value injected by FXMLLoader
 
     @FXML // fx:id="sundayCells"
-    private TableColumn<WeekBean, String> sundayCells; // Value injected by FXMLLoader
+    private TableColumn<MonthViewBean, String> sundayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="mondayCells"
-    private TableColumn<WeekBean, String> mondayCells; // Value injected by FXMLLoader
+    private TableColumn<MonthViewBean, String> mondayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="tuesdayCells"
-    private TableColumn<WeekBean, String> tuesdayCells; // Value injected by FXMLLoader
+    private TableColumn<MonthViewBean, String> tuesdayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="wednesdayCells"
-    private TableColumn<WeekBean, String> wednesdayCells; // Value injected by FXMLLoader
+    private TableColumn<MonthViewBean, String> wednesdayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="thursdayCells"
-    private TableColumn<WeekBean, String> thursdayCells; // Value injected by FXMLLoader
+    private TableColumn<MonthViewBean, String> thursdayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="fridayCells"
-    private TableColumn<WeekBean, String> fridayCells; // Value injected by FXMLLoader
+    private TableColumn<MonthViewBean, String> fridayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="saturdayCells"
-    private TableColumn<WeekBean, String> saturdayCells; // Value injected by FXMLLoader
+    private TableColumn<MonthViewBean, String> saturdayCells; // Value injected by FXMLLoader
     
     @FXML // fx:id="currentMonthLabel"
     private Label currentMonthLabel; // Value injected by FXMLLoader
@@ -141,14 +141,14 @@ public class MonthViewController {
      */
     public void displayTable()
     {
-        ObservableList<WeekBean> weekList = FXCollections.observableArrayList();
+        ObservableList<MonthViewBean> weekList = FXCollections.observableArrayList();
         
         LocalDate currentDate = LocalDate.of(currentYear, currentMonth, 1);
         currentMonthLabel.setText(currentDate.getMonth().toString() + " " + currentDate.getYear());
         
         for(int i = 0; i < 6; i++)
         {
-            WeekBean weekBean = new WeekBean();
+            MonthViewBean weekBean = new MonthViewBean();
             weekBean.setDate(currentDate);
             weekBean.setWeek();
             

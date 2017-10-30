@@ -496,6 +496,44 @@ public class AppointmentDAOImpl implements AppointmentDAO{
         
         return appointments;
     }
+    
+    @Override
+    public List<Appointment> findBetweenDateTimes(LocalDateTime date1, LocalDateTime date2) throws SQLException {
+        List<Appointment> appointments = new ArrayList<>();
+        String sql = "SELECT * FROM APPOINTMENT WHERE START_TIME BETWEEN ? AND ?";
+        
+        date1 = LocalDateTime.of(date1.getYear(), date1.getMonthValue(), date1.getDayOfMonth(), date1.getHour(), date1.getMinute());
+        date2 = LocalDateTime.of(date2.getYear(), date2.getMonthValue(), date2.getDayOfMonth(), date2.getHour(), date2.getMinute());
+        
+        Timestamp tsDate1 = Timestamp.valueOf(date1);
+        Timestamp tsDate2 = Timestamp.valueOf(date2);
+        
+        try
+        (Connection connection = util.getConnection(); PreparedStatement pStatement = connection.prepareStatement(sql);)
+        {
+            pStatement.setTimestamp(1, tsDate1);
+            pStatement.setTimestamp(2, tsDate2);
+            
+            ResultSet resultSet = pStatement.executeQuery();
+            
+             while (resultSet.next()) {
+                    Appointment appointment = new Appointment();
+                    appointment.setAppointmentID(resultSet.getInt("APPOINTMENT_ID"));
+                    appointment.setTitle(resultSet.getString("TITLE"));
+                    appointment.setLocation(resultSet.getString("LOCATION"));
+                    appointment.setStartTime(resultSet.getTimestamp("START_TIME"));
+                    appointment.setEndTime(resultSet.getTimestamp("END_TIME"));
+                    appointment.setDetails(resultSet.getString("DETAILS"));
+                    appointment.setWholeDay(resultSet.getBoolean("WHOLE_DAY"));
+                    appointment.setAppointmentGroup(resultSet.getInt("APPOINTMENT_GROUP"));
+                    appointment.setAlarmReminder(resultSet.getBoolean("ALARM_REMINDER"));
+                    
+                    appointments.add(appointment);
+                }
+        }
+        
+        return appointments;
+    }
 
     @Override
     public Appointment findNextByID(Appointment appointment) throws SQLException {

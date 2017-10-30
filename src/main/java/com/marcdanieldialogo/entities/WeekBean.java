@@ -1,15 +1,14 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com.marcdanieldialogo.entities;
 
-import com.marcdanieldialogo.persistence.AppointmentDAO;
-import com.marcdanieldialogo.persistence.AppointmentDAOImpl;
-import java.sql.SQLException;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /**
@@ -18,317 +17,62 @@ import javafx.beans.property.StringProperty;
  */
 public class WeekBean 
 {
-    private StringProperty sundayCol;
-    private StringProperty mondayCol;
-    private StringProperty tuesdayCol;
-    private StringProperty wednesdayCol;
-    private StringProperty thursdayCol;
-    private StringProperty fridayCol;
-    private StringProperty saturdayCol;
+    List<DayBean> days;
+    LocalDate currentDate;
     
-    private LocalDate currentDay;
-    private AppointmentDAO appointmentDAO;
+    StringProperty timeCell;
+    StringProperty sundayCell;
+    StringProperty mondayCell;
+    StringProperty tuesdayCell;
+    StringProperty wednesdayCell;
+    StringProperty thursdayCell;
+    StringProperty fridayCell;
+    StringProperty saturdayCell;
     
-    public WeekBean(String sundayCol, String mondayCol, String tuesdayCol, String wednesdayCol, String thursdayCol, String fridayCol,
-            String saturdayCol)
+    public WeekBean(LocalDate date)
     {
-        this.sundayCol = new SimpleStringProperty(sundayCol);
-        this.mondayCol = new SimpleStringProperty(mondayCol);
-        this.tuesdayCol = new SimpleStringProperty(tuesdayCol);
-        this.wednesdayCol = new SimpleStringProperty(wednesdayCol);
-        this.thursdayCol = new SimpleStringProperty(thursdayCol);
-        this.fridayCol = new SimpleStringProperty(fridayCol);
-        this.saturdayCol = new SimpleStringProperty(saturdayCol);
+        this.currentDate = date;
+        setDaysForWeek(date);
         
-        currentDay = LocalDate.now();
-        appointmentDAO = new AppointmentDAOImpl();
+        for(int i = 0; i < 48; i++)
+        {
+            
+        }
     }
     
     public WeekBean()
     {
-        this("", "", "", "", "", "", "");
+        this(LocalDate.now());
     }
     
-    public void setDate(LocalDate day)
+    public void setDaysForWeek(LocalDate date)
     {
-        currentDay = day;
-    }
-    
-    /**
-     * Each column will be set to its day of the month plus the titles of any appointments that are in the database for that day.
-     */
-    public void setWeek()
-    {
-        LocalDate newDate = LocalDate.of(currentDay.getYear(), currentDay.getMonthValue(), currentDay.getDayOfMonth());
-        
-        while(newDate.getDayOfWeek() != DayOfWeek.SUNDAY)
+        List<DayBean> days = new ArrayList<>();
+        while(date.getDayOfWeek() != DayOfWeek.SATURDAY)
         {
-            newDate = newDate.minusDays(1);
-        }
-        
-        while(newDate.getDayOfWeek() != DayOfWeek.SATURDAY)
-        {
-            switch (newDate.getDayOfWeek()) 
+            if(date.getMonthValue() != date.getMonthValue())
             {
-                case SUNDAY:
-                    if(newDate.getMonthValue() != currentDay.getMonthValue())
-                        sundayCol.set("");
-                    else
-                    {
-                        sundayCol.set(String.valueOf(newDate.getDayOfMonth()));
-                        
-                        try 
-                        {
-                            List<Appointment> list = appointmentDAO.findByDay(LocalDateTime.of(newDate.getYear(), newDate.getMonthValue(), newDate.getDayOfMonth(), 0, 0));
-                            for(Appointment item : list)
-                            {
-                                sundayCol.set(sundayCol.get()+ "\n" + item.getTitle());
-                            }
-                        } 
-                        catch (SQLException ex) 
-                        {
-                            Logger.getLogger(WeekBean.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-                    }
-                    
-                    break;
-                case MONDAY:
-                    if(newDate.getMonthValue() != currentDay.getMonthValue())
-                        mondayCol.set("");
-                    else
-                    {
-                        mondayCol.set(String.valueOf(newDate.getDayOfMonth()));
-                        
-                        try 
-                        {
-                            List<Appointment> list = appointmentDAO.findByDay(LocalDateTime.of(newDate.getYear(), newDate.getMonthValue(), newDate.getDayOfMonth(), 0, 0));
-                            for(Appointment item : list)
-                            {
-                                mondayCol.set(mondayCol.get()+ "\n" + item.getTitle());
-                            }
-                        } 
-                        catch (SQLException ex) 
-                        {
-                            Logger.getLogger(WeekBean.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-                    }
-                    break;
-                case TUESDAY:
-                    if(newDate.getMonthValue() != currentDay.getMonthValue())
-                        tuesdayCol.set("");
-                    else
-                    {
-                        tuesdayCol.set(String.valueOf(newDate.getDayOfMonth()));
-                        try 
-                        {
-                            List<Appointment> list = appointmentDAO.findByDay(LocalDateTime.of(newDate.getYear(), newDate.getMonthValue(), newDate.getDayOfMonth(), 0, 0));
-                            for(Appointment item : list)
-                            {
-                                tuesdayCol.set(tuesdayCol.get()+ "\n" + item.getTitle());
-                            }
-                        } 
-                        catch (SQLException ex) 
-                        {
-                            Logger.getLogger(WeekBean.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-                    }
-                    break;
-                case WEDNESDAY:
-                    if(newDate.getMonthValue() != currentDay.getMonthValue())
-                        wednesdayCol.set("");
-                    else
-                    {
-                        wednesdayCol.set(String.valueOf(newDate.getDayOfMonth()));
-                        try 
-                        {
-                            List<Appointment> list = appointmentDAO.findByDay(LocalDateTime.of(newDate.getYear(), newDate.getMonthValue(), newDate.getDayOfMonth(), 0, 0));
-                            for(Appointment item : list)
-                            {
-                                wednesdayCol.set(wednesdayCol.get()+ "\n" + item.getTitle());
-                            }
-                        } 
-                        catch (SQLException ex) 
-                        {
-                            Logger.getLogger(WeekBean.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-                    }
-                    break;
-                case THURSDAY:
-                    if(newDate.getMonthValue() != currentDay.getMonthValue())
-                        thursdayCol.set("");
-                    else
-                    {
-                        thursdayCol.set(String.valueOf(newDate.getDayOfMonth()));
-                        try 
-                        {
-                            List<Appointment> list = appointmentDAO.findByDay(LocalDateTime.of(newDate.getYear(), newDate.getMonthValue(), newDate.getDayOfMonth(), 0, 0));
-                            for(Appointment item : list)
-                            {
-                                thursdayCol.set(thursdayCol.get()+ "\n" + item.getTitle());
-                            } 
-                        } 
-                        catch (SQLException ex) 
-                        {
-                            Logger.getLogger(WeekBean.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-                    }
-                    break;
-                case FRIDAY:
-                    if(newDate.getMonthValue() != currentDay.getMonthValue())
-                        fridayCol.set("");
-                    else
-                    {
-                        fridayCol.set(String.valueOf(newDate.getDayOfMonth()));
-                        try 
-                        {
-                            List<Appointment> list = appointmentDAO.findByDay(LocalDateTime.of(newDate.getYear(), newDate.getMonthValue(), newDate.getDayOfMonth(), 0, 0));
-                            for(Appointment item : list)
-                            {
-                                fridayCol.set(fridayCol.get()+ "\n" + item.getTitle());
-                            }
-                        } 
-                        catch (SQLException ex) 
-                        {
-                            Logger.getLogger(WeekBean.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-                    }
-                    break;
-                case SATURDAY:
-                    
-                    
-                    break;
-                default:
-                    break;
+                days.add(null);
+            }
+            else
+            {
+                DayBean dayBean = new DayBean(date);
+                days.add(dayBean);
             }
             
-            newDate = newDate.plusDays(1);
+            date = date.plusDays(1);
         }
         
-        // SATURDAY
-        if(newDate.getMonthValue() != currentDay.getMonthValue())
-            saturdayCol.set("");
+        if(date.getMonthValue() != this.currentDate.getMonthValue())
+        {
+            days.add(null);
+        }
         else
         {
-            saturdayCol.set(String.valueOf(newDate.getDayOfMonth()));
-            try 
-            {
-                List<Appointment> list = appointmentDAO.findByDay(LocalDateTime.of(newDate.getYear(), newDate.getMonthValue(), newDate.getDayOfMonth(), 0, 0));
-                for(Appointment item : list)
-                {
-                    saturdayCol.set(saturdayCol.get()+ "\n" + item.getTitle());
-                }
-            } 
-            catch (SQLException ex) 
-            {
-                Logger.getLogger(WeekBean.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            DayBean dayBean = new DayBean(date);
+            days.add(dayBean);
         }
-    }
-    
-    public void setSundayCol(String data)
-    {
-        sundayCol.set(data);
-    }
-    
-    public void setMondayCol(String data)
-    {
-        mondayCol.set(data);
-    }
-    
-    public void setTuesdayCol(String data)
-    {
-        tuesdayCol.set(data);
-    }
-    
-    public void setWednesdayCol(String data)
-    {
-        wednesdayCol.set(data);
-    }
-    
-    public void setThursdayCol(String data)
-    {
-        thursdayCol.set(data);
-    }
-    
-    public void setFridayCol(String data)
-    {
-        fridayCol.set(data);
-    }
-    
-    public void setSaturdayCol(String data)
-    {
-        saturdayCol.set(data);
-    }
-    
-    public String getSundayCol()
-    {
-        return sundayCol.get();
-    }
-    
-    public StringProperty sundayColProperty()
-    {
-        return sundayCol;
-    }
-    
-    public String getMondayCol()
-    {
-        return mondayCol.get();
-    }
-    
-    public StringProperty mondayColProperty()
-    {
-        return mondayCol;
-    }
-    
-    public String getTuesdayCol()
-    {
-        return tuesdayCol.get();
-    }
-    
-    public StringProperty tuesdayColProperty()
-    {
-        return tuesdayCol;
-    }
-    
-    public String getWednesdayCol()
-    {
-        return wednesdayCol.get();
-    }
-    
-    public StringProperty wednesdayColProperty()
-    {
-        return wednesdayCol;
-    }
-    
-    public String getThursdayCol()
-    {
-        return thursdayCol.get();
-    }
-    
-    public StringProperty thursdayColProperty()
-    {
-        return thursdayCol;
-    }
-    
-    public String getFridayCol()
-    {
-        return fridayCol.get();
-    }
-    
-    public StringProperty fridayColProperty()
-    {
-        return fridayCol;
-    }
-    
-    public String getSaturdayCol()
-    {
-        return saturdayCol.get();
-    }
-    
-    public StringProperty saturdayColProperty()
-    {
-        return saturdayCol;
+        
+        this.days = days;
     }
 }
-
-

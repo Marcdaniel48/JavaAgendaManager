@@ -1,6 +1,7 @@
 package com.marcdanieldialogo.controller;
 
 import com.marcdanieldialogo.entities.DayBean;
+import com.marcdanieldialogo.entities.HalfHourBean;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -26,20 +27,17 @@ public class DayViewController {
     @FXML // fx:id="currentDayLabel"
     private Label currentDayLabel; // Value injected by FXMLLoader
 
-    @FXML // fx:id="appFormStatusLabel"
-    private Label appFormStatusLabel; // Value injected by FXMLLoader
-
     @FXML // fx:id="exitButton"
     private Button exitButton; // Value injected by FXMLLoader
 
     @FXML // fx:id="dayTable"
-    private TableView<DayBean> dayTable; // Value injected by FXMLLoader
+    private TableView<HalfHourBean> dayTable; // Value injected by FXMLLoader
 
     @FXML // fx:id="timeCells"
-    private TableColumn<DayBean, String> timeCells; // Value injected by FXMLLoader
+    private TableColumn<HalfHourBean, String> timeCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="appointmentCells"
-    private TableColumn<DayBean, String> appointmentCells; // Value injected by FXMLLoader
+    private TableColumn<HalfHourBean, String> appointmentCells; // Value injected by FXMLLoader
     
     private LocalDate day;
     
@@ -55,18 +53,14 @@ public class DayViewController {
     
     public void displayTable()
     {
-        ObservableList<DayBean> dayList = FXCollections.observableArrayList();
+        ObservableList<HalfHourBean> dayList = FXCollections.observableArrayList();
         
         LocalDateTime ldt = day.atStartOfDay();
-        for(int i = 0; i < 48; i++)
+        DayBean dayBean = new DayBean(ldt.toLocalDate());
+        for(HalfHourBean halfHour : dayBean.getHalfHourList())
         {
-            DayBean dayBean = new DayBean();
-            dayBean.setDate(ldt);
-            ldt = ldt.plusMinutes(30);
-            
-            dayList.add(dayBean);
+            dayList.add(halfHour);
         }
-        
         currentDayLabel.setText(day.getDayOfMonth() + " " + day.getMonth().toString() + " " + day.getYear());
         
         dayTable.setItems(dayList);

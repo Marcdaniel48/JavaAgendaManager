@@ -37,6 +37,7 @@ public interface AppointmentDAO {
     public List<Appointment> findByMonth(LocalDateTime date) throws SQLException;
     
     public List<Appointment> findBetweenDates(LocalDateTime date1, LocalDateTime date2) throws SQLException;
+    public List<Appointment> findBetweenDateTimes(LocalDateTime date1, LocalDateTime date2) throws SQLException;
     
     public Appointment findNextByID(Appointment appointment) throws SQLException;
     public Appointment findPrevByID(Appointment appointment) throws SQLException;

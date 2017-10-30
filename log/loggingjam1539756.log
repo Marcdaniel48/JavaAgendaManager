@@ -5687,3 +5687,215 @@ Caused by: java.lang.NullPointerException
 [INFO ] 2017-10-29 15:15:49.674 [main] TestGroupRecords - Seeding Database
 [INFO ] 2017-10-29 15:15:49.865 [main] TestGroupRecords - @AfterClass seeding
 [INFO ] 2017-10-29 15:15:49.865 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 15:20:26.748 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 15:20:28.678 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 2
+[INFO ] 2017-10-29 15:20:29.149 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 15:20:30.597 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-29 15:20:32.791 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-29 15:20:33.564 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-29 15:20:35.090 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-29 15:20:36.023 [JavaFX Application Thread] AppointmentDAOImpl - Found 2
+[INFO ] 2017-10-29 15:20:36.590 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-29 15:20:37.280 [JavaFX Application Thread] AppointmentDAOImpl - Found 2
+[INFO ] 2017-10-29 15:20:38.378 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-29 15:20:40.150 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 2
+[INFO ] 2017-10-29 15:20:40.927 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 2
+[INFO ] 2017-10-29 15:20:41.410 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 15:20:43.379 [JavaFX Application Thread] AppointmentDAOImpl - Found 3
+[INFO ] 2017-10-29 15:20:44.445 [JavaFX Application Thread] AppointmentDAOImpl - Found 4
+[INFO ] 2017-10-29 15:20:44.624 [JavaFX Application Thread] AppointmentDAOImpl - Found 5
+[INFO ] 2017-10-29 15:20:45.542 [JavaFX Application Thread] AppointmentDAOImpl - Found 6
+[INFO ] 2017-10-29 15:20:45.694 [JavaFX Application Thread] AppointmentDAOImpl - Found 7
+[INFO ] 2017-10-29 15:20:45.855 [JavaFX Application Thread] AppointmentDAOImpl - Found 8
+[INFO ] 2017-10-29 15:20:46.258 [JavaFX Application Thread] AppointmentDAOImpl - Found 9
+[INFO ] 2017-10-29 15:20:48.034 [JavaFX Application Thread] AppointmentDAOImpl - Found 8
+[INFO ] 2017-10-29 15:20:48.197 [JavaFX Application Thread] AppointmentDAOImpl - Found 7
+[INFO ] 2017-10-29 15:20:48.354 [JavaFX Application Thread] AppointmentDAOImpl - Found 6
+[INFO ] 2017-10-29 15:20:48.787 [JavaFX Application Thread] AppointmentDAOImpl - Found 5
+[INFO ] 2017-10-29 15:20:48.975 [JavaFX Application Thread] AppointmentDAOImpl - Found 4
+[INFO ] 2017-10-29 15:20:49.302 [JavaFX Application Thread] AppointmentDAOImpl - Found 3
+[INFO ] 2017-10-29 15:20:49.726 [JavaFX Application Thread] AppointmentDAOImpl - Found 2
+[INFO ] 2017-10-29 15:20:52.239 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-29 15:21:01.210 [JavaFX Application Thread] AppointmentDAOImpl - Found 2
+[INFO ] 2017-10-29 15:21:01.491 [JavaFX Application Thread] AppointmentDAOImpl - Found 3
+[INFO ] 2017-10-29 15:21:01.705 [JavaFX Application Thread] AppointmentDAOImpl - Found 4
+[INFO ] 2017-10-29 15:21:01.945 [JavaFX Application Thread] AppointmentDAOImpl - Found 5
+[INFO ] 2017-10-29 15:21:02.244 [JavaFX Application Thread] AppointmentDAOImpl - Found 6
+[INFO ] 2017-10-29 15:21:02.420 [JavaFX Application Thread] AppointmentDAOImpl - Found 7
+[INFO ] 2017-10-29 15:21:02.820 [JavaFX Application Thread] AppointmentDAOImpl - Found 8
+[INFO ] 2017-10-29 15:21:26.972 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 2
+[INFO ] 2017-10-29 15:21:29.093 [JavaFX Application Thread] GroupRecordDAOImpl - Found 3
+[INFO ] 2017-10-29 15:21:30.963 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-29 15:21:31.109 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-29 15:21:34.274 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-29 15:21:36.458 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-29 15:21:36.620 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-29 15:21:39.045 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[ERROR] 2017-10-29 15:42:07.268 [JavaFX Application Thread] MainApp - Error
+javafx.fxml.LoadException: 
+file:/C:/Users/Marc-Daniel/Documents/NetBeansProjects/JAM_1539756_1/target/JAM_1539756_1-1.0-SNAPSHOT.jar!/fxml/MonthView.fxml
+
+	at javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2601) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2571) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409) ~[jfxrt.jar:?]
+	at com.marcdanieldialogo.MainApp.initRootLayout(MainApp.java:49) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.MainApp.start(MainApp.java:33) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$162(LauncherImpl.java:863) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$175(PlatformImpl.java:326) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$null$173(PlatformImpl.java:295) ~[jfxrt.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_144]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$174(PlatformImpl.java:294) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$null$148(WinApplication.java:191) ~[jfxrt.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_144]
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_144]
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_144]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566) ~[jfxrt.jar:?]
+	... 13 more
+Caused by: java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653) ~[?:1.8.0_144]
+	at java.util.ArrayList.get(ArrayList.java:429) ~[?:1.8.0_144]
+	at com.sun.javafx.collections.ObservableListWrapper.get(ObservableListWrapper.java:89) ~[jfxrt.jar:?]
+	at com.sun.javafx.collections.VetoableListDecorator.get(VetoableListDecorator.java:306) ~[jfxrt.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.openMonthView(MonthViewController.java:377) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.addOtherViewsToStackPane(MonthViewController.java:415) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.initialize(MonthViewController.java:136) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_144]
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_144]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566) ~[jfxrt.jar:?]
+	... 13 more
+[INFO ] 2017-10-29 16:13:33.456 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 16:17:48.512 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 18:43:07.028 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 19:55:05.101 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-29 19:55:07.592 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-29 19:55:09.330 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 19:55:12.918 [JavaFX Application Thread] AppointmentDAOImpl - Found 2
+[INFO ] 2017-10-29 19:55:14.234 [JavaFX Application Thread] AppointmentDAOImpl - Found 3
+[INFO ] 2017-10-29 19:55:14.843 [JavaFX Application Thread] AppointmentDAOImpl - Found 2
+[INFO ] 2017-10-29 19:55:16.760 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-29 19:55:16.968 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-29 19:55:18.436 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 2
+[INFO ] 2017-10-29 19:55:19.817 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 2
+[INFO ] 2017-10-29 19:55:19.976 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 2
+[INFO ] 2017-10-29 19:55:20.528 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 19:55:22.360 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-29 19:55:23.548 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-29 19:55:24.220 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-29 19:55:24.408 [JavaFX Application Thread] GroupRecordDAOImpl - Found 3
+[INFO ] 2017-10-29 19:55:24.915 [JavaFX Application Thread] GroupRecordDAOImpl - Found 4
+[INFO ] 2017-10-29 19:55:26.362 [JavaFX Application Thread] GroupRecordDAOImpl - Found 3
+[INFO ] 2017-10-29 19:55:26.538 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-29 19:55:27.087 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[ERROR] 2017-10-29 20:16:13.646 [JavaFX Application Thread] MainApp - Error
+javafx.fxml.LoadException: 
+file:/C:/Users/Marc-Daniel/Documents/NetBeansProjects/JAM_1539756_1/target/JAM_1539756_1-1.0-SNAPSHOT.jar!/fxml/MonthView.fxml
+
+	at javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2601) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2571) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409) ~[jfxrt.jar:?]
+	at com.marcdanieldialogo.MainApp.initRootLayout(MainApp.java:49) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.MainApp.start(MainApp.java:33) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$162(LauncherImpl.java:863) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$175(PlatformImpl.java:326) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$null$173(PlatformImpl.java:295) ~[jfxrt.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_144]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$174(PlatformImpl.java:294) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$null$148(WinApplication.java:191) ~[jfxrt.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_144]
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_144]
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_144]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566) ~[jfxrt.jar:?]
+	... 13 more
+Caused by: java.lang.NullPointerException
+	at com.marcdanieldialogo.entities.HalfHourOfWeek.insertPropertyStrings(HalfHourOfWeek.java:192) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.entities.HalfHourOfWeek.setDate(HalfHourOfWeek.java:146) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.WeekViewController.displayTable(WeekViewController.java:91) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.WeekViewController.setDay(WeekViewController.java:171) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.addOtherViewsToStackPane(MonthViewController.java:408) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.initialize(MonthViewController.java:136) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_144]
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_144]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566) ~[jfxrt.jar:?]
+	... 13 more
+[INFO ] 2017-10-29 20:44:45.080 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:45.455 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:45.658 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:45.830 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:45.970 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:46.127 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:46.314 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:46.517 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:46.674 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:46.830 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:47.064 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:47.267 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-29 20:44:47.455 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-29 20:44:47.455 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:47.564 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:47.721 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-29 20:44:47.721 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:47.861 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:48.064 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:48.174 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:48.299 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:48.408 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:48.502 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-29 20:44:48.627 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-29 20:44:48.643 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:48.752 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:48.861 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-29 20:44:48.861 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:44:48.986 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-29 20:44:49.127 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-29 20:44:49.127 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-29 20:44:49.143 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-29 20:45:06.908 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-29 20:45:06.908 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:45:07.018 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:45:07.127 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:45:07.221 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:45:07.330 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:45:07.455 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-29 20:45:07.580 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-29 20:45:07.580 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:45:07.705 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:45:07.814 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:45:07.939 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-29 20:45:07.939 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 20:45:57.936 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
