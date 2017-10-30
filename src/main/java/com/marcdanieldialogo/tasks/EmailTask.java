@@ -44,8 +44,8 @@ public class EmailTask implements Runnable
 
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Email Sender");
-                    alert.setHeaderText("Attempting to send emails.");
-                    alert.setContentText("Emails for any appointments that both meet the current reminder interval & have email reminder set to true have been sent.");
+                    alert.setHeaderText("Sending emails.");
+                    alert.setContentText("Emails for any appointments that start from the current reminder interval & have email reminder set to true have been sent.");
                     alert.showAndWait();
                 }
             } 

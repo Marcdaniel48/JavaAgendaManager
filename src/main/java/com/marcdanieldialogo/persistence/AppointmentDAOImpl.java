@@ -1,7 +1,7 @@
 package com.marcdanieldialogo.persistence;
 
 import com.marcdanieldialogo.entities.Appointment;
-import com.marcdanieldialogo.Utilities;
+import com.marcdanieldialogo.util.Utilities;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

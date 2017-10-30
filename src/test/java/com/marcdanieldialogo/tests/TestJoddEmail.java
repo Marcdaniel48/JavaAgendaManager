@@ -1,6 +1,6 @@
 package com.marcdanieldialogo.tests;
 
-import com.marcdanieldialogo.Utilities;
+import com.marcdanieldialogo.util.Utilities;
 import com.marcdanieldialogo.entities.Appointment;
 import com.marcdanieldialogo.email.JoddEmail;
 import com.marcdanieldialogo.entities.SMTPSettings;

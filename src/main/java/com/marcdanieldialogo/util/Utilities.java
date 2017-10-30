@@ -1,4 +1,4 @@
-package com.marcdanieldialogo;
+package com.marcdanieldialogo.util;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,6 +1,6 @@
 package com.marcdanieldialogo.controller;
 
-import com.marcdanieldialogo.Utilities;
+import com.marcdanieldialogo.util.Utilities;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;

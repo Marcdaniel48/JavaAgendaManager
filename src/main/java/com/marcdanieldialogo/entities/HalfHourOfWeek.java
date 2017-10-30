@@ -143,17 +143,11 @@ public class HalfHourOfWeek
         timeCol.set(LocalTime.of(currentDate.getHour(), currentDate.getMinute()).toString());
         
         sundayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(0), daysOfWeek.get(0).plusMinutes(29));
-
         mondayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(1), daysOfWeek.get(1).plusMinutes(29));
-
         tuesdayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(2), daysOfWeek.get(2).plusMinutes(29));
-
         wednesdayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(3), daysOfWeek.get(3).plusMinutes(29));
-
         thursdayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(4), daysOfWeek.get(4).plusMinutes(29));
-
         fridayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(5), daysOfWeek.get(5).plusMinutes(29));
-
         saturdayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(6), daysOfWeek.get(6).plusMinutes(29));
         
         LocalTime time = LocalTime.of(currentDate.getHour(), currentDate.getMinute());

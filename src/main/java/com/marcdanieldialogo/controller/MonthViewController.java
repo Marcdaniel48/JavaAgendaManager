@@ -13,27 +13,32 @@ import com.marcdanieldialogo.persistence.SMTPSettingsDAO;
 import com.marcdanieldialogo.persistence.SMTPSettingsDAOImpl;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
-import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
@@ -168,13 +173,18 @@ public class MonthViewController {
         }
         
         monthTable.setItems(weekList);
-    }
-    
+        
+        for(int i = 0; i < monthTable.getColumns().size(); i++)
+        {
+            renderCell(monthTable.getColumns().get(i));
+        }
+    }    
     
     /**
     *    Turns the cells into squares, to make the table look more like a calendar
     */
-    private void adjustColumnWidths() {
+    private void adjustColumnWidths() 
+    {
         double width = monthTable.getPrefWidth();
         mondayCells.setPrefWidth(width / 7.0);
         tuesdayCells.setPrefWidth(width / 7.0);
@@ -200,7 +210,8 @@ public class MonthViewController {
             int rowIndex = selectedCell.getRow();
             String data = (String)column.getCellObservableValue(rowIndex).getValue();
             data = data.split("\\n")[0];
-        
+            
+            //renderCell(selectedCell.getTableColumn()); //DELETE
             if(!((String)data).equals(""))
             {
                 LocalDate selectedDay = LocalDate.of(currentYear, currentMonth, Integer.parseInt(data));
@@ -273,12 +284,10 @@ public class MonthViewController {
             AppointmentFormController controller = loader.getController();
             controller.setAppointment(appointmentDAO, appointment);
             appointmentFormStage.show();
-            
-            
         }
         catch(IOException ioe)
         {
-            Platform.exit();
+            log.error("Error trying to open appointment form", ioe);
         }
     }
     
@@ -440,4 +449,79 @@ public class MonthViewController {
         }
         openMonthView(null);
     }
+    
+    //DELETE METHOD
+    /**
+     * This is a method that is responsible for the contents of a cell. With it
+     * we can colour the background of a cell.
+     *
+     * @param tc
+     */
+    private void renderCell(TableColumn tc) {
+
+        tc.setCellFactory(column -> {
+            return new TableCell<MonthViewBean, String>() 
+            {
+                @Override
+                protected void updateItem(String item, boolean empty) 
+                {
+                    super.updateItem(item, empty);
+                    setText(item);
+                    if (item == null || empty) 
+                    {
+                        setText(null);
+                        setStyle("");
+                    }
+                    else
+                    {
+                        if(item.split("\\n").length > 1)
+                        {
+                            VBox vbox = new VBox();
+                            //DELETE
+                            Label dayOfMonthLbl = new Label(item.split("\\n")[0]);
+                            vbox.getChildren().add(dayOfMonthLbl);
+                            for(int i = 1; i < item.split("\\n").length; i++)
+                            {
+                                try 
+                                {
+                                    // A label to hold individual appointment titles
+                                    Label lbl = new Label(item.split("\\n")[i]);
+                                    Appointment appointment = appointmentDAO.findByTitle(item.split("\\n")[i]).get(0);
+                                    GroupRecord group = groupRecordDAO.findID(appointment.getAppointmentGroup());
+                                    
+                                    Color color = group.colourProperty().getValue();
+                                    String hex = String.format("#%02x%02x%02x", (int)(color.getRed()*255), (int)(color.getGreen()*255), (int)(color.getBlue()*255));  
+                                    
+                                    lbl.setStyle("-fx-background-color: " + hex);
+                                    
+                                    // If the background color isn't white, set the text color to white
+                                    if(!color.equals(Color.WHITE))
+                                        lbl.setTextFill(Color.WHITE);
+                                    
+                                    // Set the label text to the title of the current appointment
+                                    lbl.setText(appointment.getTitle());
+                                    
+                                    // Add the label to the VBox
+                                    vbox.getChildren().add(lbl);
+                                } 
+                                catch (SQLException ex) 
+                                {
+                                    java.util.logging.Logger.getLogger(MonthViewController.class.getName()).log(Level.SEVERE, null, ex);
+                                }
+                            }
+                            
+                            // The data of the cell, exluding the appointment labels will only consist of the day of the month.
+                            setText("");
+                            
+                            // Add the VBox to the cell
+                            setGraphic(vbox);
+                        }
+                    }
+                }
+            };
+        });
+
+    }
+
+
 }

@@ -7802,3 +7802,183 @@ Caused by: java.lang.NullPointerException
 [INFO ] 2017-10-30 09:15:02.173 [main] TestGroupRecords - @AfterClass seeding
 [INFO ] 2017-10-30 09:15:02.173 [main] TestGroupRecords - Seeding Database
 [DEBUG] 2017-10-30 09:15:41.402 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 09:23:03.121 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 09:32:52.243 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:05:25.569 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:08:34.554 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:10:07.165 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:12:39.245 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:12:58.410 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:14:37.378 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:15:58.585 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:16:28.592 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:33:55.232 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:34:38.887 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:36:13.114 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:38:06.407 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:40:23.286 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:49:01.339 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:50:12.863 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:56:49.903 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 10:59:05.739 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 11:32:53.143 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 11:38:47.579 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 11:40:58.771 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 11:41:31.677 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 11:46:38.083 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 11:51:25.403 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 11:51:59.233 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 11:52:26.495 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 11:53:17.321 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 11:57:29.243 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 12:02:12.799 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 12:07:45.379 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 12:12:49.711 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 12:13:31.012 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 12:14:37.921 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 12:16:50.277 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 12:19:42.865 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 12:20:58.828 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 12:29:40.427 [JavaFX Application Thread] MainApp - Executor has shut down
+[INFO ] 2017-10-30 12:34:27.767 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-30 12:34:29.631 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-30 12:34:30.266 [JavaFX Application Thread] GroupRecordDAOImpl - Found 3
+[INFO ] 2017-10-30 12:34:30.854 [JavaFX Application Thread] GroupRecordDAOImpl - Found 4
+[INFO ] 2017-10-30 12:34:31.481 [JavaFX Application Thread] GroupRecordDAOImpl - Found 5
+[INFO ] 2017-10-30 12:34:32.121 [JavaFX Application Thread] GroupRecordDAOImpl - Found 5
+[DEBUG] 2017-10-30 12:34:34.873 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 12:35:20.794 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 12:35:53.955 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 12:37:51.443 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 12:41:02.870 [JavaFX Application Thread] MainApp - Executor has shut down
+[INFO ] 2017-10-30 13:00:13.273 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-30 13:00:23.191 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-30 13:00:26.425 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-30 13:00:33.165 [JavaFX Application Thread] AppointmentDAOImpl - Found 2
+[DEBUG] 2017-10-30 13:02:04.443 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 13:05:42.987 [JavaFX Application Thread] MainApp - Executor has shut down
+[INFO ] 2017-10-30 13:06:28.109 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[DEBUG] 2017-10-30 13:06:34.877 [JavaFX Application Thread] MainApp - Executor has shut down
+[INFO ] 2017-10-30 13:17:42.851 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[DEBUG] 2017-10-30 13:18:07.980 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 13:21:11.215 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 13:22:35.795 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 13:23:18.622 [JavaFX Application Thread] MainApp - Executor has shut down
+[INFO ] 2017-10-30 13:28:49.501 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[DEBUG] 2017-10-30 13:28:59.926 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 13:38:24.159 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 13:45:47.594 [JavaFX Application Thread] MainApp - Executor has shut down
+[INFO ] 2017-10-30 13:46:08.806 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-30 13:46:11.880 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-30 13:46:13.729 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-30 13:46:14.316 [JavaFX Application Thread] GroupRecordDAOImpl - Found 3
+[INFO ] 2017-10-30 13:46:14.830 [JavaFX Application Thread] GroupRecordDAOImpl - Found 4
+[INFO ] 2017-10-30 13:46:15.277 [JavaFX Application Thread] GroupRecordDAOImpl - Found 5
+[DEBUG] 2017-10-30 13:47:51.043 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 13:48:35.131 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 13:48:55.922 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 13:50:01.968 [JavaFX Application Thread] MainApp - Executor has shut down
+[INFO ] 2017-10-30 14:05:41.739 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-30 14:05:49.471 [JavaFX Application Thread] AppointmentDAOImpl - Found 2
+[INFO ] 2017-10-30 14:05:49.856 [JavaFX Application Thread] AppointmentDAOImpl - Found 3
+[INFO ] 2017-10-30 14:05:50.041 [JavaFX Application Thread] AppointmentDAOImpl - Found 4
+[INFO ] 2017-10-30 14:05:50.223 [JavaFX Application Thread] AppointmentDAOImpl - Found 5
+[INFO ] 2017-10-30 14:05:50.351 [JavaFX Application Thread] AppointmentDAOImpl - Found 6
+[INFO ] 2017-10-30 14:05:50.529 [JavaFX Application Thread] AppointmentDAOImpl - Found 7
+[INFO ] 2017-10-30 14:05:50.666 [JavaFX Application Thread] AppointmentDAOImpl - Found 8
+[INFO ] 2017-10-30 14:05:50.813 [JavaFX Application Thread] AppointmentDAOImpl - Found 9
+[INFO ] 2017-10-30 14:05:50.956 [JavaFX Application Thread] AppointmentDAOImpl - Found 10
+[INFO ] 2017-10-30 14:05:55.500 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-30 14:05:57.346 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-30 14:05:57.700 [JavaFX Application Thread] GroupRecordDAOImpl - Found 3
+[INFO ] 2017-10-30 14:06:00.148 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-30 14:06:05.619 [JavaFX Application Thread] GroupRecordDAOImpl - Found 4
+[INFO ] 2017-10-30 14:06:12.060 [JavaFX Application Thread] GroupRecordDAOImpl - Found 5
+[INFO ] 2017-10-30 14:06:17.412 [JavaFX Application Thread] AppointmentDAOImpl - Found 11
+[INFO ] 2017-10-30 14:09:10.898 [JavaFX Application Thread] AppointmentDAOImpl - Found 12
+[DEBUG] 2017-10-30 14:09:57.613 [JavaFX Application Thread] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-30 14:09:57.613 [JavaFX Application Thread] AppointmentFormController - Records created: 1
+[DEBUG] 2017-10-30 14:10:08.457 [JavaFX Application Thread] AppointmentDAOImpl - New record ID is 52
+[INFO ] 2017-10-30 14:10:08.458 [JavaFX Application Thread] AppointmentFormController - Records created: 1
+[INFO ] 2017-10-30 14:10:24.892 [JavaFX Application Thread] AppointmentFormController - Records updated: 1
+[DEBUG] 2017-10-30 14:10:29.269 [JavaFX Application Thread] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-30 14:10:29.270 [JavaFX Application Thread] AppointmentFormController - Records created: 1
+[DEBUG] 2017-10-30 14:10:33.243 [JavaFX Application Thread] AppointmentDAOImpl - New record ID is 54
+[INFO ] 2017-10-30 14:10:33.244 [JavaFX Application Thread] AppointmentFormController - Records created: 1
+[DEBUG] 2017-10-30 14:10:36.346 [JavaFX Application Thread] AppointmentDAOImpl - New record ID is 55
+[INFO ] 2017-10-30 14:10:36.347 [JavaFX Application Thread] AppointmentFormController - Records created: 1
+[INFO ] 2017-10-30 14:11:06.935 [JavaFX Application Thread] EmailTask - Sent an email
+[DEBUG] 2017-10-30 14:11:56.336 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 14:35:22.971 [JavaFX Application Thread] MainApp - Executor has shut down
+[INFO ] 2017-10-30 14:39:05.626 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-30 14:39:08.329 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-30 14:39:08.799 [JavaFX Application Thread] GroupRecordDAOImpl - Found 3
+[INFO ] 2017-10-30 14:40:41.782 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-30 14:42:53.008 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 2
+[INFO ] 2017-10-30 14:42:56.340 [JavaFX Application Thread] GroupRecordDAOImpl - Found 4
+[INFO ] 2017-10-30 14:42:58.120 [JavaFX Application Thread] GroupRecordDAOImpl - Found 3
+[INFO ] 2017-10-30 14:42:58.132 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-30 14:42:58.498 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[DEBUG] 2017-10-30 14:44:45.788 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 14:44:59.267 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 14:45:41.129 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 14:50:28.060 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 14:51:23.617 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 15:01:02.947 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 15:11:59.417 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 15:15:33.188 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 15:18:11.665 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 15:19:33.906 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 15:24:15.358 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 15:24:59.907 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 15:27:19.495 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 15:27:46.835 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 15:29:09.090 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 15:37:25.844 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 15:39:37.137 [JavaFX Application Thread] MainApp - Executor has shut down
+[INFO ] 2017-10-30 15:40:26.804 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:27.135 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:27.330 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:27.449 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:27.570 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:27.695 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:27.810 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:27.973 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:28.081 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:28.204 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:28.342 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:28.457 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-30 15:40:28.585 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-30 15:40:28.590 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:28.697 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:28.875 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-30 15:40:28.876 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:28.994 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:29.125 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:29.232 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:29.333 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:29.454 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:29.558 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-30 15:40:29.660 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-30 15:40:29.664 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:29.764 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:29.901 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-30 15:40:29.901 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:30.033 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-30 15:40:30.145 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-30 15:40:30.150 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-30 15:40:30.156 [main] AppointmentDAOImpl - New record ID is 53
+[DEBUG] 2017-10-30 15:40:30.162 [main] AppointmentDAOImpl - New record ID is 54
+[INFO ] 2017-10-30 15:40:34.536 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-30 15:40:34.536 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:34.648 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:34.752 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:34.896 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:35.030 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:35.140 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-30 15:40:35.244 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-30 15:40:35.248 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:35.357 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:35.464 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 15:40:35.576 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-30 15:40:35.576 [main] TestGroupRecords - Seeding Database
