@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcdanieldialogo.controller.DayViewController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcdanieldialogo.controller.DayViewController">
    <bottom>
       <ButtonBar prefWidth="1100.0" BorderPane.alignment="CENTER">
         <buttons>
@@ -41,7 +41,7 @@
       </ButtonBar>
    </bottom>
    <center>
-      <TableView fx:id="dayTable" prefWidth="1100.0" stylesheets="@../styles/dayview.css" BorderPane.alignment="CENTER">
+      <TableView fx:id="dayTable" prefHeight="580.0" prefWidth="1100.0" stylesheets="@../styles/dayview.css" BorderPane.alignment="CENTER">
          <columns>
             <TableColumn fx:id="timeCells" prefWidth="75.0" text="%TimeColumn" />
             <TableColumn fx:id="appointmentCells" prefWidth="133.0" text="%AppointmentColumn" />

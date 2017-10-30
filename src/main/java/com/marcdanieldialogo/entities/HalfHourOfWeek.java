@@ -9,7 +9,6 @@ import com.marcdanieldialogo.persistence.AppointmentDAO;
 import com.marcdanieldialogo.persistence.AppointmentDAOImpl;
 import java.sql.SQLException;
 import java.time.DayOfWeek;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -57,6 +56,8 @@ public class HalfHourOfWeek
         this.thursdayCol = new SimpleStringProperty(thursdayCol);
         this.fridayCol = new SimpleStringProperty(fridayCol);
         this.saturdayCol = new SimpleStringProperty(saturdayCol);
+        
+        daysOfWeek = new ArrayList<>();
         
         sundayAppointments = new ArrayList<>();
         mondayAppointments = new ArrayList<>();
@@ -110,7 +111,7 @@ public class HalfHourOfWeek
     public void setDate(LocalDateTime date)
     {
         this.currentDate = date;
-        List<LocalDateTime> daysOfWeek = new ArrayList<>();
+        daysOfWeek.clear();
         
         while(date.getDayOfWeek() != DayOfWeek.SUNDAY)
         {
@@ -124,8 +125,6 @@ public class HalfHourOfWeek
         }
         
         daysOfWeek.add(date);
-        
-        this.daysOfWeek = daysOfWeek;
         
         try 
         {
@@ -143,64 +142,85 @@ public class HalfHourOfWeek
         
         timeCol.set(LocalTime.of(currentDate.getHour(), currentDate.getMinute()).toString());
         
-        for(int i = 0; i < daysOfWeek.size(); i++)
-        {
-            switch(i)
-            {
-                case 0:
-                    sundayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(0), daysOfWeek.get(0).plusMinutes(29));
-                    break;
-                case 1:
-                    mondayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(1), daysOfWeek.get(1).plusMinutes(29));
-                    break;
-                case 2:
-                    tuesdayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(2), daysOfWeek.get(2).plusMinutes(29));
-                    break;
-                case 3:
-                    wednesdayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(3), daysOfWeek.get(3).plusMinutes(29));
-                    break;
-                case 4:
-                    thursdayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(4), daysOfWeek.get(4).plusMinutes(29));
-                    break;
-                case 5:
-                    fridayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(5), daysOfWeek.get(5).plusMinutes(29));
-                    break;
-                case 6:
-                    saturdayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(6), daysOfWeek.get(6).plusMinutes(29));
-                    break;
-            } // end switch statement
-        } // end for loop
+        sundayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(0), daysOfWeek.get(0).plusMinutes(29));
+
+        mondayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(1), daysOfWeek.get(1).plusMinutes(29));
+
+        tuesdayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(2), daysOfWeek.get(2).plusMinutes(29));
+
+        wednesdayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(3), daysOfWeek.get(3).plusMinutes(29));
+
+        thursdayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(4), daysOfWeek.get(4).plusMinutes(29));
+
+        fridayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(5), daysOfWeek.get(5).plusMinutes(29));
+
+        saturdayAppointments = appointmentDAO.findBetweenDateTimes(daysOfWeek.get(6), daysOfWeek.get(6).plusMinutes(29));
         
         LocalTime time = LocalTime.of(currentDate.getHour(), currentDate.getMinute());
         timeCol.set(time.toString());
         
         for(int i = 0; i < sundayAppointments.size(); i++)
         {
-            sundayCol.set(sundayCol.get() + "\n" + sundayAppointments.get(i).getTitle());
+            String prepend = "";
+            if(!sundayCol.get().isEmpty())
+            {
+                prepend = sundayCol.get() + "\n";
+            }
+            sundayCol.set(prepend + sundayAppointments.get(i).getTitle());
         }
         for(int i = 0; i < mondayAppointments.size(); i++)
         {
-            mondayCol.set(mondayCol.get() + "\n" + mondayAppointments.get(i).getTitle());
+            String prepend = "";
+            if(!mondayCol.get().isEmpty())
+            {
+                prepend = mondayCol.get() + "\n";
+            }
+            mondayCol.set(prepend + mondayAppointments.get(i).getTitle());
         }
         for(int i = 0; i < tuesdayAppointments.size(); i++)
         {
-            tuesdayCol.set(tuesdayCol.get() + "\n" + tuesdayAppointments.get(i).getTitle());
+            String prepend = "";
+            if(!tuesdayCol.get().isEmpty())
+            {
+                prepend = tuesdayCol.get() + "\n";
+            }
+            tuesdayCol.set(prepend + tuesdayAppointments.get(i).getTitle());
         }
         for(int i = 0; i < wednesdayAppointments.size(); i++)
         {
-            wednesdayCol.set(wednesdayCol.get() + "\n" + wednesdayAppointments.get(i).getTitle());
+            String prepend = "";
+            if(!wednesdayCol.get().isEmpty())
+            {
+                prepend = wednesdayCol.get() + "\n";
+            }
+            wednesdayCol.set(prepend + wednesdayAppointments.get(i).getTitle());
         }
         for(int i = 0; i < thursdayAppointments.size(); i++)
         {
-            thursdayCol.set(thursdayCol.get() + "\n" + thursdayAppointments.get(i).getTitle());
+            String prepend = "";
+            if(!thursdayCol.get().isEmpty())
+            {
+                prepend = thursdayCol.get() + "\n";
+            }
+            thursdayCol.set(prepend + thursdayAppointments.get(i).getTitle());
         }
         for(int i = 0; i < fridayAppointments.size(); i++)
         {
-            fridayCol.set(fridayCol.get() + "\n" + fridayAppointments.get(i).getTitle());
+            String prepend = "";
+            if(!fridayCol.get().isEmpty())
+            {
+                prepend = fridayCol.get() + "\n";
+            }
+            fridayCol.set(prepend + fridayAppointments.get(i).getTitle());
         }
         for(int i = 0; i < saturdayAppointments.size(); i++)
         {
-            saturdayCol.set(saturdayCol.get() + "\n" + saturdayAppointments.get(i).getTitle());
+            String prepend = "";
+            if(!saturdayCol.get().isEmpty())
+            {
+                prepend = saturdayCol.get() + "\n";
+            }
+            saturdayCol.set(prepend + saturdayAppointments.get(i).getTitle());
         }
     }
 }

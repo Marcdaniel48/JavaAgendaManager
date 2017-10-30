@@ -26,12 +26,20 @@
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                      <items>
+                        <MenuItem mnemonicParsing="false" text="%CONFIGURATION" />
                         <MenuItem mnemonicParsing="false" onAction="#handleNewAppointment" text="%APPOINTMENTFORM" />
                         <MenuItem mnemonicParsing="false" onAction="#handleNewGroupRecord" text="%GROUPFORM" />
                         <MenuItem mnemonicParsing="false" onAction="#handleSettingsForm" text="%SMTPFORM" />
                         <MenuItem mnemonicParsing="false" onAction="#handleExit" text="%EXITBTN" />
                      </items>
                 </Menu>
+                  <Menu mnemonicParsing="false" text="View">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openMonthView" text="%ViewMonthly" />
+                        <MenuItem mnemonicParsing="false" onAction="#openWeekView" text="%ViewWeekly" />
+                        <MenuItem mnemonicParsing="false" onAction="#openDayView" text="%ViewDaily" />
+                     </items>
+                  </Menu>
               </menus>
             </MenuBar>
             <ToolBar>

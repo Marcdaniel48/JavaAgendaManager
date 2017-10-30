@@ -130,7 +130,7 @@ public class WeekViewController {
         }
         saturday = weekRange.getDayOfWeek() + " " + weekRange.getDayOfMonth() + " " + weekRange.getMonth()+ " " + weekRange.getYear();
         
-        weekLbl.setText("Week of " + sunday + " to " + saturday);
+        weekLbl.setText(sunday + " — " + saturday);
     }
     
     /**

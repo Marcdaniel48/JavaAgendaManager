@@ -5899,3 +5899,98 @@ Caused by: java.lang.NullPointerException
 [INFO ] 2017-10-29 20:45:07.939 [main] TestGroupRecords - @AfterClass seeding
 [INFO ] 2017-10-29 20:45:07.939 [main] TestGroupRecords - Seeding Database
 [INFO ] 2017-10-29 20:45:57.936 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[ERROR] 2017-10-29 20:52:23.916 [JavaFX Application Thread] MainApp - Error
+javafx.fxml.LoadException: 
+file:/C:/Users/Marc-Daniel/Documents/NetBeansProjects/JAM_1539756_1/target/JAM_1539756_1-1.0-SNAPSHOT.jar!/fxml/MonthView.fxml
+
+	at javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2601) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2571) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409) ~[jfxrt.jar:?]
+	at com.marcdanieldialogo.MainApp.initRootLayout(MainApp.java:49) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.MainApp.start(MainApp.java:33) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$162(LauncherImpl.java:863) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$175(PlatformImpl.java:326) ~[jfxrt.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$null$173(PlatformImpl.java:295) ~[jfxrt.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_144]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$174(PlatformImpl.java:294) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$null$148(WinApplication.java:191) ~[jfxrt.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_144]
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_144]
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_144]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566) ~[jfxrt.jar:?]
+	... 13 more
+Caused by: java.lang.NullPointerException
+	at com.marcdanieldialogo.entities.HalfHourOfWeek.setDate(HalfHourOfWeek.java:112) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.WeekViewController.displayTable(WeekViewController.java:92) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.WeekViewController.setDay(WeekViewController.java:174) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.addOtherViewsToStackPane(MonthViewController.java:408) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at com.marcdanieldialogo.controller.MonthViewController.initialize(MonthViewController.java:136) ~[JAM_1539756_1-1.0-SNAPSHOT.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_144]
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_144]
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566) ~[jfxrt.jar:?]
+	... 13 more
+[INFO ] 2017-10-29 20:58:18.032 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-29 21:07:17.782 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-29 22:45:27.350 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:27.699 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:27.901 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:28.027 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:28.170 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:28.293 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:28.412 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:28.530 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:28.629 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:28.743 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:28.880 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:28.990 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-29 22:45:29.162 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-29 22:45:29.167 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:29.280 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:29.437 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-29 22:45:29.437 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:29.538 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:29.700 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:29.805 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:29.910 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:30.015 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:30.144 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-29 22:45:30.251 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-29 22:45:30.255 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:30.357 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:30.480 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-29 22:45:30.480 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:30.652 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-29 22:45:30.760 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-29 22:45:30.766 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-29 22:45:30.772 [main] AppointmentDAOImpl - New record ID is 53
+[INFO ] 2017-10-29 22:45:49.202 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-29 22:45:49.202 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:49.326 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:49.436 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:49.530 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:49.670 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:49.764 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-29 22:45:49.858 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-29 22:45:49.873 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:49.983 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:50.077 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-29 22:45:50.217 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-29 22:45:50.217 [main] TestGroupRecords - Seeding Database

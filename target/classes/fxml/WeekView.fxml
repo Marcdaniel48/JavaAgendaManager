@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcdanieldialogo.controller.WeekViewController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcdanieldialogo.controller.WeekViewController">
    <center>
-      <TableView fx:id="weekTable" prefWidth="1100.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="weekTable" prefHeight="580.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
          <columns>
             <TableColumn fx:id="timeCells" prefWidth="75.0" text="%TIME" />
             <TableColumn fx:id="sundayCells" prefWidth="75.0" text="%SUNDAY" />
