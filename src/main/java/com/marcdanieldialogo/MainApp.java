@@ -2,6 +2,9 @@ package com.marcdanieldialogo;
 
 import java.io.IOException;
 import java.util.ResourceBundle;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +14,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import task.EmailTask;
 
 /**
  *
@@ -21,6 +25,21 @@ public class MainApp extends Application{
     private final Logger log = LoggerFactory.getLogger(this.getClass().getName());
     private Stage primaryStage;
     private Parent rootPane;
+    
+    private final EmailTask emailTask;
+    private final ScheduledExecutorService executor;
+    
+    /**
+     * Default constructor instantiates the task to be carried out and the
+     * executor that manages the interval
+     */
+    public MainApp()
+    {
+        emailTask = new EmailTask();
+        
+        // Multiple tasks can be scheduled, here we are scheduling just one
+        executor = Executors.newScheduledThreadPool(1);
+    }
     
     public static void main(String[] args)
     {
@@ -33,6 +52,11 @@ public class MainApp extends Application{
         initRootLayout();
         primaryStage.setTitle("Month View");
         primaryStage.show();
+        
+        // The interval is between the start time of the task.
+        // The task must complete its task before the next interval completes.
+        // Runnable task, delay to start, interval between tasks, time units
+        executor.scheduleWithFixedDelay(emailTask, 1, 60, TimeUnit.SECONDS);
     }
     
     public void initRootLayout() {
@@ -57,5 +81,13 @@ public class MainApp extends Application{
             log.error("Error", ex);
             Platform.exit();
         }
+    }
+    
+    // When the JAM window closes, then the schedule executor will stop.
+    @Override
+    public void stop()
+    {
+        executor.shutdown();
+        log.debug("Executor has shut down");
     }
 }

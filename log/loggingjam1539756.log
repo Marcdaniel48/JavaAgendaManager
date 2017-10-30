@@ -7747,3 +7747,11 @@ Caused by: java.lang.NullPointerException
 [INFO ] 2017-10-30 07:21:41.979 [main] TestGroupRecords - Seeding Database
 [INFO ] 2017-10-30 07:21:42.108 [main] TestGroupRecords - @AfterClass seeding
 [INFO ] 2017-10-30 07:21:42.108 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 08:43:03.543 [JavaFX Application Thread] EmailTask - Sent an email
+[INFO ] 2017-10-30 08:50:19.511 [JavaFX Application Thread] EmailTask - Sent an email
+[INFO ] 2017-10-30 08:51:19.498 [JavaFX Application Thread] EmailTask - Sent an email
+[INFO ] 2017-10-30 08:52:19.487 [JavaFX Application Thread] EmailTask - Sent an email
+[INFO ] 2017-10-30 08:53:19.476 [JavaFX Application Thread] EmailTask - Sent an email
+[INFO ] 2017-10-30 08:55:24.551 [JavaFX Application Thread] EmailTask - Sent an email
+[INFO ] 2017-10-30 08:56:11.926 [JavaFX Application Thread] EmailTask - Sent an email
+[DEBUG] 2017-10-30 09:05:50.776 [JavaFX Application Thread] MainApp - Executor has shut down

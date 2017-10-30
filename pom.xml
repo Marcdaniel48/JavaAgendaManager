@@ -155,7 +155,7 @@
                     Better practice is to control testing in the
                     NetBeans-Run Maven-Goals and set the property skipTests
                     to true or false -->
-                    <skipTests>false</skipTests>
+                    <skipTests>true</skipTests>
                 </configuration>
             </plugin>
 
