@@ -7755,3 +7755,50 @@ Caused by: java.lang.NullPointerException
 [INFO ] 2017-10-30 08:55:24.551 [JavaFX Application Thread] EmailTask - Sent an email
 [INFO ] 2017-10-30 08:56:11.926 [JavaFX Application Thread] EmailTask - Sent an email
 [DEBUG] 2017-10-30 09:05:50.776 [JavaFX Application Thread] MainApp - Executor has shut down
+[INFO ] 2017-10-30 09:14:39.822 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:40.159 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:40.352 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:40.527 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:40.655 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:40.781 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:40.927 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:41.059 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:41.171 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:41.289 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:41.427 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:41.546 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-30 09:14:41.700 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-30 09:14:41.706 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:41.817 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:41.993 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-30 09:14:41.993 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:42.100 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:42.247 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:42.379 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:42.503 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:42.601 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:42.702 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-30 09:14:42.801 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-30 09:14:42.806 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:42.965 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:43.080 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-30 09:14:43.080 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:14:43.186 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-30 09:14:43.293 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-30 09:14:43.299 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-30 09:14:43.305 [main] AppointmentDAOImpl - New record ID is 53
+[DEBUG] 2017-10-30 09:14:43.311 [main] AppointmentDAOImpl - New record ID is 54
+[INFO ] 2017-10-30 09:15:01.127 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-30 09:15:01.128 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:15:01.243 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:15:01.377 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:15:01.474 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:15:01.574 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:15:01.686 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-30 09:15:01.784 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-30 09:15:01.789 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:15:01.942 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:15:02.053 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-30 09:15:02.173 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-30 09:15:02.173 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-30 09:15:41.402 [JavaFX Application Thread] MainApp - Executor has shut down

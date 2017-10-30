@@ -14,7 +14,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import task.EmailTask;
+import com.marcdanieldialogo.tasks.EmailTask;
 
 /**
  *

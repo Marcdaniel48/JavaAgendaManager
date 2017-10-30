@@ -1,4 +1,4 @@
-package task;
+package com.marcdanieldialogo.tasks;
 
 import com.marcdanieldialogo.email.JoddEmail;
 import com.marcdanieldialogo.entities.Appointment;
