@@ -305,5 +305,32 @@ public class SMTPSettingsDAOImpl implements SMTPSettingsDAO{
         
         return smtpSettings;
     }
+
+    @Override
+    public SMTPSettings findDefaultSMTP() throws SQLException 
+    {
+        SMTPSettings smtp = new SMTPSettings();
+        
+        String selectQuery = "SELECT * FROM SMTP_SETTINGS WHERE DEFAULT_SMTP = 1";
+        
+        try (Connection connection = util.getConnection();
+                PreparedStatement pStatement = connection.prepareStatement(selectQuery);) 
+        {
+
+            try (ResultSet resultSet = pStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    smtp = new SMTPSettings();
+                    smtp.setSMTPID(resultSet.getInt("SMTP_ID"));
+                    smtp.setUsername(resultSet.getString("USERNAME"));
+                    smtp.setEmail(resultSet.getString("EMAIL"));
+                    smtp.setEmailPassword(resultSet.getString("EMAIL_PASSWORD"));
+                    smtp.setSMTPURL(resultSet.getString("SMTP_URL"));
+                    smtp.setSMTPPort(resultSet.getInt("SMTP_PORT"));
+                    smtp.setReminderInterval(resultSet.getInt("REMINDER_INTERVAL"));
+                }
+            }
+        }
+        return smtp;
+    }
     
 }

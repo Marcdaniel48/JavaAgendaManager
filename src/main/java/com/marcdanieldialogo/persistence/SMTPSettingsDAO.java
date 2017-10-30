@@ -29,4 +29,6 @@ public interface SMTPSettingsDAO {
     
     public SMTPSettings findNextByID(SMTPSettings smtpSettings) throws SQLException;
     public SMTPSettings findPrevByID(SMTPSettings smtpSettings) throws SQLException;
+    
+    public SMTPSettings findDefaultSMTP() throws SQLException;
 }

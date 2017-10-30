@@ -2,8 +2,8 @@ USE JAMDB;
 
 -- Insert data for SMTP_SETTINGS -- *Ask about what data to Insert
 INSERT INTO SMTP_SETTINGS values
-(NULL, 'JAMnotifications', 'JAMEmailReminder@gmail.com', 'thunderboltx', 'smtp.gmail.com', DEFAULT, 1, 120),
-(NULL, 'Air', 'air_is_the_best201999@gmail.com', 'hunter2', 'smtp.gmail.com', DEFAULT, DEFAULT, DEFAULT);
+(NULL, 'JAMemail1', 'JAMEmailReminder@gmail.com', 'thunderboltx', 'smtp.gmail.com', DEFAULT, 1, 120),
+(NULL, 'JAMemail2', 'JAMEmailReceiver@gmail.com', 'thunderboltx', 'smtp.gmail.com', DEFAULT, DEFAULT, DEFAULT);
 
 -- Insert date for GROUP_RECORD table
 -- Colors: orange, blue, green, red, grey

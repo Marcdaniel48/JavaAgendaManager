@@ -3,15 +3,17 @@ package com.marcdanieldialogo.tests;
 import com.marcdanieldialogo.Utilities;
 import com.marcdanieldialogo.entities.Appointment;
 import com.marcdanieldialogo.email.JoddEmail;
+import com.marcdanieldialogo.entities.SMTPSettings;
 import com.marcdanieldialogo.persistence.AppointmentDAO;
 import com.marcdanieldialogo.persistence.AppointmentDAOImpl;
+import com.marcdanieldialogo.persistence.SMTPSettingsDAO;
+import com.marcdanieldialogo.persistence.SMTPSettingsDAOImpl;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 import java.io.StringReader;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
@@ -40,12 +42,21 @@ public class TestJoddEmail {
     @Test
     public void mailTest() throws SQLException
     {
+        // Creates 4 appointments that start 120 minutes from now.
         createMail();
-        List<Appointment> mail = findEmails();
-        sendEmails(mail);
+        
+        // The email that's being used to send the emails is the one found in the default SMTP settings record.
+        JoddEmail emailObj = new JoddEmail();
+        
+        // Will use the reminder interval of the default SMTP Settings record, which is 120 minutes.
+        // This method makes sure to only find appointments with alarm reminder set to true.
+        List<Appointment> appointmentsToSend = emailObj.findEmailsByInterval();
+        
+        // Sends an email for each appointment in the appointmentsToSend list
+        emailObj.sendEmailList(appointmentsToSend);
         
         // Makes sure that there are only 3 appointments that have been found
-        assertEquals(3, mail.size());
+        assertEquals(3, appointmentsToSend.size());
     }
     
     /**
@@ -203,44 +214,5 @@ public class TestJoddEmail {
         dao.create(appointment2);
         dao.create(appointment3);
         dao.create(appointment4);
-    }
-    
-    /**
-     * Will return any appointments that start 120 minutes from now & have their alarm reminder set to true.
-     * 
-     * @return List<Appointment>
-     * @throws SQLException 
-     */
-    private List<Appointment> findEmails() throws SQLException
-    {
-        AppointmentDAO dao = new AppointmentDAOImpl();
-        
-        List<Appointment> appointments = dao.findByDate(LocalDateTime.now().plusMinutes(120));
-        
-        for(int i = 0; i < appointments.size(); i++)
-        {
-            if(appointments.get(i).getAlarmReminder() == false)
-            {
-                appointments.remove(i);
-            }
-        }
-        
-        return appointments;
-    }
-    
-    /**
-     * Takes in a list of appointments and for each appointment, an email
-     * describing the appointment will be sent.
-     * 
-     * @param mail 
-     */
-    private void sendEmails(List<Appointment> mail)
-    {
-        JoddEmail jodd = new JoddEmail();
-        
-        for(Appointment appointment : mail)
-        {
-            jodd.sendAppointmentEmail(appointment);
-        }
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.marcdanieldialogo.tests.TestJoddEmail" time="17.153" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.marcdanieldialogo.tests.TestJoddEmail" time="4.026" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CA"/>
     <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk1.8.0_144\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\MARC-D~1\AppData\Local\Temp\surefire3661898153984871122\surefirebooter3696685144735155508.jar C:\Users\Marc-Daniel\AppData\Local\Temp\surefire3661898153984871122 2017-10-30T00-52-36_759-jvmRun1 surefire2108323443112780994tmp surefire_03434942238609866978tmp"/>
+    <property name="sun.java.command" value="C:\Users\MARC-D~1\AppData\Local\Temp\surefire1888778829547961987\surefirebooter6668827104810895269.jar C:\Users\Marc-Daniel\AppData\Local\Temp\surefire1888778829547961987 2017-10-30T07-21-32_531-jvmRun1 surefire1748134050108273577tmp surefire_08858685358347667226tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\Marc-Daniel\Documents\NetBeansProjects\JAM_1539756_1\target\test-classes;C:\Users\Marc-Daniel\Documents\NetBeansProjects\JAM_1539756_1\target\classes;C:\Users\Marc-Daniel\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\Marc-Daniel\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.8.2\log4j-slf4j-impl-2.8.2.jar;C:\Users\Marc-Daniel\.m2\repository\org\apache\logging\log4j\log4j-api\2.8.2\log4j-api-2.8.2.jar;C:\Users\Marc-Daniel\.m2\repository\org\apache\logging\log4j\log4j-core\2.8.2\log4j-core-2.8.2.jar;C:\Users\Marc-Daniel\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Marc-Daniel\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Marc-Daniel\.m2\repository\mysql\mysql-connector-java\5.1.43\mysql-connector-java-5.1.43.jar;C:\Users\Marc-Daniel\.m2\repository\org\jodd\jodd-mail\3.8.6\jodd-mail-3.8.6.jar;C:\Users\Marc-Daniel\.m2\repository\org\jodd\jodd-core\3.8.6\jodd-core-3.8.6.jar;C:\Users\Marc-Daniel\.m2\repository\javax\mail\javax.mail-api\1.5.6\javax.mail-api-1.5.6.jar;C:\Users\Marc-Daniel\.m2\repository\com\sun\mail\javax.mail\1.5.6\javax.mail-1.5.6.jar;C:\Users\Marc-Daniel\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Marc-Daniel"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\MARC-D~1\AppData\Local\Temp\surefire3661898153984871122\surefirebooter3696685144735155508.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\MARC-D~1\AppData\Local\Temp\surefire1888778829547961987\surefirebooter6668827104810895269.jar"/>
     <property name="sun.boot.class.path" value="D:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;D:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;D:\Program Files\Java\jdk1.8.0_144\jre\lib\sunrsasign.jar;D:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;D:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.8.0_144\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -61,5 +61,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="mailTest" classname="com.marcdanieldialogo.tests.TestJoddEmail" time="17.043"/>
+  <testcase name="mailTest" classname="com.marcdanieldialogo.tests.TestJoddEmail" time="3.901"/>
 </testsuite>
