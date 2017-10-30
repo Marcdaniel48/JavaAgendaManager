@@ -346,6 +346,32 @@ public class MonthViewController {
         }
     }
     
+    @FXML
+    void openConfiguration(ActionEvent event) 
+    {
+        try
+        {   
+            Stage configFormStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setResources(ResourceBundle.getBundle("ConfigurationSettingsForm"));
+            loader.setLocation(MainApp.class.getResource("/fxml/ConfigurationForm.fxml"));
+            
+            Parent configFormPane = (BorderPane) loader.load();
+
+            Scene configFormScene = new Scene(configFormPane);
+            
+            configFormStage.setScene(configFormScene);
+            configFormStage.initModality(Modality.APPLICATION_MODAL);
+            configFormStage.setTitle("Configuration Settings");
+            
+            configFormStage.show();
+        }
+        catch(IOException ioe)
+        {
+            log.error("IOException in openConfiguration method", ioe.getMessage());
+        }  
+    }
+    
     /**
      * Closes the window
      */

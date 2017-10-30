@@ -11,12 +11,14 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
@@ -62,6 +64,9 @@ public class WeekViewController {
     private Button exitButton; // Value injected by FXMLLoader
     
     private LocalDate day;
+    
+    // The individual cells of the week table
+    private ObservableList<TablePosition> theCells;
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() 
@@ -76,6 +81,31 @@ public class WeekViewController {
         saturdayCells.setCellValueFactory(cellData -> cellData.getValue().saturdayProperty());
         
         adjustColumnWidths();
+        
+        weekTable.getSelectionModel().cellSelectionEnabledProperty().set(true);
+        theCells = weekTable.getSelectionModel().getSelectedCells();
+        theCells.addListener(this::showSingleCellDetails);
+    }
+    
+    private void showSingleCellDetails(ListChangeListener.Change<? extends TablePosition> change)
+    {
+        /*if(theCells.size() > 0)
+        {
+            TablePosition selectedCell = theCells.get(0);
+            TableColumn column = selectedCell.getTableColumn();
+            int rowIndex = selectedCell.getRow();
+            String data = (String)column.getCellObservableValue(rowIndex).getValue();
+            data = data.split("\\n")[0];
+        
+            if(!((String)data).equals(""))
+            {
+                LocalDate selectedDay = LocalDate.of(currentYear, currentMonth, Integer.parseInt(data));
+                
+                dayController.setDay(selectedDay);
+                weekController.setDay(selectedDay);
+                openDayView(null);
+            }
+        }*/
     }
     
     public void displayTable()

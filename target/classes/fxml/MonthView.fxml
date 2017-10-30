@@ -26,7 +26,7 @@
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="%CONFIGURATION" />
+                        <MenuItem mnemonicParsing="false" onAction="#openConfiguration" text="%CONFIGURATION" />
                         <MenuItem mnemonicParsing="false" onAction="#handleNewAppointment" text="%APPOINTMENTFORM" />
                         <MenuItem mnemonicParsing="false" onAction="#handleNewGroupRecord" text="%GROUPFORM" />
                         <MenuItem mnemonicParsing="false" onAction="#handleSettingsForm" text="%SMTPFORM" />

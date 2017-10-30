@@ -2,13 +2,10 @@ package com.marcdanieldialogo;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.nio.file.Files;
 import static java.nio.file.Files.newInputStream;
-import static java.nio.file.Files.newOutputStream;
 import java.nio.file.Path;
 import static java.nio.file.Paths.get;
-import java.nio.file.StandardOpenOption;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
