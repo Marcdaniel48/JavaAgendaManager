@@ -1,7 +1,8 @@
 package com.marcdanieldialogo.tests;
 
+import com.marcdanieldialogo.Utilities;
 import com.marcdanieldialogo.entities.Appointment;
-import com.marcdanieldialogo.JoddEmail;
+import com.marcdanieldialogo.email.JoddEmail;
 import com.marcdanieldialogo.persistence.AppointmentDAO;
 import com.marcdanieldialogo.persistence.AppointmentDAOImpl;
 import java.io.BufferedReader;
@@ -31,9 +32,7 @@ import org.slf4j.LoggerFactory;
 public class TestJoddEmail {
     
     // Information needed to connect to the JAM database.
-    private final String url = "jdbc:mysql://localhost:3306/jamdb?autoReconnect=true&useSSL=false";
-    private final String user = "MarcDaniel";
-    private final String password = "dbsurfing";
+    Utilities util = new Utilities();
     
     private final static Logger log = LoggerFactory.getLogger(TestGroupRecords.class);
     
@@ -78,7 +77,7 @@ public class TestJoddEmail {
         final String seedDataScript = loadAsString("CreateJAMTables.sql");
         final String seedDataScript2 = loadAsString("CreateJAMMockData.sql");
         
-        try (Connection connection = DriverManager.getConnection(url, user, password))
+        try (Connection connection = util.getConnection())
         {
             for (String statement : splitStatements(new StringReader(seedDataScript), ";")) 
             {
@@ -188,11 +187,22 @@ public class TestJoddEmail {
         appointment3.setWholeDay(Boolean.FALSE);
         appointment3.setAppointmentGroup(0);
         
+        Appointment appointment4 = new Appointment();
+        appointment4.setTitle("Test appointment #4");
+        appointment4.setLocation("The Void");
+        appointment4.setDetails("Alarm is set to false. This appointment shouldn't be sent.");
+        appointment4.setAlarmReminder(Boolean.FALSE);
+        appointment4.setStartTime(Timestamp.valueOf(twoHoursFromNow));
+        appointment4.setEndTime(Timestamp.valueOf(twoHoursFromNow.plusMinutes(30)));
+        appointment4.setWholeDay(Boolean.FALSE);
+        appointment4.setAppointmentGroup(0);
+        
         AppointmentDAO dao = new AppointmentDAOImpl();
         
         dao.create(appointment1);
         dao.create(appointment2);
         dao.create(appointment3);
+        dao.create(appointment4);
     }
     
     /**

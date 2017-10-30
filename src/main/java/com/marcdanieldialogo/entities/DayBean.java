@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class DayBean 
 {
-    List<HalfHourBean> halfHours;
+    List<HalfHourOfDay> halfHours;
     LocalDate date;
     
     public DayBean(LocalDate date)
@@ -27,12 +27,12 @@ public class DayBean
     
     public void setHoursForDay(LocalDate date)
     {
-        List<HalfHourBean> halfHours = new ArrayList<>();
+        List<HalfHourOfDay> halfHours = new ArrayList<>();
         LocalDateTime ldt = date.atStartOfDay();
         
         for(int i = 0; i < 48; i++)
         {
-            HalfHourBean dayBean = new HalfHourBean();
+            HalfHourOfDay dayBean = new HalfHourOfDay();
             dayBean.setDate(ldt);
             dayBean.insertPropertyStrings();
             halfHours.add(dayBean);
@@ -43,7 +43,7 @@ public class DayBean
         this.halfHours = halfHours;
     }
     
-    public List<HalfHourBean> getHalfHourList()
+    public List<HalfHourOfDay> getHalfHourList()
     {
         return halfHours;
     }

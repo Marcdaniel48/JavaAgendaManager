@@ -4,15 +4,11 @@
 
 package com.marcdanieldialogo.controller;
 
-import com.marcdanieldialogo.entities.DayBean;
-import com.marcdanieldialogo.entities.HalfHourBean;
 import com.marcdanieldialogo.entities.HalfHourOfWeek;
-import com.marcdanieldialogo.entities.WeekBean;
 import java.net.URL;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.Month;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

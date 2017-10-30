@@ -1,7 +1,7 @@
 package com.marcdanieldialogo.controller;
 
 import com.marcdanieldialogo.entities.DayBean;
-import com.marcdanieldialogo.entities.HalfHourBean;
+import com.marcdanieldialogo.entities.HalfHourOfDay;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -31,13 +31,13 @@ public class DayViewController {
     private Button exitButton; // Value injected by FXMLLoader
 
     @FXML // fx:id="dayTable"
-    private TableView<HalfHourBean> dayTable; // Value injected by FXMLLoader
+    private TableView<HalfHourOfDay> dayTable; // Value injected by FXMLLoader
 
     @FXML // fx:id="timeCells"
-    private TableColumn<HalfHourBean, String> timeCells; // Value injected by FXMLLoader
+    private TableColumn<HalfHourOfDay, String> timeCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="appointmentCells"
-    private TableColumn<HalfHourBean, String> appointmentCells; // Value injected by FXMLLoader
+    private TableColumn<HalfHourOfDay, String> appointmentCells; // Value injected by FXMLLoader
     
     private LocalDate day;
     
@@ -53,11 +53,11 @@ public class DayViewController {
     
     public void displayTable()
     {
-        ObservableList<HalfHourBean> dayList = FXCollections.observableArrayList();
+        ObservableList<HalfHourOfDay> dayList = FXCollections.observableArrayList();
         
         LocalDateTime ldt = day.atStartOfDay();
         DayBean dayBean = new DayBean(ldt.toLocalDate());
-        for(HalfHourBean halfHour : dayBean.getHalfHourList())
+        for(HalfHourOfDay halfHour : dayBean.getHalfHourList())
         {
             dayList.add(halfHour);
         }

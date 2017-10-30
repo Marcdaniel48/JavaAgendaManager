@@ -1,12 +1,10 @@
-package com.marcdanieldialogo;
+package com.marcdanieldialogo.email;
 
 import com.marcdanieldialogo.entities.Appointment;
 import jodd.mail.Email;
 import jodd.mail.SendMailSession;
 import jodd.mail.SmtpServer;
 import jodd.mail.SmtpSslServer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * A class used for sending emails.
@@ -14,8 +12,6 @@ import org.slf4j.LoggerFactory;
  * @author Marc-Daniel
  */
 public class JoddEmail {
-    private final Logger log = LoggerFactory.getLogger(getClass().getName());
-
     private final String smtpServerName = "smtp.gmail.com";
     
     // The gmail account that's going to be used to send email notifications
@@ -60,7 +56,5 @@ public class JoddEmail {
         session.open();
         session.sendMail(email);
         session.close();
-
     }
-   
 }

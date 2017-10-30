@@ -17,7 +17,7 @@ import javafx.beans.property.StringProperty;
  *
  * @author Marc-Daniel
  */
-public class HalfHourBean 
+public class HalfHourOfDay 
 {
     private StringProperty timeCol;
     private StringProperty appointmentCol;
@@ -26,7 +26,7 @@ public class HalfHourBean
     private AppointmentDAO appointmentDAO;
     private List<Appointment> appointmentList;
     
-    public HalfHourBean(String timeCol, String appointmentCol)
+    public HalfHourOfDay(String timeCol, String appointmentCol)
     {
         this.timeCol = new SimpleStringProperty(timeCol);
         this.appointmentCol = new SimpleStringProperty(appointmentCol);
@@ -35,7 +35,7 @@ public class HalfHourBean
         appointmentList = new ArrayList<>();
     }
     
-    public HalfHourBean()
+    public HalfHourOfDay()
     {
         this("", "");
     }
@@ -86,7 +86,7 @@ public class HalfHourBean
         } 
         catch (SQLException ex) 
         {
-            Logger.getLogger(HalfHourBean.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(HalfHourOfDay.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
