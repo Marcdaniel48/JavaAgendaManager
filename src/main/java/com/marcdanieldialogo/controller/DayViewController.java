@@ -1,18 +1,29 @@
 package com.marcdanieldialogo.controller;
 
+import com.marcdanieldialogo.entities.Appointment;
 import com.marcdanieldialogo.entities.DayBean;
+import com.marcdanieldialogo.entities.GroupRecord;
 import com.marcdanieldialogo.entities.HalfHourOfDay;
+import com.marcdanieldialogo.persistence.AppointmentDAO;
+import com.marcdanieldialogo.persistence.AppointmentDAOImpl;
+import com.marcdanieldialogo.persistence.GroupRecordDAO;
+import com.marcdanieldialogo.persistence.GroupRecordDAOImpl;
 import java.net.URL;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.slf4j.LoggerFactory;
 
@@ -42,9 +53,20 @@ public class DayViewController {
     private LocalDate day;
     
     private final org.slf4j.Logger log = LoggerFactory.getLogger(this.getClass().getName());
-
+    
+    private AppointmentDAO appointmentDAO;
+    private GroupRecordDAO groupRecordDAO;
+    
+    public DayViewController()
+    {
+        super();
+        appointmentDAO = new AppointmentDAOImpl();
+        groupRecordDAO = new GroupRecordDAOImpl();
+    }
+    
     @FXML // This method is called by the FXMLLoader when initialization is complete
-    void initialize() {
+    void initialize() 
+    {
         timeCells.setCellValueFactory(cellData -> cellData.getValue().timeColProperty());
         appointmentCells.setCellValueFactory(cellData -> cellData.getValue().appointmentColProperty());
         

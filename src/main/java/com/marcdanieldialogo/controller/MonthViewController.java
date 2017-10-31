@@ -24,7 +24,6 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -34,7 +33,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -101,12 +99,14 @@ public class MonthViewController {
     DayViewController dayController;
     WeekViewController weekController;
     
-    @FXML//delete
-    private StackPane stackPane;//delete
+    @FXML
+    private StackPane stackPane;
+    
     /**
      * Constructor
      */
-    public MonthViewController() {
+    public MonthViewController() 
+    {
         super();
         smtpDAO = new SMTPSettingsDAOImpl();
         smtp = new SMTPSettings();
@@ -450,7 +450,6 @@ public class MonthViewController {
         openMonthView(null);
     }
     
-    //DELETE METHOD
     /**
      * This is a method that is responsible for the contents of a cell. With it
      * we can colour the background of a cell.
@@ -477,7 +476,7 @@ public class MonthViewController {
                         if(item.split("\\n").length > 1)
                         {
                             VBox vbox = new VBox();
-                            //DELETE
+                            
                             Label dayOfMonthLbl = new Label(item.split("\\n")[0]);
                             vbox.getChildren().add(dayOfMonthLbl);
                             for(int i = 1; i < item.split("\\n").length; i++)
@@ -520,8 +519,5 @@ public class MonthViewController {
                 }
             };
         });
-
-    }
-
-
-}
+    } // end renderCell method
+} // end MonthViewController class
