@@ -19,7 +19,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /**
- *
+ * Used by the WeekViewController to set and display data into the weekly view table.
  * @author Marc-Daniel
  */
 public class HalfHourOfWeek 

@@ -1,10 +1,10 @@
-/**
- * Sample Skeleton for 'WeekView.fxml' Controller Class
- */
-
 package com.marcdanieldialogo.controller;
 
 import com.marcdanieldialogo.entities.HalfHourOfWeek;
+import com.marcdanieldialogo.persistence.AppointmentDAO;
+import com.marcdanieldialogo.persistence.AppointmentDAOImpl;
+import com.marcdanieldialogo.persistence.GroupRecordDAO;
+import com.marcdanieldialogo.persistence.GroupRecordDAOImpl;
 import java.net.URL;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -17,11 +17,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Controller class for WeekView.fxml
+ * @author Marc-Daniel
+ */
 public class WeekViewController {
 
     @FXML // ResourceBundle that was given to the FXMLLoader
@@ -63,14 +66,29 @@ public class WeekViewController {
     @FXML // fx:id="exitButton"
     private Button exitButton; // Value injected by FXMLLoader
     
+    // Logger
     private final org.slf4j.Logger log = LoggerFactory.getLogger(this.getClass().getName());
     
+    // This controller refers to this LocalDate object to find and display all days of the week.
     private LocalDate day;
     
-    // The individual cells of the week table
-    private ObservableList<TablePosition> theCells;
+    // These DAO objects will be used to find certain appointments and group records.
+    AppointmentDAO appointmentDAO;
+    GroupRecordDAO groupRecordDAO;
     
+    /**
+     * Constructor that helps with initializing the DAO objects of this class.
+     */
+    public WeekViewController()
+    {
+        super();
+        appointmentDAO = new AppointmentDAOImpl();
+        groupRecordDAO = new GroupRecordDAOImpl();
+    }
     
+    /**
+     * Initializes the controller class.
+     */
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() 
     {
@@ -83,12 +101,16 @@ public class WeekViewController {
         fridayCells.setCellValueFactory(cellData -> cellData.getValue().fridayProperty());
         saturdayCells.setCellValueFactory(cellData -> cellData.getValue().saturdayProperty());
         
+        // Balances the widths of each column
         adjustColumnWidths();
         
+        // Enables  the selection of single cells in the table
         weekTable.getSelectionModel().cellSelectionEnabledProperty().set(true);
-        theCells = weekTable.getSelectionModel().getSelectedCells();
     }
     
+    /**
+     * Sets and displays the rows for the week table.
+     */
     public void displayTable()
     {
         ObservableList<HalfHourOfWeek> dayList = FXCollections.observableArrayList();
@@ -104,6 +126,9 @@ public class WeekViewController {
         weekTable.setItems(dayList);
     }
     
+    /**
+     * Sets the widths of each column so that they each have the same width.
+     */
     private void adjustColumnWidths() 
     {
         double width = weekTable.getPrefWidth();
@@ -118,25 +143,37 @@ public class WeekViewController {
     }
     
     /**
-     * Sets the label responsible for displaying the current week
+     * Sets the label responsible for displaying what the current week is (from Sunday to Saturday).
      */
     private void setWeekLabel()
     {
+        // Assigns the day field to a new LocalDate object, so that day won't be overwritten or set to a new value
         LocalDate weekRange = day;
+        
+        // These strings will be used to display the range of the week
         String sunday = "";
         String saturday = "";
         
+        // If the current day of weekRange is not sunday, then keep going back by 1 day, until it is.
         while(weekRange.getDayOfWeek() != DayOfWeek.SUNDAY)
         {
             weekRange = weekRange.minusDays(1);
         }
+        
+        // Set the sunday String to the values of the week's sunday
         sunday = weekRange.getDayOfWeek() + " " + weekRange.getDayOfMonth() + " " + weekRange.getMonth()+ " " + weekRange.getYear();
+        
+        // Moves up weekRange by 1 day, until it is saturday
         while(weekRange.getDayOfWeek() != DayOfWeek.SATURDAY)
         {
             weekRange = weekRange.plusDays(1);
         }
+        
+        // Set the saturday String to the values of the week's saturday
         saturday = weekRange.getDayOfWeek() + " " + weekRange.getDayOfMonth() + " " + weekRange.getMonth()+ " " + weekRange.getYear();
         
+        
+        // Set weekLbl with the date from sunday to the date of saturday
         weekLbl.setText(sunday + " — " + saturday);
     }
     

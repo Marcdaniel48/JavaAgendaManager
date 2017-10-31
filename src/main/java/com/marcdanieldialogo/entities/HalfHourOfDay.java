@@ -3,7 +3,6 @@ package com.marcdanieldialogo.entities;
 import com.marcdanieldialogo.persistence.AppointmentDAO;
 import com.marcdanieldialogo.persistence.AppointmentDAOImpl;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -14,13 +13,14 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /**
- *
+ * Used by the DayViewController to set and display data into the daily view table.
  * @author Marc-Daniel
  */
 public class HalfHourOfDay 
 {
-    private StringProperty timeCol;
-    private StringProperty appointmentCol;
+    
+    private StringProperty timeCol; // A half-hour period of time
+    private StringProperty appointmentCol; // The appointments found within a half-hour time frame.
     
     private LocalDateTime currentDay;
     private AppointmentDAO appointmentDAO;

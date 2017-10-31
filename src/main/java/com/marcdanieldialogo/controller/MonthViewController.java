@@ -4,7 +4,7 @@ import com.marcdanieldialogo.MainApp;
 import com.marcdanieldialogo.entities.Appointment;
 import com.marcdanieldialogo.entities.GroupRecord;
 import com.marcdanieldialogo.entities.SMTPSettings;
-import com.marcdanieldialogo.entities.MonthViewBean;
+import com.marcdanieldialogo.entities.WeekOfMonth;
 import com.marcdanieldialogo.persistence.AppointmentDAO;
 import com.marcdanieldialogo.persistence.AppointmentDAOImpl;
 import com.marcdanieldialogo.persistence.GroupRecordDAO;
@@ -51,28 +51,28 @@ public class MonthViewController {
     private URL location;
 
     @FXML // fx:id="monthTable"
-    private TableView<MonthViewBean> monthTable; // Value injected by FXMLLoader
+    private TableView<WeekOfMonth> monthTable; // Value injected by FXMLLoader
 
     @FXML // fx:id="sundayCells"
-    private TableColumn<MonthViewBean, String> sundayCells; // Value injected by FXMLLoader
+    private TableColumn<WeekOfMonth, String> sundayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="mondayCells"
-    private TableColumn<MonthViewBean, String> mondayCells; // Value injected by FXMLLoader
+    private TableColumn<WeekOfMonth, String> mondayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="tuesdayCells"
-    private TableColumn<MonthViewBean, String> tuesdayCells; // Value injected by FXMLLoader
+    private TableColumn<WeekOfMonth, String> tuesdayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="wednesdayCells"
-    private TableColumn<MonthViewBean, String> wednesdayCells; // Value injected by FXMLLoader
+    private TableColumn<WeekOfMonth, String> wednesdayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="thursdayCells"
-    private TableColumn<MonthViewBean, String> thursdayCells; // Value injected by FXMLLoader
+    private TableColumn<WeekOfMonth, String> thursdayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="fridayCells"
-    private TableColumn<MonthViewBean, String> fridayCells; // Value injected by FXMLLoader
+    private TableColumn<WeekOfMonth, String> fridayCells; // Value injected by FXMLLoader
 
     @FXML // fx:id="saturdayCells"
-    private TableColumn<MonthViewBean, String> saturdayCells; // Value injected by FXMLLoader
+    private TableColumn<WeekOfMonth, String> saturdayCells; // Value injected by FXMLLoader
     
     @FXML // fx:id="currentMonthLabel"
     private Label currentMonthLabel; // Value injected by FXMLLoader
@@ -80,15 +80,17 @@ public class MonthViewController {
     @FXML // fx:id="exitButton"
     private Button exitButton; // Value injected by FXMLLoader
     
+    // Logger
     private final Logger log = LoggerFactory.getLogger(getClass().getName());
     
-    // The individual cells of the month table
+    // The individual cells of the month table. Useful for handling single-cell clicks.
     private ObservableList<TablePosition> theCells;
     
-    // Keeps track of the current month and year
+    // Keeps track of the current month and year of the monthly calendar
     private int currentMonth;
     private int currentYear;
     
+    // DAO and entities which will be used for retrieving data from the database
     private SMTPSettingsDAO smtpDAO;
     private SMTPSettings smtp;
     private GroupRecordDAO groupRecordDAO;
@@ -96,14 +98,18 @@ public class MonthViewController {
     private AppointmentDAO appointmentDAO;
     private Appointment appointment;
     
+    // Controllers for the daily and weekly views. 
+    // Needed, because the daily and weekly views are set inside a stack pane in the main window which is the monthly view).
     DayViewController dayController;
     WeekViewController weekController;
     
+    // A stack pane that contains the monthly, weekly, and daily views
     @FXML
     private StackPane stackPane;
     
     /**
-     * Constructor
+     * Constructor that initializes the DAO objects, the database beans, and the
+     * current month and year of the controller.
      */
     public MonthViewController() 
     {
@@ -119,6 +125,9 @@ public class MonthViewController {
         currentYear = LocalDate.now().getYear();
     }
     
+    /**
+     * Initializes the controller class
+     */
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
 
@@ -130,14 +139,18 @@ public class MonthViewController {
         fridayCells.setCellValueFactory(cellData -> cellData.getValue().fridayColProperty());
         saturdayCells.setCellValueFactory(cellData -> cellData.getValue().saturdayColProperty());
         
+        // Adjusts the individual cells to make square shapes. Makes the month table look like a calendar.
         adjustColumnWidths();
         
+        // Allows the clicking of individual cells within the monthly table.
         monthTable.getSelectionModel().cellSelectionEnabledProperty().set(true);
         theCells = monthTable.getSelectionModel().getSelectedCells();
         theCells.addListener(this::showSingleCellDetails);
         
+        // Displays and sets the data for the current month.
         displayTable();
         
+        // Adds the weekly and daily views to a stack pane, to allow users to easily switch between views.
         addOtherViewsToStackPane();
     }
     
@@ -146,14 +159,14 @@ public class MonthViewController {
      */
     public void displayTable()
     {
-        ObservableList<MonthViewBean> weekList = FXCollections.observableArrayList();
+        ObservableList<WeekOfMonth> weekList = FXCollections.observableArrayList();
         
         LocalDate currentDate = LocalDate.of(currentYear, currentMonth, 1);
         currentMonthLabel.setText(currentDate.getMonth().toString() + " " + currentDate.getYear());
         
         for(int i = 0; i < 6; i++)
         {
-            MonthViewBean weekBean = new MonthViewBean();
+            WeekOfMonth weekBean = new WeekOfMonth();
             weekBean.setDate(currentDate);
             weekBean.setWeek();
             
@@ -355,6 +368,10 @@ public class MonthViewController {
         }
     }
     
+    /**
+     * Opens the database credentials form.
+     * @param event 
+     */
     @FXML
     void openConfiguration(ActionEvent event) 
     {
@@ -451,15 +468,13 @@ public class MonthViewController {
     }
     
     /**
-     * This is a method that is responsible for the contents of a cell. With it
-     * we can colour the background of a cell.
-     *
-     * @param tc
+     * Adds background colors to the appointments listed in the month table. The color of the background depends on the appointment's appointment group.
+     * @param tc 
      */
     private void renderCell(TableColumn tc) {
 
         tc.setCellFactory(column -> {
-            return new TableCell<MonthViewBean, String>() 
+            return new TableCell<WeekOfMonth, String>() 
             {
                 @Override
                 protected void updateItem(String item, boolean empty) 

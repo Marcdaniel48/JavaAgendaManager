@@ -13,10 +13,10 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /**
- *
+ * Used by the MonthViewController to set and display data into the month table (the calendar).
  * @author Marc-Daniel
  */
-public class MonthViewBean 
+public class WeekOfMonth 
 {
     private StringProperty sundayCol;
     private StringProperty mondayCol;
@@ -29,7 +29,7 @@ public class MonthViewBean
     private LocalDate currentDay;
     private AppointmentDAO appointmentDAO;
     
-    public MonthViewBean(String sundayCol, String mondayCol, String tuesdayCol, String wednesdayCol, String thursdayCol, String fridayCol,
+    public WeekOfMonth(String sundayCol, String mondayCol, String tuesdayCol, String wednesdayCol, String thursdayCol, String fridayCol,
             String saturdayCol)
     {
         this.sundayCol = new SimpleStringProperty(sundayCol);
@@ -44,7 +44,7 @@ public class MonthViewBean
         appointmentDAO = new AppointmentDAOImpl();
     }
     
-    public MonthViewBean()
+    public WeekOfMonth()
     {
         this("", "", "", "", "", "", "");
     }
@@ -87,7 +87,7 @@ public class MonthViewBean
                         } 
                         catch (SQLException ex) 
                         {
-                            Logger.getLogger(MonthViewBean.class.getName()).log(Level.SEVERE, null, ex);
+                            Logger.getLogger(WeekOfMonth.class.getName()).log(Level.SEVERE, null, ex);
                         }
                     }
                     
@@ -109,7 +109,7 @@ public class MonthViewBean
                         } 
                         catch (SQLException ex) 
                         {
-                            Logger.getLogger(MonthViewBean.class.getName()).log(Level.SEVERE, null, ex);
+                            Logger.getLogger(WeekOfMonth.class.getName()).log(Level.SEVERE, null, ex);
                         }
                     }
                     break;
@@ -129,7 +129,7 @@ public class MonthViewBean
                         } 
                         catch (SQLException ex) 
                         {
-                            Logger.getLogger(MonthViewBean.class.getName()).log(Level.SEVERE, null, ex);
+                            Logger.getLogger(WeekOfMonth.class.getName()).log(Level.SEVERE, null, ex);
                         }
                     }
                     break;
@@ -149,7 +149,7 @@ public class MonthViewBean
                         } 
                         catch (SQLException ex) 
                         {
-                            Logger.getLogger(MonthViewBean.class.getName()).log(Level.SEVERE, null, ex);
+                            Logger.getLogger(WeekOfMonth.class.getName()).log(Level.SEVERE, null, ex);
                         }
                     }
                     break;
@@ -169,7 +169,7 @@ public class MonthViewBean
                         } 
                         catch (SQLException ex) 
                         {
-                            Logger.getLogger(MonthViewBean.class.getName()).log(Level.SEVERE, null, ex);
+                            Logger.getLogger(WeekOfMonth.class.getName()).log(Level.SEVERE, null, ex);
                         }
                     }
                     break;
@@ -189,7 +189,7 @@ public class MonthViewBean
                         } 
                         catch (SQLException ex) 
                         {
-                            Logger.getLogger(MonthViewBean.class.getName()).log(Level.SEVERE, null, ex);
+                            Logger.getLogger(WeekOfMonth.class.getName()).log(Level.SEVERE, null, ex);
                         }
                     }
                     break;
@@ -220,7 +220,7 @@ public class MonthViewBean
             } 
             catch (SQLException ex) 
             {
-                Logger.getLogger(MonthViewBean.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(WeekOfMonth.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }

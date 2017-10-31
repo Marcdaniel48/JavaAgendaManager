@@ -6,7 +6,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,15 +16,18 @@ import org.slf4j.LoggerFactory;
 import com.marcdanieldialogo.tasks.EmailTask;
 
 /**
- *
+ * This class class allow the JavaFX application begin.
+ * 
  * @author Marc-Daniel
  */
 public class MainApp extends Application{
     
     private final Logger log = LoggerFactory.getLogger(this.getClass().getName());
+    
     private Stage primaryStage;
     private Parent rootPane;
     
+    // Fields that handle the threading for email sending.
     private final EmailTask emailTask;
     private final ScheduledExecutorService executor;
     
@@ -46,6 +48,13 @@ public class MainApp extends Application{
         launch(args);
     }
 
+    /**
+     * Calls a method to load up the main window of the JavaFX application (The monthly view)
+     * and the executor runs and schedules the email task.
+     * 
+     * @param primaryStage
+     * @throws Exception 
+     */
     @Override
     public void start(Stage primaryStage) throws Exception {
         this.primaryStage = primaryStage;
@@ -59,7 +68,11 @@ public class MainApp extends Application{
         executor.scheduleWithFixedDelay(emailTask, 1, 60, TimeUnit.SECONDS);
     }
     
-    public void initRootLayout() {
+    /**
+     * Loads the main layout and controller.
+     */
+    public void initRootLayout() 
+    {
         try 
         {
             // Instantiate a FXMLLoader object
@@ -78,12 +91,14 @@ public class MainApp extends Application{
         } 
         catch (IOException ex) 
         {
-            log.error("Error", ex);
-            Platform.exit();
+            log.error("Error in initRootLayout", ex);
         }
     }
     
-    // When the JAM window closes, then the schedule executor will stop.
+    /**
+     * Overrides the stop method so that when the main window of the application closes,
+     * the executor shuts down.
+     */
     @Override
     public void stop()
     {

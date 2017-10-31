@@ -1,32 +1,29 @@
 package com.marcdanieldialogo.controller;
 
-import com.marcdanieldialogo.entities.Appointment;
 import com.marcdanieldialogo.entities.DayBean;
-import com.marcdanieldialogo.entities.GroupRecord;
 import com.marcdanieldialogo.entities.HalfHourOfDay;
 import com.marcdanieldialogo.persistence.AppointmentDAO;
 import com.marcdanieldialogo.persistence.AppointmentDAOImpl;
 import com.marcdanieldialogo.persistence.GroupRecordDAO;
 import com.marcdanieldialogo.persistence.GroupRecordDAOImpl;
 import java.net.URL;
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Controller class for DayView.fxml
+ * @author Marc-Daniel
+ */
 public class DayViewController {
 
     @FXML // ResourceBundle that was given to the FXMLLoader
@@ -50,13 +47,19 @@ public class DayViewController {
     @FXML // fx:id="appointmentCells"
     private TableColumn<HalfHourOfDay, String> appointmentCells; // Value injected by FXMLLoader
     
+    // The controller refers to this LocalDate object find and display 
     private LocalDate day;
     
+    // Logger
     private final org.slf4j.Logger log = LoggerFactory.getLogger(this.getClass().getName());
     
+    // These DAO objects will be used to find certain appointments and group records.
     private AppointmentDAO appointmentDAO;
     private GroupRecordDAO groupRecordDAO;
     
+    /**
+     * Constructor that helps with initializing the DAO objects of this class.
+     */
     public DayViewController()
     {
         super();
@@ -64,15 +67,22 @@ public class DayViewController {
         groupRecordDAO = new GroupRecordDAOImpl();
     }
     
+    /**
+     * Initializes the controller class
+     */
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() 
     {
         timeCells.setCellValueFactory(cellData -> cellData.getValue().timeColProperty());
         appointmentCells.setCellValueFactory(cellData -> cellData.getValue().appointmentColProperty());
         
+        // Balances the widths of each column
         adjustColumnWidths();
     }
     
+    /**
+     * Sets and displays the rows for the day table
+     */
     public void displayTable()
     {
         ObservableList<HalfHourOfDay> dayList = FXCollections.observableArrayList();

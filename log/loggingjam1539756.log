@@ -31440,3 +31440,72 @@ Supper with the family
 [INFO ] 2017-10-30 20:42:28.820 [main] TestGroupRecords - @AfterClass seeding
 [INFO ] 2017-10-30 20:42:28.821 [main] TestGroupRecords - Seeding Database
 [DEBUG] 2017-10-30 20:43:25.421 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 21:16:56.761 [JavaFX Application Thread] MainApp - Executor has shut down
+[DEBUG] 2017-10-30 22:35:23.457 [JavaFX Application Thread] MainApp - Executor has shut down
+[INFO ] 2017-10-31 00:13:59.638 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:13:59.997 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:00.310 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:00.435 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:00.544 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:00.685 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:00.841 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:00.982 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:01.122 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:01.341 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:01.497 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:01.607 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-31 00:14:01.794 [Time-limited test] AppointmentDAOImpl - New record ID is 51
+[INFO ] 2017-10-31 00:14:01.810 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:02.013 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:02.310 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-31 00:14:02.310 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:02.450 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:02.638 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:02.794 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:02.935 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:03.075 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:03.216 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-31 00:14:03.404 [Time-limited test] GroupRecordDAOImpl - New record ID is 6
+[INFO ] 2017-10-31 00:14:03.404 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:03.591 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:03.810 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-31 00:14:03.810 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:03.997 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-31 00:14:04.185 [main] AppointmentDAOImpl - New record ID is 51
+[DEBUG] 2017-10-31 00:14:04.201 [main] AppointmentDAOImpl - New record ID is 52
+[DEBUG] 2017-10-31 00:14:04.216 [main] AppointmentDAOImpl - New record ID is 53
+[DEBUG] 2017-10-31 00:14:04.216 [main] AppointmentDAOImpl - New record ID is 54
+[INFO ] 2017-10-31 00:14:23.330 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-31 00:14:23.330 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:23.502 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:23.627 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:23.736 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:23.861 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:23.986 [main] TestGroupRecords - Seeding Database
+[DEBUG] 2017-10-31 00:14:24.095 [Time-limited test] SMTPSettingsDAOImpl - New record ID is 3
+[INFO ] 2017-10-31 00:14:24.111 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:24.236 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:24.361 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:24.502 [main] TestGroupRecords - @AfterClass seeding
+[INFO ] 2017-10-31 00:14:24.502 [main] TestGroupRecords - Seeding Database
+[INFO ] 2017-10-31 00:14:49.809 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-31 00:14:51.846 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 2
+[INFO ] 2017-10-31 00:14:51.863 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 2
+[INFO ] 2017-10-31 00:14:56.317 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 1
+[INFO ] 2017-10-31 00:14:58.144 [JavaFX Application Thread] SMTPSettingsDAOImpl - Found 2
+[INFO ] 2017-10-31 00:15:01.519 [JavaFX Application Thread] GroupRecordDAOImpl - Found 1
+[INFO ] 2017-10-31 00:15:05.809 [JavaFX Application Thread] GroupRecordDAOImpl - Found 2
+[INFO ] 2017-10-31 00:15:06.391 [JavaFX Application Thread] GroupRecordDAOImpl - Found 3
+[INFO ] 2017-10-31 00:15:06.909 [JavaFX Application Thread] GroupRecordDAOImpl - Found 4
+[INFO ] 2017-10-31 00:15:07.537 [JavaFX Application Thread] GroupRecordDAOImpl - Found 5
+[INFO ] 2017-10-31 00:15:12.960 [JavaFX Application Thread] GroupRecordDAOImpl - Found 5
+[INFO ] 2017-10-31 00:15:17.218 [JavaFX Application Thread] AppointmentDAOImpl - Found 1
+[INFO ] 2017-10-31 00:15:19.096 [JavaFX Application Thread] AppointmentDAOImpl - Found 2
+[INFO ] 2017-10-31 00:15:19.115 [JavaFX Application Thread] AppointmentDAOImpl - Found 3
+[INFO ] 2017-10-31 00:15:19.424 [JavaFX Application Thread] AppointmentDAOImpl - Found 4
+[INFO ] 2017-10-31 00:15:19.443 [JavaFX Application Thread] AppointmentDAOImpl - Found 5
+[INFO ] 2017-10-31 00:15:19.796 [JavaFX Application Thread] AppointmentDAOImpl - Found 6
+[INFO ] 2017-10-31 00:15:20.445 [JavaFX Application Thread] AppointmentDAOImpl - Found 7
+[INFO ] 2017-10-31 00:15:20.846 [JavaFX Application Thread] AppointmentDAOImpl - Found 8
+[INFO ] 2017-10-31 00:15:21.766 [JavaFX Application Thread] AppointmentDAOImpl - Found 9
+[DEBUG] 2017-10-31 00:15:34.169 [JavaFX Application Thread] MainApp - Executor has shut down
